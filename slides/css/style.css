@@ -1,0 +1,20 @@
+.reveal .no-border{
+    border: 0;
+    box-shadow: none;
+}
+
+.reveal .nvs-logo-container {
+    padding-left: 15px;
+}
+
+.reveal #speaker-info {
+    font-size: 30px;
+}
+
+.reveal #speaker-info .speaker-img-container {
+    margin-right: 25px;
+}
+
+.reveal #speaker-info .speaker-img-container, .speaker-contact-info {
+    display: inline-block;
+}

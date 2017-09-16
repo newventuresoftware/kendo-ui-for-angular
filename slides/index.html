@@ -7,43 +7,79 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/white.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+        <link rel="stylesheet" href="/css/style.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		 var link = document.createElement( 'link' );
+		 link.rel = 'stylesheet';
+		 link.type = 'text/css';
+		 link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		 document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section id="intro">
+                    <div>
+                        <img alt="" src="./img/kendoka.png" class="no-border" />
+                    </div>
+                    <p>Denis Kyashif</p>
+                </section>
+                <section id="speaker-info">
+                    <div class="speaker-img-container">
+                        <img src="./img/speaker.jpg" width="200" />
+                    </div>
+		            <table class="speaker-contact-info">
+			            <tbody>
+			                <tr>
+				                <td><img class="no-border" src="./img/email.png" width="50"></td>
+				                <td style="vertical-align:middle"> <a href="mailto:denis@newventuresoftware.com?Subject=Hello" target="_blank">denis@newventuresoftware.com</a></td>
+			                </tr>
+			                <tr>
+				                <td><img class="no-border" src="./img/github.png" width="50"></td>
+				                <td style="vertical-align:middle"> <a href="https://github.com/deniskyashif" target="_blank">github.com/deniskyashif</a></td>
+			                </tr>
+                            <tr>
+				                <td><img class="no-border" src="./img/twitter.png" width="50"></td>
+				                <td style="vertical-align:middle"><a href="https://twitter.com/deniskyashif" target="_blank">@deniskyashif</a></td>
+			                </tr>
+			            </tbody>
+		            </table>
+		        </section>
 			</div>
+            <section class="reveal-shared">
+		        <div class="nvs-logo-container">
+		            <a href="http://www.newventuresoftware.com/" target="_blank">
+			            <img class="no-border" src="./img/nvs-logo.svg" width="150"/>    
+                    </a>
+		        </div>
+	        </section>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
 		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
+		 // More info about config & dependencies:
+		 // - https://github.com/hakimel/reveal.js#configuration
+		 // - https://github.com/hakimel/reveal.js#dependencies
+		 Reveal.initialize({
+             history: true,
+             progress: true,
+             touch: true,
+			 dependencies: [
+				 { src: 'plugin/markdown/marked.js' },
+				 { src: 'plugin/markdown/markdown.js' },
+				 { src: 'plugin/notes/notes.js', async: true },
+				 { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+			 ]
+		 });
 		</script>
 	</body>
 </html>
