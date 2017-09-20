@@ -1,0 +1,30 @@
+----------------------
+Angular Training Plan
+----------------------
+
+Intro ~ 5 min
+TypeScript Overview ~ 20 min
+
+Angular
+------------------
+Setting up a project using the CLI ~ 15 min
+Components ~ 15 min
+Templates & Data Binding ~ 15 min
+Services & Dependency Injection ~ 15 min
+Routing ~ 10 min
+
+Kendo for Angular
+-----------------
+Product Info: Roadmap, Community, Licencing, Installation ~ 10 min
+Using Kendo components(Grid, Chart etc.) ~ 25 min
+Common Features: Data Query, Localization, Internationalization ~ 20 min
+Configuring and integrating Kendo CSS themes using the Theme Builder ~ 10 min
+
+Misc
+-----
+Ensuring code quality - 5 min
+Deployment - difference between development and production builds ~ 5 min
+
+Q&A ~ 20 min
+
+There'll be three 15 minute breaks.
