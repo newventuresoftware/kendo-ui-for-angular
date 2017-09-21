@@ -18,3 +18,7 @@
 .reveal #speaker-info .speaker-img-container, .speaker-contact-info {
     display: inline-block;
 }
+
+.reveal .color-white * {
+    color: #fff;
+}
