@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<title>Kendo for Angular</title>
-
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/white.css">
 
@@ -52,15 +52,16 @@
 			            </tbody>
 		            </table>
 		        </section>
-                <section id="summary">
-                    <h3>Checklist</h3>
+                <section id="agenda" class="color-white" data-background-image="./img/school-board.jpg">
+                    <h3>Agenda</h3>
                     <ul>
-                        <li>TypeScript</li>
-                        <li>Angular</li>
-                        <li>Kendo for Angular</li>
-                        <li>Q&A</li>
+                        <li class="fragment">TypeScript</li>
+                        <li class="fragment">Angular</li>
+                        <li class="fragment">Kendo for Angular</li>
+                        <li class="fragment">Q&A</li>
                     </ul>
                 </section>
+                <!-- TypeScript -->
                 <section>
                     <section id="typescript" data-background="./img/type-script-bg.jpeg" data-background-transition="zoom"></section>
                     <section id="typescript-venn">
@@ -84,13 +85,84 @@
                         </ul>
                     </section>
                 </section>
+                <!-- Angular -->
+                <section>
+                    <section id="ng-intro" data-background="./img/ng-wallpaper.png" data-background-transition="zoom" ></section>
+                    <section id="ng-is" data-background-transition="zoom" data-background-color="#315FBE">
+                        <div class="col col-left">
+                            <h3>Angular is...</h3>
+                        </div>
+                        <div class="col col-right"></div>
+                    </section>
+                    <section id="ng-overview" data-background-color="#315FBE">
+                        <div>
+                        <img alt="" src="./img/ng-logo-text.png" class="no-border bg-transparent" width="500" />
+                        </div>
+                        <p>Framework for building client applications in HTML and either JavaScript or a language like TypeScript that compiles to JavaScript.</p>
+                        <p>Consists of several libraries, some of them core and some optional.</p>
+                    </section>
+                    <section id="ng-framework">
+                        <h3>Framework</h3>
+                    </section>
+                    <section id="ng-architecture">
+                        <div>
+                            <img alt="" src="./img/ng-architecture.png" class="no-border" />
+                        </div>
+                    </section>
+                    <section id="ng-cli" data-background-color="#315FBE">
+                        <div class="col col-left">
+                            <h3><strong>angular-cli</strong></h3>
+                            <ul>
+                                <li>Project initializer</li>
+                                <li>
+                                    Generating:
+                                    <ul>
+                                        <li>Components</li>
+                                        <li>Services</li>
+                                        <li>Directives</li>
+                                        <li>Pipes</li>
+                                    </ul>
+                                </li>
+                                <li>Support for progressive web apps</li>
+                                <li>Linting</li>
+                                <li>And many more...</li>
+                            </ul>
+                        </div>
+                        <div class="col col-right">
+                            <img alt="" src="./img/ng-cli-logo.png" width="300" class="no-border bg-transparent" />
+                        </div>
+                    </section>
+                    <section id="ng-tooling" data-background-color="#315FBE">
+                        <div class="col col-left">
+                        <h3>Angular Tooling</h3>
+                        <ul>
+                        <li class="fragment">Ahead-Of-Time Compiler</li>
+                        <li class="fragment">Module Loader</li>
+                        <li class="fragment">
+                        Testing
+                        <ul>
+                        <li>Unit testing</li>
+                        <li>e2e testing</li>
+                        <li>Code Coverage</li>
+                                    </ul>
+                                </li>
+                        <li class="fragment">Bundler (Tree Shaking)</li>
+                        <li class="fragment">Linter (TypeScript and CSS)</li>
+                        <li class="fragment">Minifier</li>
+                            </ul>
+                        </div>
+                        <div class="col col-right">
+                        <img alt="" src="./img/ng-logo.png" class="no-border bg-transparent" width="300" />
+                        </div>                        
+                    </section>
+                </section>
 			</div>
             <section class="reveal-shared">
-		        <div class="nvs-logo-container">
+		        <section class="nvs-logo-container">
 		            <a href="http://www.newventuresoftware.com/" target="_blank">
 			            <img class="no-border" src="./img/nvs-logo.svg" width="150"/>
                     </a>
-		        </div>
+		        </section>
 	        </section>
 		</div>
 

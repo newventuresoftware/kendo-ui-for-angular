@@ -22,3 +22,16 @@
 .reveal .color-white * {
     color: #fff;
 }
+
+.reveal .bg-transparent {
+    background: transparent;
+}
+
+.reveal .col {
+    display: inline-block;
+}
+
+.reveal .col-right {
+    vertical-align: top;
+    padding-top: 10%;
+}
