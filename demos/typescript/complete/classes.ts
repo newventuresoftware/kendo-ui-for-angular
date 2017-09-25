@@ -43,7 +43,7 @@ class Employee extends Person {
     }
 }
 
-let howard = new Employee("Howard", "Sales");
+const howard = new Employee("Howard", "Sales");
 console.log(howard.getElevatorPitch());
 console.log(howard.name);
 console.log(howard.Department);
