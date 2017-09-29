@@ -1,8 +1,11 @@
-<kendo-grid [data]="movies">
-    <kendo-grid-column field="title"></kendo-grid-column>
-    <kendo-grid-column field="year"></kendo-grid-column>
-    <kendo-grid-column field="director"></kendo-grid-column>
+<kendo-grid [data]="movies" [height]="500">
+    <kendo-grid-column field="title" title="Title"></kendo-grid-column>
+    <kendo-grid-column field="year" title="Year"></kendo-grid-column>
+    <kendo-grid-column field="director" title="Director"></kendo-grid-column>
     <ng-template kendoGridDetailTemplate let-movie>
-        {{movie.cast}}
+        <dl>
+            <dt>Cast:</dt>
+            <dd>{{movie.cast}}</dd>
+        </dl>
     </ng-template>
 </kendo-grid>
