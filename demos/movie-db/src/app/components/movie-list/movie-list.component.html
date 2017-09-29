@@ -1,0 +1,8 @@
+<kendo-grid [data]="movies">
+    <kendo-grid-column field="title"></kendo-grid-column>
+    <kendo-grid-column field="year"></kendo-grid-column>
+    <kendo-grid-column field="director"></kendo-grid-column>
+    <ng-template kendoGridDetailTemplate let-movie>
+        {{movie.cast}}
+    </ng-template>
+</kendo-grid>
