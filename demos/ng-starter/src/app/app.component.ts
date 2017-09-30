@@ -7,15 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     message = 'Angular Rocks!';
+    fontSize: number = 30;
     color = '';
-    colors: string[] = [ 'default', 'red', 'green', 'blue' ];
+    colors: string[] = [ '', 'red', 'green', 'blue' ];
 
     onColorChange(color: string) {
         this.color = color;
     }
 
     onAddColorClick(color) {
-        console.log(color);
         this.colors.push(color);
     }
 }
