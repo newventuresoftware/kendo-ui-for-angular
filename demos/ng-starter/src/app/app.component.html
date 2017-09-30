@@ -1,3 +1,17 @@
 <section>
-  
+    <div>
+        Message: <input type="text" [(ngModel)]="message" name="message" />
+        Font Size: <input type="number" [(ngModel)]="fontSize" name="fontSize" value="24" />
+
+        <div>
+            Background Color: <input type="text" #newColor />
+            <button (click)="onAddColorClick(newColor.value)">Add Color</button>
+        </div>
+        Set Color:
+        <select (change)="onColorChange($event.target.value)">
+            <option *ngFor="let color of colors">{{color}}</option>
+        </select>
+    </div>
+    <h1 [style.background-color]="color" [style.font-size.px]="fontSize">{{message}}</h1>
+
 </section>
