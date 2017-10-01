@@ -25,11 +25,11 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section id="intro">
-                    <h1>KendoUI for Angular</h1>
+				<section id="intro" data-background="./img/telerik-bg.jpg">
+                    <h1>Kendo UI for Angular</h1>
                     <p>Denis Kyashif @ New Venture Software</p>
                 </section>
-                <section id="speaker-info">
+                <section id="speaker-info" data-background="./img/telerik-bg.jpg">
                     <div class="speaker-img-container">
                         <img src="./img/speaker.jpg" width="200" />
                     </div>
@@ -54,8 +54,8 @@
                     <h3>Agenda</h3>
                     <ul>
                         <li class="fragment">TypeScript</li>
-                        <li class="fragment">Angular</li>
-                        <li class="fragment">Kendo for Angular</li>
+                        <li class="fragment">Angular 2+</li>
+                        <li class="fragment">Kendo UI for Angular</li>
                         <li class="fragment">Q&A</li>
                     </ul>
                 </section>
@@ -66,7 +66,7 @@
                         <p>A strict syntactical superset of JavaScript. <br/>Adds optional static typing to the language.</p>
                         <img src="./img/typescript-venn.png" class="no-border" width="300" />
                     </section>
-                    <section id="ts-benefits">
+                    <section id="ts-benefits" data-background="./img/telerik-bg.jpg">
 					    <blockquote cite="http://ttendency.cs.ucl.ac.uk/projects/type_study/documents/type_study.pdf">
 						    &ldquo;Strongly typed languages reduce bugs by 15%.&rdquo;
 					    </blockquote>
@@ -126,8 +126,9 @@
                         <img alt="" src="./img/ng-cli-logo.png" width="300" class="no-border bg-transparent" />
                         </div>
                     </section>
-                    <section id="ng-components">
+                    <section id="ng-components" data-background="./img/telerik-bg.jpg">
                         <h3>Components</h3>
+                        <img src="./img/ng-logo.png" width="170" class="no-border bg-transparent" />
                         <p>@Component()</p>
                     </section>
                     <section id="ng-components-bullets"  data-background-color="#315FBE">
@@ -145,6 +146,7 @@
                         <img src="./img/ng-component-tree.PNG" class="no-border" />
                     </section>
                     <section id="ng-data-binding" data-background-color="#315FBE">
+                        <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -40%; right: -15%;" />
                         <h3>Data Binding</h3>
                         <p>{{}} () [] [()]</p>
                         <p>A mechanism for coordinating the view with the application data.</p>
@@ -152,6 +154,9 @@
                     <section id="ng-data-binding-bullets">
                         <h4 class="text-right">Data Binding Types</h4>
                         <img class="no-border" alt="" src="./img/ng-databinding.png" />
+                    </section>
+                    <section id="ng-directives" data-background-color="#315FBE">
+                        <h3>Directives and Pipes</h3>
                     </section>
                     <section id="ng-modules">
                         <h3>Modules</h3>
@@ -166,18 +171,19 @@
                             <li>Consolidates components, directives and services into <strong>cohesive blocks</strong> of functionality.</li>
                         </ul>
                     </section>
-                    <section id="ng-di-services">
+                    <section id="ng-di-services" data-background-color="#353334">
                         <h3>Dependency Injection and Services</h3>
+                        <img src="./img/ng-logo.png" width="170" class="no-border bg-transparent" />
                         <p>@Injectable()</p>
                     </section>
-                    <section id="di-about" data-background-color="#315FBE">
+                    <section id="di-about" data-background-color="#353334">
                         <h4>What is Dependency Injection(DI)?</h4>
                         <p class="fragment" style="font-size: 0.9em">A <strong>design principle</strong> in which a class should receive its dependencies from external sources rather than creating them itself.</p>
                     </section>
                     <section id="no-di-example">
                         <h4 class="text-right">DI Example</h4>
                         <div>
-                            <pre><code>class Car {
+                        <pre><code>class Car {
     public engine: Engine;
 
     constructor() {
@@ -186,19 +192,19 @@
 }</code></pre>
                         </div>
                         <div class="color-red">
-                            <p class="fragment"><span><em>What is the problem here?</em></span></p>
-                            <ul style="font-size: 0.8em">
-                                <li class="fragment">Tight coupling between <strong>Car</strong> and <strong>Engine</strong></li>
-                                <li class="fragment">If the definition of <strong>Engine</strong> changes, <strong>Car</strong> must also change.</li>
-                                <li class="fragment"><strong>Engine</strong> cannot be shared among <strong>Car</strong> instances.</li>
-                                <li class="fragment">Is it possible to create an Engine in a test environment?</li>
+                        <p class="fragment"><span><em>What is the problem here?</em></span></p>
+                        <ul style="font-size: 0.8em">
+                        <li class="fragment">Tight coupling between <strong>Car</strong> and <strong>Engine</strong></li>
+                        <li class="fragment">If the definition of <strong>Engine</strong> changes, <strong>Car</strong> must also change.</li>
+                        <li class="fragment"><strong>Engine</strong> cannot be shared among <strong>Car</strong> instances.</li>
+                        <li class="fragment">Is it possible to create an Engine in a test environment?</li>
                             </ul>
                         </div>
                     </section>
                     <section id="di-example">
                         <h4 class="text-right">DI Example</h4>
                         <div>
-                            <pre><code>class Car {
+                        <pre><code>class Car {
     public engine: Engine;
 
     constructor(engine: Engine) {
@@ -207,15 +213,15 @@
 }</code></pre>
                         </div>
                         <p class="color-green" style="font-size: 0.9em"><span><em>The class now receives its dependencies in the constructor.</em></span></p>
-                        <pre><code>const engine = new HybridEngine();
+                        <pre><code>const engine: Engine = new HybridEngine();
 const car = new Car(engine);</code></pre>
                     </section>
-                    <section id="ng-di"  data-background-color="#315FBE">
+                    <section id="ng-di"  data-background-color="#353334">
                         <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -50%; right: -10%;" />
                         <p>Angular ships with its own dependency injection framework. This framework can also be used as a standalone module by other applications and frameworks.</p>
                     </section>
-                    <section id="ng-services-about" data-background-color="#315FBE">
-                        <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -40%; left: -20%;" />
+                    <section id="ng-services-about" data-background-color="#353334">
+                        <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -40%; left: -10%;" />
                         <h3 class="text-right">Services</h3>
                         <ul style="font-size: 0.8em">
                             <li>A service is nothing more than a class in Angular. It remains nothing more than a class until registered with an Angular injector.</li>
@@ -242,9 +248,6 @@ const car = new Car(engine);</code></pre>
 export class AppModule { }</code></pre>
                             <pre><code>platformBrowserDynamic().bootstrapModule(AppModule);</code></pre>
                         </div>
-                    </section>
-                    <section id="ng-directives">
-                        <h3>Directives and Pipes</h3>
                     </section>
                     <section id="ng-lifecycle">
                         <h3>Angular Lifecycle</h3>
@@ -302,7 +305,7 @@ export class AppModule { }</code></pre>
                             <span class="component-only">Component Only</span></small>
                         </p>
                     </section>
-                    <section id="ng-tooling" data-background-color="#315FBE">
+                    <section id="ng-tooling" data-background-color="#353334">
                         <div class="col col-left">
                             <h3>Tooling</h3>
                             <ul>
@@ -328,13 +331,48 @@ export class AppModule { }</code></pre>
                 </section>
                 <!-- Kendo -->
                 <section>
-                    <section data-background-color="#F54B00" id="kendo-intro">
-                        <h1>Kendo for Angular</h1>
+                    <section data-background="./img/telerik-bg.jpg" id="kendo-intro">
+                        <h2>Kendo UI for Angular</h2>
+                        <img alt="" src="./img/kendoka-09-350.png" class="no-border bg-transparent" />
+                    </section>
+                    <section data-background="./img/telerik-bg.jpg" id="kendo-bullets">
+                        <img src="./img/kendoka-08-350.png" width="200" class="no-border bg-transparent" style="position: absolute; top: -40%; left: -20%;" />
+                        <h4 class="text-right">What is Kendo UI for Angular?</h4>
+                        <ul>
+                            <li>Native Angular Component Suite.</li>
+                            <li>Each component is a separate Angular module.</li>
+                            <li>Distributed via NPM (nodejs package manager).</li>
+                            <li>Offers Unlimited Support.</li>
+                            <li>Open Source.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Components in Action</h3>
+                    </section>
+                    <section>
+                        <h3>Common Features</h3>
+                        <p><em>Data Query, Localization...</em></p>
+                    </section>
+                    <section data-background="./img/bg-pattern.png" class="color-white" id="theme-builder">
+                        <img alt="" src="./img/progress_mainLogo.png" class="no-border bg-transparent" width="700" />
+                        <p>Kendo UI for Angular</p>
                     </section>
                 </section>
-                <section id="resources">
-                    <h3>Learning Resources</h3>
-                    <ul>
+                <section data-background-color="#000">
+                    <h3>Ensuring Code Quality</h3>
+                    <p style="background: #000" class="color-white"><code>>_ ng lint</code></p>
+                </section>
+                <section>
+                    <h3>Deployment</h3>
+                    <p>Building in Development & Production mode.</p>
+                </section>
+                <section id="ng-nativescript" data-background-color="#315FBE">
+                    <h3>Angular + NativeScript</h3>
+                    <img alt="" src="./img/ng-nativescript.png" class="bg-transparent no-border" />
+                </section>
+                <section id="resources" data-background="./img/school-board.jpg">
+                    <h3 class="color-white"><span>Learning Resources</span></h3>
+                    <ul style="list-style-type: none">
                         <li><a href="https://angular.io/docs">angular.io/docs</a></li>
                         <li><a href="http://www.telerik.com/kendo-angular-ui/">telerik.com/kendo-angular-ui/</a></li>
                         <li><a href="https://www.typescriptlang.org/docs/home.html">typescriptlang.org/docs/home.html</a></li>
