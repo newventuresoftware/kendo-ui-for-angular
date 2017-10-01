@@ -48,17 +48,21 @@
     text-align: right;
 }
 
-#ng-lifecycle-hooks table tr {
+.reveal .text-left {
+    text-align: left;
+}
+
+#ng-lifecycle-hooks .components-and-directives, table tr {
     background-color: #ef5770;
     color: white;    
 }
 
-#ng-lifecycle-hooks .typescript * {
+#ng-lifecycle-hooks .typescript {
     background-color: #0082a8;
     color: white;
 }
 
-#ng-lifecycle-hooks .component-only * {
+#ng-lifecycle-hooks .component-only {
     background-color: #d9e963;
     color: black;
 }
