@@ -31,6 +31,10 @@
     color: yellow;
 }
 
+.reveal .color-green * {
+    color: green;
+}
+
 .reveal .bg-transparent {
     background: transparent;
 }
