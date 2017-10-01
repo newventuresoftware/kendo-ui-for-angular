@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Kendo for Angular</title>
+		<title>Ng Slides</title>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/white.css">
@@ -26,10 +26,8 @@
 		<div class="reveal">
 			<div class="slides">
 				<section id="intro">
-                    <div>
-                        <img alt="" src="./img/kendoka.png" class="no-border" />
-                    </div>
-                    <p>Denis Kyashif</p>
+                    <h1>KendoUI for Angular</h1>
+                    <p>Denis Kyashif @ New Venture Software</p>
                 </section>
                 <section id="speaker-info">
                     <div class="speaker-img-container">
@@ -95,10 +93,12 @@
                         <p>A developer platform for building mobile and desktop web apps using TypeScript/JavaScript and other languages.</p>
                         <p>Consists of several libraries, some of them core and some optional.</p>
                     </section>
-                    <section id="ng-framework">
+                    <section id="ng-framework" data-background-color="#000" data-background-transition="zoom">
                         <h3>Framework</h3>
+                        <img src="./img/ng-framework.png" class="no-border" />
                     </section>
                     <section id="ng-architecture">
+                        <h3>Architecture</h3>
                         <div>
                             <img alt="" src="./img/ng-architecture.png" class="no-border" />
                         </div>
@@ -126,28 +126,56 @@
                         <img alt="" src="./img/ng-cli-logo.png" width="300" class="no-border bg-transparent" />
                         </div>
                     </section>
-                    <section id="ng-modules">
-                        <h3>Modules</h3>
-                        <div>
-                            <p>NgModule is a decorator function that takes a single metadata object whose properties describe the module. The most important properties are:</p>
-                            <ul>
-                                <li>declarations - the view classes that belong to this module. Angular has three kinds of view classes: components, directives, and pipes.</li>
-                                <li>exports - the subset of declarations that should be visible and usable in the component templates of other modules.</li>
-                                <li>imports - other modules whose exported classes are needed by component templates declared in this module.</li>
-                                <li>providers - creators of services that this module contributes to the global collection of services; they become accessible in all parts of the app.</li>
-                                <li>bootstrap - the main application view, called the root component, that hosts all other app views. Only the root module should set this bootstrap property.</li>
-                            </ul>
-                        </div>
-                    </section>
                     <section id="ng-components">
                         <h3>Components</h3>
                     </section>
-                    <section id="ng-directives">
-                        <h3>Directives</h3>
+                    <section id="ng-components-bullets">
+                        <h4 class="text-right">Components in Angular</h4>
+                        <ul>
+                            <li>The basic UI building block in Angular.</li>
+                            <li>Control the view.</li>
+                            <li>Represent anything visible to the end user.</li>
+                            <li>Angular <strong>creates, updates and destroys</strong> components as the user moves through the app.</li>
+                            <li>Angular provides <strong>view encapsulation</strong> by default which enables the <strong>Shadow DOM</strong></li>
+                        </ul>
                     </section>
-                    <section id="ng-services">
+                    <section id="ng-component-tree">
+                        <h3>Component Tree</h3>
+                        <img src="./img/ng-component-tree.PNG" class="no-border" />
+                    </section>
+                    <section id="ng-data-binding" data-background-color="#315FBE">
+                        <h3>Data Binding</h3>
+                        <p>{{}} () [] [()]</p>
+                        <p>A mechanism for coordinating the view with the application data.</p>
+                    </section>
+                    <section id="ng-data-binding-bullets" data-background-color="#315FBE">
+                        <h4 class="text-right">Data Binding Types</h4>
+                        <img class="no-border" alt="" src="./img/ng-databinding.png" />
+                    </section>
+                    <section id="ng-modules">
+                        <h3>Modules</h3>
+                        <img class="no-border" src="./img/module.png" />
+                    </section>
+                    <section id="ng-modules-bullets">
+                        <h4 class="text-right">What is @NgModule?</h4>
+                        <ul>
+                            <li><strong>@NgModule</strong> is a decorator function that takes a single metadata object whose properties describe the module.</li>
+                            <li>Tells Angular how to <strong>compile and run</strong> the module code.</li>
+                            <li>Consolidates components, directives and services into <strong>cohesive blocks</strong> of functionality.</li>
+                        </ul>
+                    </section>
+                    <section id="ng-services" data-background-color="#315FBE">
                         <h3>Dependency Injection and Services</h3>
+                        <p>@Injectable()</p>
                     </section>
+                    <section id="ng-directives">
+                        <h3>Directives and Pipes</h3>
+                    </section>
+                    <section id="ng-lifecycle">
+                        <h3>Angular Lifecycle</h3>
+                        <img class="no-border" width="400" src="./img/lifecycle.jpg" />
+                    </section>
+                    
                     <section id="ng-tooling" data-background-color="#315FBE">
                         <div class="col col-left">
                             <h3>Tooling</h3>
@@ -171,6 +199,24 @@
                             <img alt="" src="./img/ng-logo.png" class="no-border bg-transparent" width="300" />
                         </div>                        
                     </section>
+                </section>
+                <!-- Kendo -->
+                <section>
+                    <section data-background-color="#F54B00" id="kendo-intro">
+                        <h1>Kendo for Angular</h1>
+                    </section>
+                </section>
+                <section id="resources">
+                    <h3>Learning Resources</h3>
+                    <ul>
+                        <li><a href="https://angular.io/docs">angular.io/docs</a></li>
+                        <li><a href="http://www.telerik.com/kendo-angular-ui/">telerik.com/kendo-angular-ui/</a></li>
+                        <li><a href="https://www.typescriptlang.org/docs/home.html">typescriptlang.org/docs/home.html</a></li>
+                    </ul>
+                </section>
+                <section id="questions">
+                    <h3>Questions?</h3>
+                    <img class="" src="./img/cats-staring.jpg" width="500" />
                 </section>
 			</div>
             <section class="reveal-shared">

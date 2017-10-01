@@ -35,3 +35,7 @@
     vertical-align: top;
     padding-top: 10%;
 }
+
+.reveal .text-right {
+    text-align: right;
+}
