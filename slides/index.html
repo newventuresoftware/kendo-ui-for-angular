@@ -172,7 +172,7 @@
                     </section>
                     <section id="di-about" data-background-color="#315FBE">
                         <h4>What is Dependency Injection(DI)?</h4>
-                        <p class="fragment">A <strong>design principle</strong> in which a class should receive its dependencies from external sources rather than creating them itself.</p>
+                        <p class="fragment" style="font-size: 0.9em">A <strong>design principle</strong> in which a class should receive its dependencies from external sources rather than creating them itself.</p>
                     </section>
                     <section id="no-di-example">
                         <h4 class="text-right">DI Example</h4>
@@ -214,13 +214,17 @@ const car = new Car(engine);</code></pre>
                         <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -50%; right: -10%;" />
                         <p>Angular ships with its own dependency injection framework. This framework can also be used as a standalone module by other applications and frameworks.</p>
                     </section>
-                    <section id="ng-services">
-                        <h3>Services</h3>
+                    <section id="ng-services-about" data-background-color="#315FBE">
+                        <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -40%; left: -20%;" />
+                        <h3 class="text-right">Services</h3>
                         <ul style="font-size: 0.8em">
                             <li>A service is nothing more than a class in Angular. It remains nothing more than a class until registered with an Angular injector.</li>
                             <li>You don't have to create an Angular injector. Angular creates an application-wide injector for you during the bootstrap process.</li>
                         </ul>
-                        <pre><code>platformBrowserDynamic().bootstrapModule(AppModule);</code></pre>
+                    </section>
+                    <section id="ng-services-img">
+                        <h4 class="text-right">DI & Services</h4>
+                        <img src="./img/ng-injector.png" width="600" class="no-border" />
                     </section>
                     <section id="ng-providers">
                         <h3>Providers</h3>
@@ -236,6 +240,7 @@ const car = new Car(engine);</code></pre>
   bootstrap: [App]
 })
 export class AppModule { }</code></pre>
+                            <pre><code>platformBrowserDynamic().bootstrapModule(AppModule);</code></pre>
                         </div>
                     </section>
                     <section id="ng-directives">
@@ -248,7 +253,7 @@ export class AppModule { }</code></pre>
                     </section>
                     <section id="ng-lifecycle-about" data-background-color="#315FBE">
                         <div><img src="./img/ng-logo.png" width="150" class="no-border bg-transparent" /></div>
-                        <p>Angular calls lifecycle hook methods on directives and components as it creates, changes, and destroys them.</p>
+                        <p>Angular calls lifecycle hook methods on directives and components as it <strong>creates, changes, and destroys</strong> them.</p>
                     </section>
                     <section id="ng-lifecycle-hooks" style="font-size: 0.6em" data-background-color="#fff">
                         <h4 class="text-right">Lifecycle Sequence</h4>

@@ -56,7 +56,7 @@
     text-align: left;
 }
 
-#ng-lifecycle-hooks .components-and-directives, table tr {
+#ng-lifecycle-hooks .components-and-directives, #ng-lifecycle-hooks table tr {
     background-color: #ef5770;
     color: white;    
 }
