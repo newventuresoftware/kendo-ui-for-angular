@@ -128,8 +128,9 @@
                     </section>
                     <section id="ng-components">
                         <h3>Components</h3>
+                        <p>@Component()</p>
                     </section>
-                    <section id="ng-components-bullets">
+                    <section id="ng-components-bullets"  data-background-color="#315FBE">
                         <h4 class="text-right">Components in Angular</h4>
                         <ul>
                             <li>The basic UI building block in Angular.</li>
@@ -148,7 +149,7 @@
                         <p>{{}} () [] [()]</p>
                         <p>A mechanism for coordinating the view with the application data.</p>
                     </section>
-                    <section id="ng-data-binding-bullets" data-background-color="#315FBE">
+                    <section id="ng-data-binding-bullets">
                         <h4 class="text-right">Data Binding Types</h4>
                         <img class="no-border" alt="" src="./img/ng-databinding.png" />
                     </section>
@@ -156,7 +157,7 @@
                         <h3>Modules</h3>
                         <img class="no-border" src="./img/module.png" />
                     </section>
-                    <section id="ng-modules-bullets">
+                    <section id="ng-modules-bullets"  data-background-color="#315FBE">
                         <h4 class="text-right">What is @NgModule?</h4>
                         <ul>
                             <li><strong>@NgModule</strong> is a decorator function that takes a single metadata object whose properties describe the module.</li>
@@ -164,7 +165,7 @@
                             <li>Consolidates components, directives and services into <strong>cohesive blocks</strong> of functionality.</li>
                         </ul>
                     </section>
-                    <section id="ng-services" data-background-color="#315FBE">
+                    <section id="ng-services">
                         <h3>Dependency Injection and Services</h3>
                         <p>@Injectable()</p>
                     </section>
@@ -173,9 +174,54 @@
                     </section>
                     <section id="ng-lifecycle">
                         <h3>Angular Lifecycle</h3>
-                        <img class="no-border" width="400" src="./img/lifecycle.jpg" />
+                        <p>ngOnInit()</p>
+                        <img class="no-border" width="300" src="./img/lifecycle.jpg" />
                     </section>
-                    
+                    <section id="ng-lifecycle-about" data-background-color="#315FBE">
+                        <div><img src="./img/ng-logo.png" width="150" class="no-border bg-transparent" /></div>
+                        <p>Angular calls lifecycle hook methods on directives and components as it creates, changes, and destroys them.</p>
+                    </section>
+                    <section id="ng-lifecycle-hooks" style="font-size: 0.6em" data-background-color="#fff">
+                        <h4 class="text-right">Lifecycle Sequence</h4>
+                        <table>
+                            <tr class="typescript">
+                                <td><strong>Constructor</strong></td>
+                                <td><em>The constructor has been invoked.</em></td>
+                            </tr>
+                            <tr>
+                                <td><strong>OnChanges</strong></td>
+                                <td><em>The data-bound input properties have been (re)set.</em></td>
+                            </tr>
+                            <tr>
+                                <td><strong>OnInit</strong></td>
+                                <td><em>The component/directive has been initialized.</em></td>
+                            </tr>
+                            <tr>
+                                <td><strong>DoCheck</strong></td>
+                                <td><em>Detect and act upon changes that Angular can't or won't detect on its own.</em></td>
+                            </tr>
+                            <tr class="component-only">
+                                <td><strong>AfterContentInit</strong></td>
+                                <td><em>After Angular projects external content into the component's view.</em></td>
+                            </tr>
+                            <tr class="component-only">
+                                <td><strong>AfterContentChecked</strong></td>
+                                <td><em>After Angular checks the content projected into the component.</em></td>
+                            </tr>
+                            <tr class="component-only">
+                                <td><strong>AfterViewInit</strong></td>
+                                <td><em>After Angular initializes the component's views and child views.</em></td>
+                            </tr class="component-only">
+                            <tr>
+                                <td><strong>AfterViewChecked</strong></td>
+                                <td><em>Called just before Angular destroys the directive/component.</em></td>
+                            </tr>
+                            <tr>
+                                <td><strong>OnDestroy</strong></td>
+                                <td><em>After Angular checks the component's views and child views.</em></td>
+                            </tr>
+                        </table>
+                    </section>
                     <section id="ng-tooling" data-background-color="#315FBE">
                         <div class="col col-left">
                             <h3>Tooling</h3>
