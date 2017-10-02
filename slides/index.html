@@ -156,13 +156,48 @@
                         <img class="no-border" alt="" src="./img/ng-databinding.png" />
                     </section>
                     <section id="ng-directives" data-background-color="#315FBE">
-                        <h3>Directives and Pipes</h3>
+                        <h3>Pipes & Directives</h3>
+                        <img src="./img/ng-logo.png" width="150" class="no-border bg-transparent" />
+                        <p><em>@Pipe() <br/>@Directive()</em></p>
+                    </section>
+                    <section id="pipes-overview" data-background-color="#353334">
+                        <h4 class="text-right">What are Pipes?</h4>
+                        <table>
+                            <tr>
+                                <td>
+                                    <ul style="font-size: 0.6em">
+                                        <li>A way to write display-value transformations that can be declared in the HTML.</li>
+                                        <li>A pipe takes in data as <strong>input</strong> and transforms it to a desired <strong>output</strong>.</li>
+                                        <li>Angular comes with a <strong>stock of pipes</strong> such as <em>DatePipe, UpperCasePipe, CurrencyPipe...</em></li>
+                                        <li>Pipes can be chained together in potentially useful combinations.</li>
+                                    </ul>
+                                    <pre><code><p>Name: {{ name | uppercase }}</p></code></pre>
+                                </td>
+                                <td style="vertical-align: top; padding-top: 0">
+                                    <img src="./img/dicaprio-pipe.jpg" width="300"  />
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section id="directives-overview" data-background-color="#315FBE">
+                        <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -50%; left: -15%;" />
+                        <h4 class="text-right">What are Directives?</h4>
+                        <p>Directives aim to extends the static nature of HTML. They allow creating custom elements, attributes and even control flow inside the HTML.</p>
+                    </section>
+                    <section id="directive-types" data-background-color="#315FBE">
+                        <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -50%; left: -15%;" />
+                        <h4 class="text-right">Directives Types</h4>
+                        <ul style="font-size: 0.8em">
+                            <li><strong>Components</strong> - directives with a template.</li>
+                            <li><strong>Structural</strong> - change the DOM layout by adding and removing DOM elements<em>(*ngIf, *ngFor)</em>.</li>
+                            <li><strong>Attribute</strong> - change the appearance or behavior of an element, component, or another directive<em>(NgStyle, NgClass)</em>.</li>
+                        </ul>
                     </section>
                     <section id="ng-modules">
                         <h3>Modules</h3>
                         <img class="no-border" src="./img/module.png" />
                     </section>
-                    <section id="ng-modules-bullets"  data-background-color="#315FBE">
+                    <section id="ng-modules-bullets" data-background-color="#315FBE">
                         <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -20%; left: -15%;" />
                         <h4 class="text-right">What is @NgModule?</h4>
                         <ul>
