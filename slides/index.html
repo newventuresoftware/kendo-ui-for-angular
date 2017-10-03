@@ -126,6 +126,25 @@
                         <img alt="" src="./img/ng-cli-logo.png" width="300" class="no-border bg-transparent" />
                         </div>
                     </section>
+                    <section id="ng-cli-demo">
+                        <h3>Live Demo</h3>
+                        <p>Setting Up a project with the Angular CLI</p>
+                    </section>
+                    <section id="ng-cli-exercise">
+                        <h4 class="text-right">Angular CLI</h4>
+                        <dl style="font-size: 0.8em">
+                            <dt>Install NodeJS</dt>
+                            <dd><a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></dd>
+                            <dt>Install Angular CLI</dt>
+                            <dd><pre><code class="bash">npm install -g @angular/cli</code></pre></dd>
+                            <dt>Initialize a project</dt>
+                            <dd><pre><code class="bash">ng new hello-angular</code></pre></dd>
+                            <dt>Navigate to the project root.</dt>
+                            <dd><pre><code class="bash">cd hello-angular</code></pre></dd>
+                            <dt>Run the project</dt>
+                            <dd><pre><code class="bash">ng serve</code></pre></dd>
+                        </dl>
+                    </section>
                     <section id="ng-components" data-background="./img/telerik-bg.jpg">
                         <h3>Components</h3>
                         <img src="./img/ng-logo.png" width="170" class="no-border bg-transparent" />
@@ -151,9 +170,13 @@
                         <p>{{}} () [] [()]</p>
                         <p>A mechanism for coordinating the view with the application data.</p>
                     </section>
-                    <section id="ng-data-binding-bullets">
+                    <section id="ng-data-binding-overview">
                         <h4 class="text-right">Data Binding Types</h4>
                         <img class="no-border" alt="" src="./img/ng-databinding.png" />
+                    </section>
+                    <section id="ng-components-demo">
+                        <h3>Live Demo</h3>
+                        <p>Creating Angular Components.</p>
                     </section>
                     <section id="ng-directives" data-background-color="#315FBE">
                         <h3>Pipes & Directives</h3>
@@ -192,6 +215,11 @@
                             <li><strong>Structural</strong> - change the DOM layout by adding and removing DOM elements<em>(*ngIf, *ngFor)</em>.</li>
                             <li><strong>Attribute</strong> - change the appearance or behavior of an element, component, or another directive<em>(NgStyle, NgClass)</em>.</li>
                         </ul>
+                    </section>
+                    <section id="ng-directives-pipes-demo">
+                        <h3>Live Demo</h3>
+                        <p>Working with Directives and Pipes.</p>
+                    </section>
                     </section>
                     <section id="ng-modules" data-background="./img/telerik-bg.jpg">
                         <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -40%; right: -10%;" />
@@ -291,6 +319,10 @@ export class AppModule { }</code></pre>
                             <pre><code>platformBrowserDynamic().bootstrapModule(AppModule);</code></pre>
                         </div>
                     </section>
+                    <section id="services-demo">
+                        <h3>Live Demo</h3>
+                        <p>Working with Directives and Pipes.</p>
+                    </section>
                     <section id="ng-lifecycle">
                         <h3>Angular Lifecycle</h3>
                         <p>ngOnInit()</p>
@@ -299,6 +331,16 @@ export class AppModule { }</code></pre>
                     <section id="ng-lifecycle-about" data-background-color="#315FBE">
                         <div><img src="./img/ng-logo.png" width="150" class="no-border bg-transparent" /></div>
                         <p>Angular calls lifecycle hook methods on directives and components as it <strong>creates, changes, and destroys</strong> them.</p>
+                    </section>
+                    <section id="ng-routing">
+                        <h3>Routing in Angular</h3>
+                    </section>
+                    <section>
+                        <h4 class="text-right">What is Routing?</h4>
+                        <ul>
+                            <li>Routing the standard way to navigate in a web applications.</li>
+                            <li>Each unique route must always return the same page.</li>
+                        </ul>
                     </section>
                     <section id="ng-lifecycle-hooks" style="font-size: 0.6em" data-background-color="#fff">
                         <h4 class="text-right">Lifecycle Sequence</h4>
