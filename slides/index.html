@@ -220,7 +220,6 @@
                         <h3>Live Demo</h3>
                         <p>Working with Directives and Pipes.</p>
                     </section>
-                    </section>
                     <section id="ng-modules" data-background="./img/telerik-bg.jpg">
                         <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -40%; right: -10%;" />
                         <h3>Modules</h3>
@@ -240,7 +239,7 @@ export class AppModule { }</code></pre>
                             <li>Consolidates components, directives and services into <strong>cohesive blocks</strong> of functionality.</li>
                             <li>It can import other modules for reusing their Components, Directives etc.</li>
                         </ul>
-                    </section>
+                </section>
                     <section id="ng-di-services" data-background-color="#353334">
                         <h3>Dependency Injection and Services</h3>
                         <img src="./img/ng-logo.png" width="170" class="no-border bg-transparent" />
@@ -286,7 +285,7 @@ export class AppModule { }</code></pre>
                         <pre><code>const engine: Engine = new HybridEngine();
 const car = new Car(engine);</code></pre>
                     </section>
-                    <section id="ng-di"  data-background-color="#353334">
+                    <section id="ng-di" data-background-color="#353334">
                         <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -50%; right: -10%;" />
                         <p>Angular ships with its own dependency injection framework. This framework can also be used as a standalone module by other applications and frameworks.</p>
                     </section>
@@ -323,6 +322,20 @@ export class AppModule { }</code></pre>
                         <h3>Live Demo</h3>
                         <p>Working with Directives and Pipes.</p>
                     </section>
+                    <section id="ng-routing">
+                        <h3>Routing in Angular</h3>
+                    </section>
+                    <section id="routing-overview">
+                        <h4 class="text-right">What is Routing?</h4>
+                        <ul>
+                            <li>Routing the standard way to navigate in a web applications.</li>
+                            <li>Each unique route must always return the same page.</li>
+                        </ul>
+                    </section>
+                    <section id="routing-demo">
+                        <h3>Live Demo</h3>
+                        <p>Angular Routing.</p>
+                    </section>
                     <section id="ng-lifecycle">
                         <h3>Angular Lifecycle</h3>
                         <p>ngOnInit()</p>
@@ -331,16 +344,6 @@ export class AppModule { }</code></pre>
                     <section id="ng-lifecycle-about" data-background-color="#315FBE">
                         <div><img src="./img/ng-logo.png" width="150" class="no-border bg-transparent" /></div>
                         <p>Angular calls lifecycle hook methods on directives and components as it <strong>creates, changes, and destroys</strong> them.</p>
-                    </section>
-                    <section id="ng-routing">
-                        <h3>Routing in Angular</h3>
-                    </section>
-                    <section>
-                        <h4 class="text-right">What is Routing?</h4>
-                        <ul>
-                            <li>Routing the standard way to navigate in a web applications.</li>
-                            <li>Each unique route must always return the same page.</li>
-                        </ul>
                     </section>
                     <section id="ng-lifecycle-hooks" style="font-size: 0.6em" data-background-color="#fff">
                         <h4 class="text-right">Lifecycle Sequence</h4>
@@ -444,13 +447,53 @@ export class AppModule { }</code></pre>
                         <p>Kendo UI for Angular</p>
                     </section>
                 </section>
-                <section data-background-color="#000">
+                <section id="code-quality" data-background-color="#000">
                     <h3>Ensuring Code Quality</h3>
                     <p style="background: #000" class="color-white"><code>>_ ng lint</code></p>
                 </section>
-                <section id="deployment" data-background="/img/rocket-launch-day-illustration.png" class="color-black">
-                    <h2>Deployment</h2>
-                    <code>ng build [-prod]</code>
+                <!-- Deployment -->
+                <section>
+                    <section id="deployment" data-background="/img/rocket-launch-day-illustration.png" class="color-black">
+                        <h2>Deployment</h2>
+                        <p>building for development and production</p>
+                    </section>
+                    <section>
+                        <p class="color-white"><code class="bash" style="background: black">ng build [--prod]</code></p>
+                        <p>Publish the contents of the generated <code style="color: blue">dist/</code> folder to a web server.</p>
+                    </section>
+                    <section id="ng-build-prod">
+                        <p class="color-white"><code class="bash" style="background: black">ng build --prod</code></p>
+                        <table style="font-size: 0.6em">
+                            <tr>
+                                <td><strong>AOT Compilation</strong></td>
+                                <td><span class="fragment">Pre-compiles Angular component templates.</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Bundling</strong></td>
+                                <td><span class="fragment">Concatenates modules into a single file.</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Inlining</strong></td>
+                                <td><span class="fragment">Pulls template html and css into the components.</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Minification</strong></td>
+                                <td><span class="fragment">Removes excess whitespace, comments, and optional tokens.</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Uglification</strong></td>
+                                <td><span class="fragment">Rewrites code to use short, cryptic variable and function names.</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Dead Code Elimination</strong></td>
+                                <td><span class="fragment">Removes unreferenced modules and unused code.</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Prune Libraries</strong></td>
+                                <td><span class="fragment">Drop unused libraries and pare others down to the features you need.</span></td>
+                            </tr>
+                        </table>
+                    </section>
                 </section>
                 <section id="ng-nativescript" data-background-color="#315FBE">
                     <h3>Angular + NativeScript</h3>
@@ -483,7 +526,7 @@ export class AppModule { }</code></pre>
 
 		<script>
 		 // More info about config & dependencies:
-		        // - https://github.com/hakimel/reveal.js#configuration
+		 // - https://github.com/hakimel/reveal.js#configuration
 		 // - https://github.com/hakimel/reveal.js#dependencies
 		 Reveal.initialize({
              history: true,
@@ -494,7 +537,8 @@ export class AppModule { }</code></pre>
 				 { src: 'plugin/markdown/markdown.js' },
 				 { src: 'plugin/notes/notes.js', async: true },
 				 { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-			 ]
+			 ],
+             slideNumber: 'c/t'
 		 });
 		</script>
 	</body>
