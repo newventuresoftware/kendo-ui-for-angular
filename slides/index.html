@@ -26,8 +26,10 @@
 		<div class="reveal">
 			<div class="slides">
 				<section id="intro" data-background="./img/telerik-bg.jpg">
+                    <div>
+                        <img alt="" src="./img/nvs-logo.svg" class="no-border" />
+                    </div>
                     <h2>Kendo UI for Angular</h2>
-                    <p>Denis Kyashif @ New Venture Software</p>
                 </section>
                 <section id="speaker-info" data-background="./img/telerik-bg.jpg">
                     <div class="speaker-img-container">
@@ -59,6 +61,9 @@
                         <li class="fragment">Q&A</li>
                     </ul>
                 </section>
+                <section id="tools">
+                    <h4 class="text-right">Tools that we need</h4>
+                </section>
                 <!-- TypeScript -->
                 <section>
                     <section id="typescript" data-background="./img/type-script-bg.jpeg" data-background-transition="zoom"></section>
@@ -66,21 +71,33 @@
                         <p>A strict syntactical superset of JavaScript. <br/>Adds optional static typing to the language.</p>
                         <img src="./img/typescript-venn.png" class="no-border" width="300" />
                     </section>
-                    <section id="ts-benefits" data-background="./img/telerik-bg.jpg">
+                    <section id="ts-summary" data-background="./img/ts.png" class="color-white">
+                        <h3>Language Features</h3>
+                    </section>
+                    <section data-background="./img/ts.png" class="color-white">
+                        <h4 class="text-right">Language Features</h4>
+                        <h3>Static Type System</h3>
 					    <blockquote cite="http://ttendency.cs.ucl.ac.uk/projects/type_study/documents/type_study.pdf">
 						    &ldquo;Strongly typed languages reduce bugs by 15%.&rdquo;
 					    </blockquote>
                     </section>
-                    <section id="ts-summary" data-background="./img/ts.png" class="color-white">
-                        <h3>Language Features</h3>
-                        <ul>
-                            <li class="fragment fadein">Static Type System</li>
-                            <li class="fragment fadein">Classes</li>
-                            <li class="fragment fadein">Interfaces</li>
-                            <li class="fragment fadein">Generics</li>
-                            <li class="fragment fadein">Modules</li>
-                            <li class="fragment fadein">ES Next</li>
-                        </ul>
+                    <section data-background="./img/ts.png" class="color-white">
+                        <h3>Classes</h3>
+                    </section>
+                    <section data-background="./img/ts.png" class="color-white">
+                        <h3>Interfaces</h3>
+                    </section>
+                    <section data-background="./img/ts.png" class="color-white">
+                        <h3>Generics</h3>
+                    </section>
+                    <section data-background="./img/ts.png" class="color-white">
+                        <h3>Modules</h3>
+                        <p>
+                            <em>import / export</em>
+                        </p>
+                    </section>
+                    <section data-background="./img/ts.png" class="color-white">
+                        <h3>EcmaScript Next</h3>
                     </section>
                 </section>
                 <!-- Angular -->
@@ -111,7 +128,7 @@
                         <img src="./img/configs-meme.jpg" />
                     </section>
                     <section>
-                        <p><span>Angular solves this problem.</span></p>
+                        <p><span>Angular solves this problem!</span></p>
                         <img width="350" src="./img/frodo.jpeg" class="fragment" />
                     </section>
                     <section id="ng-cli" data-background-color="#315FBE">
@@ -331,7 +348,7 @@ export class AppModule { }</code></pre>
                     </section>
                     <section id="services-demo">
                         <h3>Live Demo</h3>
-                        <p>Working with Directives and Pipes.</p>
+                        <p>Services and DI.</p>
                     </section>
                     <section id="ng-routing">
                         <h3>Routing in Angular</h3>
@@ -403,29 +420,6 @@ export class AppModule { }</code></pre>
                             <span class="component-only">Component Only</span></small>
                         </p>
                     </section>
-                    <section id="ng-tooling" data-background-color="#353334">
-                        <div class="col col-left">
-                            <h3>Tooling</h3>
-                            <ul>
-                                <li class="fragment">Ahead-Of-Time Compiler</li>
-                                <li class="fragment">Module Loader</li>
-                                <li class="fragment">
-                                    Testing
-                                    <ul>
-                                        <li>Unit testing</li>
-                                        <li>e2e testing</li>
-                                        <li>Code Coverage</li>
-                                    </ul>
-                                </li>
-                                <li class="fragment">Bundler (Tree Shaking)</li>
-                                <li class="fragment">Linter (TypeScript and CSS)</li>
-                                <li class="fragment">Minifier</li>
-                            </ul>
-                        </div>
-                        <div class="col col-right">
-                            <img alt="" src="./img/ng-logo.png" class="no-border bg-transparent" width="300" />
-                        </div>                        
-                    </section>
                 </section>
                 <!-- Kendo -->
                 <section>
@@ -458,10 +452,6 @@ export class AppModule { }</code></pre>
                         <p>Kendo UI for Angular</p>
                     </section>
                 </section>
-                <section id="code-quality" data-background-color="#000">
-                    <h3>Ensuring Code Quality</h3>
-                    <p style="background: #000" class="color-white"><code>>_ ng lint</code></p>
-                </section>
                 <!-- Deployment -->
                 <section>
                     <section id="deployment" data-background="/img/rocket-launch-day-illustration.png" class="color-black">
@@ -471,6 +461,29 @@ export class AppModule { }</code></pre>
                     <section>
                         <p class="color-white"><code class="bash" style="background: black">ng build [--prod]</code></p>
                         <p>Publish the contents of the generated <code style="color: blue">dist/</code> folder to a web server.</p>
+                    </section>
+                    <section id="ng-tooling" data-background-color="#353334">
+                        <div class="col col-left">
+                            <h3>Tooling</h3>
+                            <ul>
+                                <li class="fragment">Ahead-Of-Time Compiler</li>
+                                <li class="fragment">Module Loader</li>
+                                <li class="fragment">
+                                    Testing
+                                    <ul>
+                                        <li>Unit testing</li>
+                                        <li>e2e testing</li>
+                                        <li>Code Coverage</li>
+                                    </ul>
+                                </li>
+                                <li class="fragment">Bundler (Tree Shaking)</li>
+                                <li class="fragment">Linter (TypeScript and CSS)</li>
+                                <li class="fragment">Minifier</li>
+                            </ul>
+                        </div>
+                        <div class="col col-right">
+                            <img alt="" src="./img/ng-logo.png" class="no-border bg-transparent" width="300" />
+                        </div>                        
                     </section>
                     <section id="ng-build-prod">
                         <p class="color-white"><code class="bash" style="background: black">ng build --prod</code></p>
@@ -505,17 +518,23 @@ export class AppModule { }</code></pre>
                             </tr>
                         </table>
                     </section>
-                </section>
-                <section id="ng-nativescript" data-background-color="#315FBE">
-                    <h3>Angular + NativeScript</h3>
-                    <img alt="" src="./img/ng-nativescript.png" class="bg-transparent no-border" />
+                    <section id="code-quality" data-background-color="#000">
+                        <h3>Ensuring Code Quality</h3>
+                        <p style="background: #000" class="color-white"><code>>_ ng lint</code></p>
+                    </section>
+                    <section id="ng-nativescript" data-background-color="#315FBE">
+                        <h3>Angular + NativeScript</h3>
+                        <img alt="" src="./img/ng-nativescript.png" class="bg-transparent no-border" />
+                    </section>
                 </section>
                 <section id="learning-resources" data-background="./img/school-board.jpg">
                     <h3 class="color-white"><span>Learning Resources</span></h3>
                     <ul style="list-style-type: none">
                         <li><a href="https://angular.io/docs">angular.io/docs</a></li>
+                        <li><a href="https://angular.io/resources">angular.io/resources</a></li>
                         <li><a href="http://www.telerik.com/kendo-angular-ui/">telerik.com/kendo-angular-ui/</a></li>
                         <li><a href="https://www.typescriptlang.org/docs/home.html">typescriptlang.org/docs/home.html</a></li>
+                        <li><a href="https://angular.io/guide/styleguide">angular.io/guide/styleguide</a></li>
                     </ul>
                 </section>
                 <section id="questions">
@@ -524,11 +543,12 @@ export class AppModule { }</code></pre>
                 </section>
 			</div>
             <section class="reveal-shared">
-		        <section class="nvs-logo-container">
+		        <div class="nvs-logo-container">
 		            <a href="http://www.newventuresoftware.com/" target="_blank">
 			            <img class="no-border" src="./img/nvs-logo.svg" width="150"/>
                     </a>
-		        </section>
+		        </div>
+                <div class="nvs-website-bar"><span class="nvs-website-text brackets">www.newventuresoftware.com</span></div>
 	        </section>
 		</div>
 

@@ -1,6 +1,61 @@
+@font-face {
+	font-family: "Dax-Bold";
+	src: url("./../fonts/DaxComp-Bold.ttf");
+}
+
+h1:before, h2:before, h3:before, h4:before {
+    content: "{";
+    color: #4DBEA1;
+}
+
+h1:after, h2:after, h3:after, h4:after {
+    content: "}";
+    color: #4DBEA1;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: "Dax-Bold";
+}
+
+.reveal .nvs-website-bar {
+    background-color: #4dbea1;
+    color: #fff;
+    line-height: 0.6em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0.5% 0 1% 10px;
+    font-size: 0.5em;
+}
+
+.reveal .nvs-website-bar .nvs-website-text {
+    /* font-size: 0.6em; */
+    font-weight: bold;
+}
+
+.brackets:before {
+    content: "{";
+}
+
+.brackets:after {
+    content: "}";
+}
+
 .reveal .no-border{
     border: 0;
     box-shadow: none;
+}
+
+.reveal .bg-transparent {
+    background: transparent;
+}
+
+.reveal .text-right {
+    text-align: right;
+}
+
+.reveal .text-left {
+    text-align: left;
 }
 
 .reveal .nvs-logo-container {
@@ -35,10 +90,7 @@
     color: green;
 }
 
-.reveal .bg-transparent {
-    background: transparent;
-}
-
+/* -Presentation Specific Styles */
 .reveal .col {
     display: inline-block;
 }
@@ -46,14 +98,6 @@
 .reveal .col-right {
     vertical-align: top;
     padding-top: 10%;
-}
-
-.reveal .text-right {
-    text-align: right;
-}
-
-.reveal .text-left {
-    text-align: left;
 }
 
 #ng-lifecycle-hooks .components-and-directives, #ng-lifecycle-hooks table tr {
