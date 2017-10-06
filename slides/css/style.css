@@ -3,17 +3,17 @@
 	src: url("./../fonts/DaxComp-Bold.ttf");
 }
 
-h1:before, h2:before, h3:before, h4:before {
+h1:before, h2:before, h3:before, h4:before, h5:before {
     content: "{";
     color: #4DBEA1;
 }
 
-h1:after, h2:after, h3:after, h4:after {
+h1:after, h2:after, h3:after, h4:after, h5:after {
     content: "}";
     color: #4DBEA1;
 }
 
-.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5 {
     font-family: "Dax-Bold";
 }
 
@@ -24,12 +24,11 @@ h1:after, h2:after, h3:after, h4:after {
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 0.5% 0 1% 10px;
+    padding: 0.5% 0 0.5% 0.5%;
     font-size: 0.5em;
 }
 
 .reveal .nvs-website-bar .nvs-website-text {
-    /* font-size: 0.6em; */
     font-weight: bold;
 }
 
@@ -100,6 +99,18 @@ h1:after, h2:after, h3:after, h4:after {
     padding-top: 10%;
 }
 
+#intro .nvs-logo-container {
+    margin-bottom: 3%;
+}
+
+#intro .title {
+    margin-bottom: 0;
+}
+
+#intro .kendo-logo {
+    margin-top: 0;
+}
+
 #ng-lifecycle-hooks .components-and-directives, #ng-lifecycle-hooks table tr {
     background-color: #ef5770;
     color: white;    
@@ -115,6 +126,11 @@ h1:after, h2:after, h3:after, h4:after {
     color: black;
 }
 
+#deployment h2 {
+    color: #fff;
+}
+
 #learning-resources a {
     color: lightblue;
 }
+
