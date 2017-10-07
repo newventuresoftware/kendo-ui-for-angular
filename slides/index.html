@@ -64,23 +64,78 @@
                 </section>
                 <section id="tools">
                     <h4 class="text-right">Tools that we need</h4>
+                    <dl>
+                        <dt>NodeJS:</dt>
+                        <dd><a href="https://nodejs.org/en/download/current/"><em>https://nodejs.org/en/download/current/</em></a></dd>
+                        <dt>IDE/Text Editor</dt>
+                        <dd><em>Visual Studio Code, WebStorm, Sublime Text etc.</em></dd>
+                    </dl>
                 </section>
                 <!-- TypeScript -->
                 <section>
                     <section id="typescript" data-background="./img/type-script-bg.jpeg" data-background-transition="zoom"></section>
+                    <section data-background-color="#007ACC">
+                        <h4 class="text-right">What is TypeScript?</h4>
+                        <ul>
+                            <li>Language created by <code>Microsoft</code>.</li>
+                            <li>Has optional <code>static typing</code>.</li>
+                            <li>Inherits concepts from <code>C#</code>.</li>
+                            <li>Can use type definitions for <code>intellisense</code>.</li>
+                            <li>Can use <code>JavaScript</code> libraries.</li>
+                            <li><strong>Compiles to JavaScript</strong>.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <p><em>It's always better to catch errors at compile time rather that at runtime.</em></p>
+                    </section>
+                    <section data-background="#000">
+                        <img alt="" src="./img/corleone-runtime.jpg" width="400" />
+                    </section>
+                    <section data-background-color="#007ACC">
+                        <h4 class="text-right">Benefits of TypeScript</h4>
+                        <ul>
+                            <li>Due to <code>static typing</code>, it's more <strong>predictable</strong>.</li>
+                            <li>Due to <code>modules, namespaces and stronger OOP</code>, it <strong>scales better</strong> for larger apps.</li>
+                            <li>Due to <code>compilation step</code>, some errors are caught <strong>compile-time</strong>, not run-time.</li>
+                        </ul>
+                    </section>
                     <section id="typescript-venn">
-                        <p>A strict syntactical superset of JavaScript. <br/>Adds optional static typing to the language.</p>
                         <img src="./img/typescript-venn.png" class="no-border" width="300" />
+                    </section>
+                    <section>
+                        <h4 class="text-right">Installing TypeScript</h4>
+                        <div style="height: 50px"></div>
+                        <p>Using the Node Package Manager.</p>
+                        <pre><code class="bash">npm install --global typescript</code></pre>
+                        <div style="height: 50px"></div>
+                    </section>
+                    <section>
+                        <h4 class="text-right">Compiling TypeScript</h4>
+                        <p>TypeScript is written in .ts files, which can't be used directly in the browser.<br/>It need to be translated to vanilla .js first.</p>
+                        <pre><code class="bash">tsc main.ts</code></pre>
+                    </section>
+                    <section>
+                        <h4 class="text-right">tsconfig.json</h4>
+                        <p>Specifies the way TS is compiled.<br/>(autogeneratable with tsc --init)</p>
+                        <pre><code class="json">{
+  "compilerOptions": {
+    "target": "es5", // Sets the output JS's version
+    "module": "commonjs", // Sets the module loader
+    "outDir": "dist", // Sets output JS files' location
+    "sourceMap": true, // Allows debugging
+    "noEmitOnError": true // Do not compile if errors
+  }
+}</code></pre>
                     </section>
                     <section id="ts-summary" data-background="./img/ts.png" class="color-white">
                         <h3>Language Features</h3>
                     </section>
-                    <section data-background="./img/ts.png" class="color-white">
-                        <h5 class="text-right">Language Features</h5>
+                    <section data-background="#000">
+                        <img alt="" src="./img/montanta-type-checker.jpg-large" width="500" class="no-border" />
+                    </section>
+                    <section data-background-color="#007ACC" class="color-white">
                         <h3>Static Type System</h3>
-					    <blockquote cite="http://ttendency.cs.ucl.ac.uk/projects/type_study/documents/type_study.pdf">
-						    &ldquo;Strongly typed languages reduce bugs by 15%.&rdquo;
-					    </blockquote>
+                        <p><em>&ldquo;Strongly typed languages reduce bugs by 15%.&rdquo;</em></p>
                     </section>
                     <section data-background="./img/ts.png" class="color-white">
                         <h3>Classes</h3>
@@ -90,6 +145,9 @@
                     </section>
                     <section data-background="./img/ts.png" class="color-white">
                         <h3>Generics</h3>
+                        <p>
+                            <em>Class&lt;T&gt;</em>
+                        </p>
                     </section>
                     <section data-background="./img/ts.png" class="color-white">
                         <h3>Modules</h3>
@@ -125,7 +183,7 @@
                         <p><em>With all the front-end build tools, setting up a project can be tedious.</em></p>
                         <img alt="" src="./img/front-end-build-tools.png" class="no-border" width="500" />
                     </section>
-                    <section>
+                    <section data-background-color="#000">
                         <img src="./img/configs-meme.jpg" />
                     </section>
                     <section>
@@ -157,7 +215,7 @@
                     </section>
                     <section id="ng-cli-demo">
                         <h3>Live Demo</h3>
-                        <p>Setting Up a project with the Angular CLI</p>
+                        <p>Setting up a project with the Angular CLI</p>
                     </section>
                     <section id="ng-cli-exercise">
                         <h4 class="text-right">Angular CLI</h4>
@@ -205,7 +263,7 @@
                     </section>
                     <section id="ng-components-demo">
                         <h3>Live Demo</h3>
-                        <p>Creating Angular Components.</p>
+                        <p>Creating Angular Components</p>
                     </section>
                     <section id="ng-directives" data-background-color="#315FBE">
                         <h3>Pipes & Directives</h3>
@@ -247,7 +305,7 @@
                     </section>
                     <section id="ng-directives-pipes-demo">
                         <h3>Live Demo</h3>
-                        <p>Working with Directives and Pipes.</p>
+                        <p>Working with Directives and Pipes</p>
                     </section>
                     <section id="ng-modules" data-background="./img/telerik-bg.jpg">
                         <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -40%; right: -10%;" />
@@ -349,7 +407,7 @@ export class AppModule { }</code></pre>
                     </section>
                     <section id="services-demo">
                         <h3>Live Demo</h3>
-                        <p>Services and DI.</p>
+                        <p>Services and DI</p>
                     </section>
                     <section id="ng-routing">
                         <h3>Routing in Angular</h3>
@@ -367,7 +425,7 @@ export class AppModule { }</code></pre>
                     </section>
                     <section id="ng-lifecycle">
                         <h3>Angular Lifecycle</h3>
-                        <p>ngOnInit()</p>
+                        <p><em>ngOnInit()</em></p>
                         <img class="no-border" width="300" src="./img/lifecycle.jpg" />
                     </section>
                     <section id="ng-lifecycle-about" data-background-color="#315FBE">
@@ -439,6 +497,12 @@ export class AppModule { }</code></pre>
                             <li>Offers Unlimited Support.</li>
                             <li>Open Source.</li>
                         </ul>
+                    </section>
+                    <section>
+                        <h4 class="text-right">Installation</h4>
+                        <p>Kendo UI for Angular components are distributed via npm.</p>
+                        <pre><code class="bash">npm install --save [kendo-component]</code></pre>
+                        <p>Every component represents a separate Angular module.</p>
                     </section>
                     <section>
                         <h3>Components in Action</h3>
@@ -518,6 +582,10 @@ export class AppModule { }</code></pre>
                                 <td><span class="fragment">Drop unused libraries and pare others down to the features you need.</span></td>
                             </tr>
                         </table>
+                    </section>
+                    <section id="debugging">
+                        <h3>Debugging</h3>
+                        <img alt="" src="./img/Debug.jpg" class="no-border" width="300" />
                     </section>
                     <section id="code-quality" data-background-color="#000">
                         <h3>Ensuring Code Quality</h3>
