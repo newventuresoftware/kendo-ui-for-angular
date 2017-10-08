@@ -1,0 +1,15 @@
+<div class="container">
+    <h3>Regional Sales Status: {{selectedCountry}}</h3>
+    <div>
+        <kendo-dropdownlist [data]="countries" [value]="selectedCountry"
+            (selectionChange)="handleSelectedCountryChange($event)"></kendo-dropdownlist>
+    </div>
+    <kendo-chart [categoryAxis]="{ categories: categories }">
+        <kendo-chart-title text="Top Selling Products"></kendo-chart-title>
+        <kendo-chart-legend position="bottom" orientation="horizontal"></kendo-chart-legend>
+        <kendo-chart-tooltip format="Quantity {0}"></kendo-chart-tooltip>
+        <kendo-chart-series>
+            <kendo-chart-series-item *ngFor="let item of series" [data]="item.data" [name]="item.name" type="line" style="smooth"></kendo-chart-series-item>
+        </kendo-chart-series>
+    </kendo-chart>
+</div>
