@@ -17,9 +17,16 @@ export class TopSellingProductsService {
             })
     }
 
-    getProductsForCountry(country: string): Observable<any> {
+    getProductsForCountry(country: string, from: Date = new Date(1900, 1, 1), to: Date = new Date()): Observable<any> {
         return this.getProducts()
-            .map(ps => ps.filter(p => p.Country === country))
+            .map(ps => ps.filter(p => {
+                if (p.Country === country) {
+                    const date = new Date(p.Date);
+                    return from <= date && date <= to;
+                }
+
+                return false;
+            }))
             .map(this.mapData);
     }
 
@@ -32,10 +39,10 @@ export class TopSellingProductsService {
         const grouped = {};
         const categories = [];
 
-        for(let product of products) {
+        for (let product of products) {
             let name = product.ProductName;
 
-            if(!grouped[name]) {
+            if (!grouped[name]) {
                 grouped[name] = { name: name, data: [] };
             }
 

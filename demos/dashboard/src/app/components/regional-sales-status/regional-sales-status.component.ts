@@ -10,6 +10,9 @@ export class RegionalSalesStatusComponent implements OnInit {
     selectedCountry = 'USA';
     countries: string[] = [];
 
+    fromDate: Date;
+    toDate: Date;
+
     series: any[] = [];
     categories: number[] = [];
 
@@ -21,15 +24,20 @@ export class RegionalSalesStatusComponent implements OnInit {
                 this.countries = countries;
             });
 
-        this.populateChart(this.selectedCountry);
+        this.populateChart(this.selectedCountry, this.fromDate, this.toDate);
     }
 
     handleSelectedCountryChange(country: string) {
-        this.populateChart(country);
+        this.selectedCountry = country;
+        this.populateChart(this.selectedCountry, this.fromDate, this.toDate);
     }
 
-    private populateChart(country) {
-        this.productService.getProductsForCountry(country)
+    handleDateRangeChange(date: Date) {
+        this.populateChart(this.selectedCountry, this.fromDate, this.toDate);
+    }
+
+    private populateChart(country, fromDate, toDate) {
+        this.productService.getProductsForCountry(country, fromDate, toDate)
             .subscribe(data => {
                 this.series = data.series;
                 this.categories = data.categories;

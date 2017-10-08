@@ -1,8 +1,11 @@
 <div class="container">
-    <h3>Regional Sales Status: {{selectedCountry}}</h3>
+    <h3>Regional Sales Status: <strong>{{selectedCountry}}</strong></h3>
     <div>
-        <kendo-dropdownlist [data]="countries" [value]="selectedCountry"
-            (selectionChange)="handleSelectedCountryChange($event)"></kendo-dropdownlist>
+        <kendo-dropdownlist [data]="countries" [value]="selectedCountry" (selectionChange)="handleSelectedCountryChange($event)"></kendo-dropdownlist>
+        <label for="fromDate">From: </label>
+        <kendo-datepicker [(value)]="fromDate" (valueChange)="handleDateRangeChange($event)"></kendo-datepicker>
+        <label for="toDate">To: </label>
+        <kendo-datepicker [(value)]="toDate" (valueChange)="handleDateRangeChange($event)"></kendo-datepicker>
     </div>
     <kendo-chart [categoryAxis]="{ categories: categories }">
         <kendo-chart-title text="Top Selling Products"></kendo-chart-title>

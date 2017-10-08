@@ -9,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import 'hammerjs';
 import { ChartsModule } from '@progress/kendo-angular-charts';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 
 // Components
 import { AppComponent } from './app.component';
@@ -38,7 +39,8 @@ const appRoutes: Routes = [
         HttpModule,
         RouterModule.forRoot(appRoutes),
         ChartsModule,
-        DropDownsModule
+        DropDownsModule,
+        DateInputsModule
     ],
     providers: [
         TopSellingProductsService
