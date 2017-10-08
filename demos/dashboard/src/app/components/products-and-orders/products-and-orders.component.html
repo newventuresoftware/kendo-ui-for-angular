@@ -1,3 +1,22 @@
 <div class="container">
-  <h3>PRODUCTS AND ORDERS</h3>
+    <h3>Products and Orders</h3>
+    <div>
+        <kendo-grid [data]="orders" [height]="410" [selectable]="true" (selectionChange)="onGridSelectionChange($event)" [kendoGridSelectBy]="'OrderID'">
+            <kendo-grid-column field="OrderID" title="ID" width="75"></kendo-grid-column>
+            <kendo-grid-column field="OrderDate" title="Order Date" format="{0:MM/dd/yyyy}"></kendo-grid-column>
+            <kendo-grid-column field="CustomerID" title="Customer"></kendo-grid-column>
+            <kendo-grid-column field="ShipName" title="Ship Name"></kendo-grid-column>
+            <kendo-grid-column field="ShipCity" title="City"></kendo-grid-column>
+            <kendo-grid-column field="ShipCountry" title="Country"></kendo-grid-column>
+        </kendo-grid>
+    </div>
+    <kendo-dialog title="Order Details" *ngIf="orderDetailsDialogOpened" (close)="closeOrderDetailsDialog()">
+        <h4>Order #{{selectedOrderInfo.OrderID}}</h4>
+        <ul>
+            <li *ngFor="let product of selectedOrderInfo.OrderDetails">
+                <img [src]="'/assets/data/Products/' + product.ProductID + '.jpg'" width="75">
+                Quantity: {{product.Quantity}} | UnitPrice: {{product.UnitPrice}}
+            </li>
+        </ul>
+    </kendo-dialog>
 </div>

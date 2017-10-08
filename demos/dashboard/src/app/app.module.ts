@@ -10,6 +10,8 @@ import 'hammerjs';
 import { ChartsModule } from '@progress/kendo-angular-charts';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
+import { GridModule } from '@progress/kendo-angular-grid';
+import { DialogModule } from '@progress/kendo-angular-dialog';
 
 // Components
 import { AppComponent } from './app.component';
@@ -19,8 +21,10 @@ import { TeamEfficiencyComponent } from './components/team-efficiency/team-effic
 
 // Services
 import { TopSellingProductsService } from './services/top-selling-products.service';
+import { ProductsOrdersService } from './services/products-orders.service';
 
 const appRoutes: Routes = [
+    { path: '', redirectTo: '/regional-sales-status', pathMatch: 'full' },
     { path: 'regional-sales-status', component: RegionalSalesStatusComponent },
     { path: 'products-and-orders', component: ProductsAndOrdersComponent },
     { path: 'team-efficiency', component: TeamEfficiencyComponent }
@@ -40,10 +44,13 @@ const appRoutes: Routes = [
         RouterModule.forRoot(appRoutes),
         ChartsModule,
         DropDownsModule,
-        DateInputsModule
+        DateInputsModule,
+        GridModule,
+        DialogModule
     ],
     providers: [
-        TopSellingProductsService
+        TopSellingProductsService,
+        ProductsOrdersService
     ],
     bootstrap: [AppComponent]
 })

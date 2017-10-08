@@ -9,12 +9,7 @@ export class TopSellingProductsService {
     constructor(private http: Http) { }
 
     getCountries(): Observable<string[]> {
-        return this.getProducts()
-            .map(ps => {
-                const countries = new Set<string>();
-                ps.forEach(p => countries.add(p.Country));
-                return Array.from(countries).sort();
-            })
+        return this.http.get('/assets/data/countries.json').map(res => res.json());
     }
 
     getProductsForCountry(country: string, from: Date = new Date(1900, 1, 1), to: Date = new Date()): Observable<any> {
