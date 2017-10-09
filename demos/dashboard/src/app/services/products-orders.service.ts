@@ -10,11 +10,15 @@ export class ProductsOrdersService {
     getOrders(): Observable<any[]> {
         return this.http.get('/assets/data/orders.json').map(res => res.json())
             .map(orders => {
-                for (let order of orders) {
+                const filtered = [];
+
+                for (let i = 0; i < orders.length; i += 1) {
+                    const order = orders[i];
                     order.OrderDate = this.parseMicrosoftJSONDateString(order.OrderDate);
+                    filtered.push(order);
                 }
 
-                return orders;
+                return filtered;
             });
     }
 

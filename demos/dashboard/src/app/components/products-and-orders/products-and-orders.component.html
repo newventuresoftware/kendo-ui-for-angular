@@ -1,13 +1,37 @@
 <div class="container">
     <h3>Products and Orders</h3>
     <div style="position: relative">
-        <kendo-grid [data]="orders" [height]="410" [selectable]="true" (selectionChange)="onGridSelectionChange($event)" [kendoGridSelectBy]="'OrderID'">
-            <kendo-grid-column field="OrderID" title="ID" width="75"></kendo-grid-column>
-            <kendo-grid-column field="OrderDate" title="Order Date" format="{0:MM/dd/yyyy}"></kendo-grid-column>
+        <!-- <kendo-grid [data]="orders" [height]="600"
+            [sortable]="true" [sort]="state.sort" (sortChange)="onGridSortChange($event)"
+            [pageable]="true" [skip]="state.skip" [pageSize]="state.take" (pageChange)="onGridPageChange($event)"
+            [groupable]="true" [group]="state.group" (groupChange)="onGridGroupChange($event)"
+            [filterable]="true" [filter]="state.filter" (filterChange)="onGridFilterChange($event)"
+            [selectable]="true" (selectionChange)="onGridSelectionChange($event)" [kendoGridSelectBy]="'OrderID'"> -->
+        <kendo-grid [data]="orders" [height]="600"
+            [sortable]="true" [sort]="state.sort"
+            [pageable]="true" [skip]="state.skip" [pageSize]="state.take"
+            [groupable]="true" [group]="state.group"
+            [filterable]="true" [filter]="state.filter" (dataStateChange)="onGridDataStateChange($event)"
+            [selectable]="true" (selectionChange)="onGridSelectionChange($event)" [kendoGridSelectBy]="'OrderID'">
+
+            <kendo-grid-column field="OrderID" title="ID" filter="numeric"></kendo-grid-column>
+            <kendo-grid-column field="OrderDate" title="Order Date" format="{0:MM/dd/yyyy}" filter="date"></kendo-grid-column>
             <kendo-grid-column field="CustomerID" title="Customer"></kendo-grid-column>
             <kendo-grid-column field="ShipName" title="Ship Name"></kendo-grid-column>
             <kendo-grid-column field="ShipCity" title="City"></kendo-grid-column>
             <kendo-grid-column field="ShipCountry" title="Country"></kendo-grid-column>
+            <kendo-grid-command-column title="Command" width="200">
+                <ng-template kendoGridCellTemplate let-isNew="isNew">
+                    <!-- edit the command directive, will be visible when not in edit mode -->
+                    <button kendoGridEditCommand class="k-primary">Edit</button>
+                    <!-- remove the command directive, will be visible when not in edit mode -->
+                    <button kendoGridRemoveCommand>Remove</button>
+                    <!-- save the command directive, will be visible when in edit mode -->
+                    <button kendoGridSaveCommand>{{ isNew ? 'Add' : 'Update' }}</button>
+                    <!-- cancel the command directive, will be visible when in edit mode -->
+                    <button kendoGridCancelCommand>{{ isNew ? 'Discard changes' : 'Cancel' }}</button>
+                </ng-template>
+             </kendo-grid-command-column>
         </kendo-grid>
         <div *ngIf="isLoading" class="spinner-wrapper">
             <span class="k-icon k-i-loading spinner"></span>

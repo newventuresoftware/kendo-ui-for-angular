@@ -1,6 +1,7 @@
 import { ProductsOrdersService } from '../../services/products-orders.service';
 import { Component, OnInit } from '@angular/core';
-import { SelectionEvent, GridDataResult } from '@progress/kendo-angular-grid';
+import { SelectionEvent, GridDataResult, PageChangeEvent, DataStateChangeEvent } from '@progress/kendo-angular-grid';
+import { SortDescriptor, orderBy, State, GroupDescriptor, process } from '@progress/kendo-data-query';
 import 'rxjs/add/operator/finally';
 
 @Component({
@@ -10,20 +11,32 @@ import 'rxjs/add/operator/finally';
 })
 export class ProductsAndOrdersComponent implements OnInit {
 
-    orders = [];
+    orders: GridDataResult = { data: [], total: 0 };
     selectedOrderInfo: any = {};
 
     orderDetailsDialogOpened = false;
     isLoading = false;
 
+    state: State = {
+        sort: [],
+        skip: 0,
+        take: 20,
+        group: [],
+    };
+
     constructor(private dataService: ProductsOrdersService) { }
 
     ngOnInit() {
+        this.loadGridData();
+    }
+
+    loadGridData() {
         this.isLoading = true;
         this.dataService.getOrders()
             .finally(() => this.isLoading = false)
-            .subscribe(data => this.orders = data);
-
+            .subscribe(data => {
+                this.orders = process(data, this.state);
+            });
     }
 
     onGridSelectionChange(selection: SelectionEvent) {
@@ -36,6 +49,31 @@ export class ProductsAndOrdersComponent implements OnInit {
                 this.openOrderDetailsDialog();
             });
     }
+
+    onGridDataStateChange(state: State) {
+        this.state = state;
+        this.loadGridData();
+    }
+
+    // onGridSortChange(sort: SortDescriptor[]) {
+    //     this.state.sort = sort;
+    //     this.loadGridData();
+    // }
+
+    // onGridPageChange(event: PageChangeEvent) {
+    //     this.state.skip = event.skip;
+    //     this.loadGridData();
+    // }
+
+    // onGridGroupChange(group: GroupDescriptor[]) {
+    //     this.state.group = group;
+    //     this.loadGridData();
+    // }
+
+    // onGridFilterChange(filter) {2
+    //     this.state.filter = filter;
+    //     this.loadGridData();
+    // }
 
     openOrderDetailsDialog() {
         this.orderDetailsDialogOpened = true;
