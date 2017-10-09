@@ -31,13 +31,15 @@ export class TopSellingProductsService {
                 let countrySales = 0;
                 let allSales = 0;
 
-
                 for (let order of orders) {
                     const date = this.parseMicrosoftJSONDateString(order.orderDate);
-                    allSales += order.price;
 
-                    if (order.country === country && (from <= date && date <= to)) {
-                        countrySales += order.price;
+                    if (from <= date && date <= to) {
+                        allSales += order.price;
+
+                        if (order.country === country && (from <= date && date <= to)) {
+                            countrySales += order.price;
+                        }
                     }
                 }
 

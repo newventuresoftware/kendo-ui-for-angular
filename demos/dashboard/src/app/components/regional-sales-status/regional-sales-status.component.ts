@@ -11,8 +11,8 @@ export class RegionalSalesStatusComponent implements OnInit {
     selectedCountryRevenue: number = 0;
     countries: string[] = [];
 
-    fromDate: Date;
-    toDate: Date;
+    fromDate: Date = new Date(1996, 1);
+    toDate: Date = new Date(1998, 12);
 
     series: any[] = [];
     categories: number[] = [];
@@ -43,7 +43,7 @@ export class RegionalSalesStatusComponent implements OnInit {
     }
 
     private populatePieChart(country, fromDate, toDate) {
-        this.productService.getCountrySalesInfo(this.selectedCountry)
+        this.productService.getCountrySalesInfo(this.selectedCountry, fromDate, toDate)
             .subscribe(data => {
                 this.countryMarketShare = data;
                 this.selectedCountryRevenue = this.countryMarketShare.find(x => x.country === country).sales;
