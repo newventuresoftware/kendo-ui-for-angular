@@ -14,24 +14,17 @@
             [filterable]="true" [filter]="state.filter" (dataStateChange)="onGridDataStateChange($event)"
             [selectable]="true" (selectionChange)="onGridSelectionChange($event)" [kendoGridSelectBy]="'OrderID'">
 
+            <ng-template kendoGridToolbarTemplate>
+                <button type="button" kendoGridExcelCommand><span class="k-icon k-i-file-excel"></span>Export to Excel</button>
+            </ng-template>
             <kendo-grid-column field="OrderID" title="ID" filter="numeric"></kendo-grid-column>
             <kendo-grid-column field="OrderDate" title="Order Date" format="{0:MM/dd/yyyy}" filter="date"></kendo-grid-column>
             <kendo-grid-column field="CustomerID" title="Customer"></kendo-grid-column>
             <kendo-grid-column field="ShipName" title="Ship Name"></kendo-grid-column>
             <kendo-grid-column field="ShipCity" title="City"></kendo-grid-column>
             <kendo-grid-column field="ShipCountry" title="Country"></kendo-grid-column>
-            <kendo-grid-command-column title="Command" width="200">
-                <ng-template kendoGridCellTemplate let-isNew="isNew">
-                    <!-- edit the command directive, will be visible when not in edit mode -->
-                    <button kendoGridEditCommand class="k-primary">Edit</button>
-                    <!-- remove the command directive, will be visible when not in edit mode -->
-                    <button kendoGridRemoveCommand>Remove</button>
-                    <!-- save the command directive, will be visible when in edit mode -->
-                    <button kendoGridSaveCommand>{{ isNew ? 'Add' : 'Update' }}</button>
-                    <!-- cancel the command directive, will be visible when in edit mode -->
-                    <button kendoGridCancelCommand>{{ isNew ? 'Discard changes' : 'Cancel' }}</button>
-                </ng-template>
-             </kendo-grid-command-column>
+
+            <kendo-grid-excel fileName="Orders.xlsx"></kendo-grid-excel>
         </kendo-grid>
         <div *ngIf="isLoading" class="spinner-wrapper">
             <span class="k-icon k-i-loading spinner"></span>

@@ -33,6 +33,6 @@ export class ProductsOrdersService {
     }
 
     private parseMicrosoftJSONDateString(date: string) {
-        return new Date(parseInt(date.substr(6)));
+        return new Date(parseInt(date.substr(6), 10));
     }
 }

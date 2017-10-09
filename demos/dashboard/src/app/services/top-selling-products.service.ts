@@ -25,6 +25,27 @@ export class TopSellingProductsService {
             .map(this.mapData);
     }
 
+    getCountrySalesInfo(country: string, from: Date = new Date(1900, 1, 1), to: Date = new Date()) {
+        return this.http.get('/assets/data/order-details.json').map(res => res.json())
+            .map((orders: any[]) => {
+                const salesInfo = {
+                    country: 0,
+                    all: 0
+                };
+
+                for(let order of orders) {
+                    const date = this.parseMicrosoftJSONDateString(order.orderDate);
+                    salesInfo.all += order.price;
+
+                    if (order.country === country && (from <= date && date <= to)) {
+                        salesInfo.country += order.price;
+                    }
+                }
+
+                return salesInfo;
+            });
+    }
+
     private getProducts(): Observable<any> {
         return this.http.get('/assets/data/top-selling-products.json')
             .map(res => res.json());
@@ -34,8 +55,8 @@ export class TopSellingProductsService {
         const grouped = {};
         const categories = [];
 
-        for (let product of products) {
-            let name = product.ProductName;
+        for (const product of products) {
+            const name = product.ProductName;
 
             if (!grouped[name]) {
                 grouped[name] = { name: name, data: [] };
@@ -48,6 +69,10 @@ export class TopSellingProductsService {
         return {
             series: Object.keys(grouped).map(name => grouped[name]),
             categories
-        }
+        };
+    }
+
+    private parseMicrosoftJSONDateString(date: string) {
+        return new Date(parseInt(date.substr(6), 10));
     }
 }

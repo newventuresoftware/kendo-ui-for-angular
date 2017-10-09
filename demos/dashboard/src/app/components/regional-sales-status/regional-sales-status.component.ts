@@ -16,6 +16,8 @@ export class RegionalSalesStatusComponent implements OnInit {
     series: any[] = [];
     categories: number[] = [];
 
+    countrySalesInfo: any = {};
+
     constructor(private productService: TopSellingProductsService) { }
 
     ngOnInit() {
@@ -25,6 +27,9 @@ export class RegionalSalesStatusComponent implements OnInit {
             });
 
         this.populateChart(this.selectedCountry, this.fromDate, this.toDate);
+
+        this.productService.getCountrySalesInfo(this.selectedCountry)
+            .subscribe(console.log);
     }
 
     handleSelectedCountryChange(country: string) {

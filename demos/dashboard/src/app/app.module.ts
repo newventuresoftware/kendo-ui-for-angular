@@ -10,7 +10,7 @@ import 'hammerjs';
 import { ChartsModule } from '@progress/kendo-angular-charts';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
-import { GridModule } from '@progress/kendo-angular-grid';
+import { GridModule, ExcelModule } from '@progress/kendo-angular-grid';
 import { DialogModule } from '@progress/kendo-angular-dialog';
 
 // Components
@@ -46,7 +46,8 @@ const appRoutes: Routes = [
         DropDownsModule,
         DateInputsModule,
         GridModule,
-        DialogModule
+        DialogModule,
+        ExcelModule
     ],
     providers: [
         TopSellingProductsService,
