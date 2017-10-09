@@ -1,6 +1,7 @@
 import { ProductsOrdersService } from '../../services/products-orders.service';
 import { Component, OnInit } from '@angular/core';
 import { SelectionEvent, GridDataResult } from '@progress/kendo-angular-grid';
+import 'rxjs/add/operator/finally';
 
 @Component({
     selector: 'app-products-and-orders',
@@ -13,11 +14,16 @@ export class ProductsAndOrdersComponent implements OnInit {
     selectedOrderInfo: any = {};
 
     orderDetailsDialogOpened = false;
+    isLoading = false;
 
     constructor(private dataService: ProductsOrdersService) { }
 
     ngOnInit() {
-        this.dataService.getOrders().subscribe(data => this.orders = data);
+        this.isLoading = true;
+        this.dataService.getOrders()
+            .finally(() => this.isLoading = false)
+            .subscribe(data => this.orders = data);
+
     }
 
     onGridSelectionChange(selection: SelectionEvent) {
