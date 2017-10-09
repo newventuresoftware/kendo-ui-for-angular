@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegionalSalesStatusComponent implements OnInit {
     selectedCountry = 'USA';
+    selectedCountryRevenue: number = 0;
     countries: string[] = [];
 
     fromDate: Date;
@@ -16,29 +17,37 @@ export class RegionalSalesStatusComponent implements OnInit {
     series: any[] = [];
     categories: number[] = [];
 
-    countrySalesInfo: any = {};
+    countryMarketShare: any[] = [];
 
     constructor(private productService: TopSellingProductsService) { }
 
     ngOnInit() {
+        this.populatePieChart(this.selectedCountry, this.fromDate, this.toDate);
+        this.populateChart(this.selectedCountry, this.fromDate, this.toDate);
+
         this.productService.getCountries()
             .subscribe(countries => {
                 this.countries = countries;
             });
-
-        this.populateChart(this.selectedCountry, this.fromDate, this.toDate);
-
-        this.productService.getCountrySalesInfo(this.selectedCountry)
-            .subscribe(console.log);
     }
 
     handleSelectedCountryChange(country: string) {
         this.selectedCountry = country;
+        this.populatePieChart(this.selectedCountry, this.fromDate, this.toDate);
         this.populateChart(this.selectedCountry, this.fromDate, this.toDate);
     }
 
     handleDateRangeChange(date: Date) {
+        this.populatePieChart(this.selectedCountry, this.fromDate, this.toDate);
         this.populateChart(this.selectedCountry, this.fromDate, this.toDate);
+    }
+
+    private populatePieChart(country, fromDate, toDate) {
+        this.productService.getCountrySalesInfo(this.selectedCountry)
+            .subscribe(data => {
+                this.countryMarketShare = data;
+                this.selectedCountryRevenue = this.countryMarketShare.find(x => x.country === country).sales;
+            });
     }
 
     private populateChart(country, fromDate, toDate) {

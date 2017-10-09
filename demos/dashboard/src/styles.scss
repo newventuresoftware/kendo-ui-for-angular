@@ -1,5 +1,13 @@
 @import "~@progress/kendo-theme-default/scss/all";
 
+#pie-chart-container {
+    padding: 15px 0;
+
+    .k-chart {
+        height: 225px;
+    }
+}
+
 .spinner-wrapper {
     z-index: 9999;
     width: 100%;

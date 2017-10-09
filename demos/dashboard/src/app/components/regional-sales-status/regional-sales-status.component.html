@@ -1,5 +1,7 @@
 <div class="container">
-    <h3>Regional Sales Status: <strong>{{selectedCountry}}</strong></h3>
+    <h3>Regional Sales Status:
+        <strong>{{selectedCountry}}</strong>
+    </h3>
     <div>
         <kendo-dropdownlist [data]="countries" [value]="selectedCountry" (selectionChange)="handleSelectedCountryChange($event)"></kendo-dropdownlist>
         <label for="fromDate">From: </label>
@@ -7,11 +9,22 @@
         <label for="toDate">To: </label>
         <kendo-datepicker [(value)]="toDate" (valueChange)="handleDateRangeChange($event)"></kendo-datepicker>
     </div>
-    <kendo-chart [categoryAxis]="{ categories: categories }" [title]="{ text: 'Top Selling Products' }">
-        <kendo-chart-legend position="bottom" orientation="horizontal"></kendo-chart-legend>
-        <kendo-chart-tooltip format="Quantity {0}"></kendo-chart-tooltip>
-        <kendo-chart-series>
-            <kendo-chart-series-item *ngFor="let item of series" [data]="item.data" [name]="item.name" type="line" style="smooth"></kendo-chart-series-item>
-        </kendo-chart-series>
-    </kendo-chart>
+    <div>
+        <kendo-chart [categoryAxis]="{ categories: categories }" [title]="{ text: 'Top Selling Products' }">
+            <kendo-chart-legend position="bottom" orientation="horizontal"></kendo-chart-legend>
+            <kendo-chart-tooltip format="Quantity: {0}"></kendo-chart-tooltip>
+            <kendo-chart-series>
+                <kendo-chart-series-item *ngFor="let item of series" [data]="item.data" [name]="item.name" type="line" style="smooth"></kendo-chart-series-item>
+            </kendo-chart-series>
+        </kendo-chart>
+    </div>
+    <div class="" id="pie-chart-container">
+        <kendo-chart [seriesColors]="['#4DBEA1', '#008AD2']">
+            <kendo-chart-legend position="bottom"></kendo-chart-legend>
+            <kendo-chart-tooltip format="Sales: {0:C}"></kendo-chart-tooltip>
+            <kendo-chart-series>
+                <kendo-chart-series-item type="pie" [data]="countryMarketShare" field="sales" categoryField="country"></kendo-chart-series-item>
+            </kendo-chart-series>
+        </kendo-chart>
+    </div>
 </div>

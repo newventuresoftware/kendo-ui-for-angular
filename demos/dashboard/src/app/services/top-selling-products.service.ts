@@ -28,21 +28,23 @@ export class TopSellingProductsService {
     getCountrySalesInfo(country: string, from: Date = new Date(1900, 1, 1), to: Date = new Date()) {
         return this.http.get('/assets/data/order-details.json').map(res => res.json())
             .map((orders: any[]) => {
-                const salesInfo = {
-                    country: 0,
-                    all: 0
-                };
+                let countrySales = 0;
+                let allSales = 0;
 
-                for(let order of orders) {
+
+                for (let order of orders) {
                     const date = this.parseMicrosoftJSONDateString(order.orderDate);
-                    salesInfo.all += order.price;
+                    allSales += order.price;
 
                     if (order.country === country && (from <= date && date <= to)) {
-                        salesInfo.country += order.price;
+                        countrySales += order.price;
                     }
                 }
 
-                return salesInfo;
+                return [
+                    { country: 'All', sales: allSales },
+                    { country: country, sales: countrySales }
+                ];
             });
     }
 
