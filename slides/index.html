@@ -189,7 +189,7 @@
                         <img src="./img/configs-meme.jpg" />
                     </section>
                     <section>
-                        <p><span>Angular solves this problem!</span></p>
+                        <p><span><strong>Angular solves this problem!</strong></span></p>
                         <img width="350" src="./img/frodo.jpeg" class="fragment" />
                     </section>
                     <section id="ng-cli" data-background-color="#315FBE">
@@ -406,6 +406,50 @@ const car = new Car(engine);</code></pre>
 export class AppModule { }</code></pre>
                             <pre><code>platformBrowserDynamic().bootstrapModule(AppModule);</code></pre>
                         </div>
+                    </section>
+                    <!-- <section id="reactive-programming">
+                         <h4 class="text-right">Reactive Programming</h4>
+                         <ul>
+                         <li>Programming with asynchronous data streams</li>
+                         <li>You are able to create data streams of anything</li>
+                         <li>A stream can be used as an input to another one</li>
+                         <li>A stream is a sequence of ongoing events ordered in time.</li>
+                         <li>It emits <strong>three different things</strong><ul>
+                         <li>a value (of some type)</li>
+                         <li>an error</li>
+                         <li>a complete method</li>
+                         </ul>
+                         </li>
+                         </ul>
+                    </section> -->
+                    <!-- <section id="observable-vs-promise">
+                         <table>
+                         <thead>
+                         <tr>
+                         <th style="text-align:center">Observables</th>
+                         <th style="text-align:center">Promise</th>
+                         </tr>
+                         </thead>
+                         <tbody>
+                         <tr>
+                         <td style="text-align:center">Observables handle multiple values over time</td>
+                         <td style="text-align:center">Promises are only called once and will return a single value</td>
+                         </tr>
+                         <tr>
+                         <td style="text-align:center">Observables are cancellable</td>
+                         <td style="text-align:center">Promises are not cancellable</td>
+                         </tr>
+                         <tr>
+                         <td style="text-align:center">Observables are lazy</td>
+                         <td style="text-align:center">Promises NOT</td>
+                         </tr>
+                         </tbody>
+                         </table>
+                    </section> -->
+                    <section id="ng-http">
+                        <h3>Angular HttpClient</h3>
+                        <p style="font-size: 0.8em">Angular provides a simplified API for HTTP functionality, building on top of the XMLHttpRequest interface exposed by browsers.</p>
+                        <p style="font-size: 0.8em">Additional benefits of HttpClient include <strong>testability support</strong>, <strong>strong typing</strong> of request and response objects, request and <strong>response interceptor support</strong>, and better error handling via apis based on Observables.</p>
                     </section>
                     <section id="services-demo">
                         <h3>Live Demo</h3>
