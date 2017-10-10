@@ -32,27 +32,46 @@
                     <h2 class="title">Kendo UI for Angular</h2>
                     <div><img alt="" src="./img/kendoka-08-350.png" width="300" class="no-border kendo-logo" /></div>
                 </section>
-                <section id="speaker-info" data-background="./img/telerik-bg.jpg">
-                    <div class="speaker-img-container">
-                        <img src="./img/speaker.jpg" width="200" />
-                    </div>
-		            <table class="speaker-contact-info">
-			            <tbody>
-			                <tr>
-				                <td><img class="no-border" src="./img/email.png" width="50"></td>
-				                <td style="vertical-align:middle"> <a href="mailto:denis@newventuresoftware.com?Subject=Hello" target="_blank">denis@newventuresoftware.com</a></td>
-			                </tr>
-			                <tr>
-				                <td><img class="no-border" src="./img/github.png" width="50"></td>
-				                <td style="vertical-align:middle"> <a href="https://github.com/deniskyashif" target="_blank">github.com/deniskyashif</a></td>
-			                </tr>
-                            <tr>
-				                <td><img class="no-border" src="./img/twitter.png" width="50"></td>
-				                <td style="vertical-align:middle"><a href="https://twitter.com/deniskyashif" target="_blank">@deniskyashif</a></td>
-			                </tr>
-			            </tbody>
-		            </table>
-		        </section>
+                <section>
+                    <section id="speaker-info" data-background="./img/telerik-bg.jpg">
+                        <div class="speaker-img-container">
+                            <img src="./img/speaker.jpg" width="200" />
+                        </div>
+		                <table class="speaker-contact-info">
+			                <tbody>
+			                    <tr>
+				                    <td><img class="no-border" src="./img/email.png" width="50"></td>
+				                    <td style="vertical-align:middle"> <a href="mailto:denis@newventuresoftware.com?Subject=Hello" target="_blank">denis@newventuresoftware.com</a></td>
+			                    </tr>
+			                    <tr>
+				                    <td><img class="no-border" src="./img/github.png" width="50"></td>
+				                    <td style="vertical-align:middle"> <a href="https://github.com/deniskyashif" target="_blank">github.com/deniskyashif</a></td>
+			                    </tr>
+                                <tr>
+				                    <td><img class="no-border" src="./img/twitter.png" width="50"></td>
+				                    <td style="vertical-align:middle"><a href="https://twitter.com/deniskyashif" target="_blank">@deniskyashif</a></td>
+			                    </tr>
+			                </tbody>
+		                </table>
+		            </section>
+                    <section id="certifications">
+		                <div>
+			                <img width="300" class="no-border" src="./img/medallion_sitefitiny-certified---300-dpi.png" />
+			                <img width="350" class="no-border" src="./img/KendoUI_Badge_Square_Certified_Big.png" />
+		                </div>
+		            </section>
+                    <section data-background-color="white">
+                        <img class="no-border" width="500" src="./img/nvs-logo.svg"/>
+                    </section>
+                    <section id="progress-partner">
+		                <div id="progress-logos">
+			                <img id="progress-partner-logo" width="500" class="no-border" src="./img/progress-partner-gray---300-dpi.png" />
+		                </div>
+		            </section>
+                    <section id="pug-emea" data-background-color="#15334B">
+                        <a href="http://www.pugchallenge.eu/" target="_blank"><img src="./img/pug-emea.jpg" class="no-border" /></a>
+                    </section>
+                </section>
                 <section id="agenda" class="color-white" data-background-image="./img/school-board.jpg">
                     <h3>Agenda</h3>
                     <ul>
@@ -161,6 +180,14 @@
                         <h3>EcmaScript Next</h3>
                     </section>
                 </section>
+                <section>
+                    <p><em>Every time a new JS Framework comes up...</em></p>
+                    <img alt="" src="./img/it-js-frameworks.jpg" width="450" class="no-border" />
+                </section>
+                <section>
+                    <p><em>...but not this time.</em></p>
+                    <img alt="" src="http://blog.soshace.com/wp-content/uploads/2016/08/tumblr_o1n96vth4D1ufi43qo1_500.png"/>
+                </section>
                 <!-- Angular -->
                 <section>
                     <section id="ng-intro" data-background="https://images.contentful.com/99yi1k2r2plr/5u7inaJyMgE4IQky6ywKem/0ff02c1e622784bb66c523e7d32607ee/Screen_Shot_2017-08-25_at_2.38.34_PM.png" data-background-transition="zoom"></section>
@@ -218,6 +245,7 @@
                     <section id="ng-cli-demo">
                         <h3>Live Demo</h3>
                         <p>Setting up a project with the Angular CLI</p>
+                        <img alt="" src="./img/dog-coder.jpeg" width="500" />
                     </section>
                     <section id="ng-cli-exercise">
                         <h4 class="text-right">Angular CLI</h4>
@@ -234,12 +262,32 @@
                             <dd><pre><code class="bash">ng serve</code></pre></dd>
                         </dl>
                     </section>
+                    <section id="ng-modules" data-background="./img/telerik-bg.jpg">
+                        <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -40%; right: -10%;" />
+                        <h3>Modules</h3>
+                        <pre><code>@NgModule({
+  imports:      [ BrowserModule ],
+  declarations: [ AppComponent ],
+  bootstrap:    [ AppComponent ]
+})
+export class AppModule { }</code></pre>
+                    </section>
+                    <section id="ng-modules-bullets" data-background-color="#315FBE">
+                        <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -20%; left: -15%;" />
+                        <h4 class="text-right">What is @NgModule?</h4>
+                        <ul style="font-size: 0.9em;">
+                            <li>A <strong>decorator function</strong> that takes a single metadata object whose properties describe the module.</li>
+                            <li>Tells Angular how to <strong>compile and run</strong> the module code.</li>
+                            <li>Consolidates components, directives and services into <strong>cohesive blocks</strong> of functionality.</li>
+                            <li>It can import other modules for reusing their Components, Directives etc.</li>
+                        </ul>
+                    </section>
                     <section id="ng-components" data-background="./img/telerik-bg.jpg">
                         <h3>Components</h3>
                         <img src="./img/ng-logo.png" width="170" class="no-border bg-transparent" />
                         <p>@Component()</p>
                     </section>
-                    <section id="ng-components-bullets"  data-background-color="#315FBE">
+                    <section id="ng-components-bullets" data-background-color="#315FBE">
                         <h4 class="text-right">Components in Angular</h4>
                         <ul>
                             <li>The basic UI building block in Angular.</li>
@@ -247,6 +295,47 @@
                             <li>Represent anything visible to the end user.</li>
                             <li>Angular <strong>creates, updates and destroys</strong> components as the user moves through the app.</li>
                             <li>Angular provides <strong>view encapsulation</strong> by default which enables the <strong>Shadow DOM</strong></li>
+                        </ul>
+                    </section>
+                    <section id="shadow-dom">
+                        <h4 class="text-right">Shadow DOM</h4>
+                        <ul>
+                            <li><code>Shadow DOM</code> is just normal DOM with two differences: <ol>
+                                <li>how it's created/used and </li>
+                                <li>how it behaves in relation to the rest of the page</li>
+                            </ol>
+                            </li>
+                            <li><p><code>Shadow DOM</code> is designed as a tool for building component-based apps</p>
+                                <ul>
+                                    <li>Angular uses components<ul>
+                                        <li>It addresses the <code>DOM</code> tree encapsulation problem</li>
+                                        <li>Allows us to <strong>hide</strong> <code>DOM</code> logic behind other elements</li>
+                                    </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section id="shadow-dom-2">
+                        <h4 class="text-right">Shadow DOM</h4>
+                        <ul>
+                            <li><code>Isolated DOM</code> -  A component's DOM is self-contained <ul>
+                                <li><code>document.querySelector()</code> won't return nodes in the component's shadow DOM</li>
+                            </ul>
+                            </li>
+                            <li><code>Scoped CSS</code> -  CSS defined inside shadow DOM is scoped to it</li>
+                        </ul>
+                    </section>
+                    <section id="view-encapsulation" data-background-color="#315FBE">
+                        <h4 class="text-right">View Encapsulation</h4>
+                        <ul>
+                            <li>Angular comes with view encapsulation by default which enables Shadow DOM</li>
+                            <li>There are three view encapsulation types available<ul>
+                                <li><code>None</code> - no Shadow DOM and no encapsulation</li>
+                                <li><code>Emulated</code> <strong>(default)</strong> - no Shadow DOM but there is encapsulation of the views</li>
+                                <li><code>Native</code> - native Shadow DOM</li>
+                            </ul>
+                            </li>
                         </ul>
                     </section>
                     <section id="ng-component-tree">
@@ -266,6 +355,7 @@
                     <section id="ng-components-demo">
                         <h3>Live Demo</h3>
                         <p>Creating Angular Components</p>
+                        <img alt="" src="./img/dog-coder.jpeg" width="500" />
                     </section>
                     <section id="ng-directives" data-background-color="#315FBE">
                         <h3>Pipes & Directives</h3>
@@ -308,27 +398,8 @@
                     <section id="ng-directives-pipes-demo">
                         <h3>Live Demo</h3>
                         <p>Working with Directives and Pipes</p>
+                        <img alt="" src="./img/dog-coder.jpeg" width="500" />
                     </section>
-                    <section id="ng-modules" data-background="./img/telerik-bg.jpg">
-                        <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -40%; right: -10%;" />
-                        <h3>Modules</h3>
-                        <pre><code>@NgModule({
-  imports:      [ BrowserModule ],
-  declarations: [ AppComponent ],
-  bootstrap:    [ AppComponent ]
-})
-export class AppModule { }</code></pre>
-                    </section>
-                    <section id="ng-modules-bullets" data-background-color="#315FBE">
-                        <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -20%; left: -15%;" />
-                        <h4 class="text-right">What is @NgModule?</h4>
-                        <ul style="font-size: 0.9em;">
-                            <li>A <strong>decorator function</strong> that takes a single metadata object whose properties describe the module.</li>
-                            <li>Tells Angular how to <strong>compile and run</strong> the module code.</li>
-                            <li>Consolidates components, directives and services into <strong>cohesive blocks</strong> of functionality.</li>
-                            <li>It can import other modules for reusing their Components, Directives etc.</li>
-                        </ul>
-                </section>
                     <section id="ng-di-services" data-background-color="#353334">
                         <h3>Dependency Injection and Services</h3>
                         <img src="./img/ng-logo.png" width="170" class="no-border bg-transparent" />
@@ -341,7 +412,7 @@ export class AppModule { }</code></pre>
                     <section id="no-di-example">
                         <h4 class="text-right">DI Example</h4>
                         <div>
-                        <pre><code>class Car {
+                            <pre><code>class Car {
     public engine: Engine;
 
     constructor() {
@@ -350,19 +421,19 @@ export class AppModule { }</code></pre>
 }</code></pre>
                         </div>
                         <div class="color-red">
-                        <p class="fragment"><span><em>What is the problem here?</em></span></p>
-                        <ul style="font-size: 0.8em">
-                        <li class="fragment">Tight coupling between <strong>Car</strong> and <strong>Engine</strong></li>
-                        <li class="fragment">If the definition of <strong>Engine</strong> changes, <strong>Car</strong> must also change.</li>
-                        <li class="fragment"><strong>Engine</strong> cannot be shared among <strong>Car</strong> instances.</li>
-                        <li class="fragment">Is it possible to create an Engine in a test environment?</li>
+                            <p class="fragment"><span><em>What is the problem here?</em></span></p>
+                            <ul style="font-size: 0.8em">
+                                <li class="fragment">Tight coupling between <strong>Car</strong> and <strong>Engine</strong></li>
+                                <li class="fragment">If the definition of <strong>Engine</strong> changes, <strong>Car</strong> must also change.</li>
+                                <li class="fragment"><strong>Engine</strong> cannot be shared among <strong>Car</strong> instances.</li>
+                                <li class="fragment">Is it possible to create an Engine in a test environment?</li>
                             </ul>
                         </div>
                     </section>
                     <section id="di-example">
                         <h4 class="text-right">DI Example</h4>
                         <div>
-                        <pre><code>class Car {
+                            <pre><code>class Car {
     public engine: Engine;
 
     constructor(engine: Engine) {
@@ -421,7 +492,7 @@ export class AppModule { }</code></pre>
                          </ul>
                          </li>
                          </ul>
-                    </section> -->
+                         </section> -->
                     <!-- <section id="observable-vs-promise">
                          <table>
                          <thead>
@@ -445,7 +516,7 @@ export class AppModule { }</code></pre>
                          </tr>
                          </tbody>
                          </table>
-                    </section> -->
+                         </section> -->
                     <section id="ng-http">
                         <h3>Angular HttpClient</h3>
                         <p style="font-size: 0.8em">Angular provides a simplified API for HTTP functionality, building on top of the XMLHttpRequest interface exposed by browsers.</p>
@@ -454,6 +525,7 @@ export class AppModule { }</code></pre>
                     <section id="services-demo">
                         <h3>Live Demo</h3>
                         <p>Services and DI</p>
+                        <img alt="" src="./img/dog-coder.jpeg" width="500" />
                     </section>
                     <section id="ng-routing">
                         <h3>Routing in Angular</h3>
@@ -468,6 +540,7 @@ export class AppModule { }</code></pre>
                     <section id="routing-demo">
                         <h3>Live Demo</h3>
                         <p>Angular Routing.</p>
+                        <img alt="" src="./img/dog-coder.jpeg" width="500" />
                     </section>
                     <section id="ng-lifecycle">
                         <h3>Angular Lifecycle</h3>
@@ -538,10 +611,9 @@ export class AppModule { }</code></pre>
                         <h4 class="text-right">What is Kendo UI for Angular?</h4>
                         <ul>
                             <li>Native Angular Component Suite.</li>
-                            <li>Each component is a separate Angular module.</li>
+                            <li>Each component group represents a separate Angular module.</li>
                             <li>Distributed via NPM (nodejs package manager).</li>
                             <li>Offers Unlimited Support.</li>
-                            <li>Open Source.</li>
                         </ul>
                     </section>
                     <section>
@@ -632,6 +704,7 @@ export class AppModule { }</code></pre>
                     <section id="debugging">
                         <h3>Debugging</h3>
                         <img alt="" src="./img/Debug.jpg" class="no-border" width="300" />
+                        <p>The TypeScript compiler generates source map files, which allow browsers to recover the original source code from the compiled javascript.</p>
                     </section>
                     <section id="code-quality" data-background-color="#000">
                         <h3>Ensuring Code Quality</h3>
@@ -656,6 +729,25 @@ export class AppModule { }</code></pre>
                     <h3>Questions?</h3>
                     <img class="" src="./img/cats-staring.jpg" width="500" />
                 </section>
+                <section id="end">
+		            <h2>Thank You!</h2>
+		            <table>
+			            <tbody>
+                            <tr>
+				                <td><img class="no-border" src="./img/email.png" style="width:70px"></td>
+				                <td style="vertical-align:middle"> <a href="mailto:denis@newventuresoftware.com?Subject=Hello" target="_blank">denis@newventuresoftware.com</a></td>
+			                </tr>
+			                <tr>
+				                <td><img class="no-border" src="./img/github.png" width="70"></td>
+				                <td style="vertical-align:middle"> <a href="https://github.com/deniskyashif" target="_blank">github.com/deniskyashif</a></td>
+			                </tr>
+                            <tr>
+				                <td><img class="no-border" src="./img/twitter.png" width="70"></td>
+				                <td style="vertical-align:middle"><a href="https://twitter.com/deniskyashif" target="_blank">@deniskyashif</a></td>
+			                </tr>
+			            </tbody>
+		            </table>
+		        </section>
 			</div>
             <section class="reveal-shared">
 		        <div class="nvs-logo-container">

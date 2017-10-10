@@ -1,0 +1,50 @@
+body {
+    padding: 0 20px;
+}
+.selected {
+    background-color: #D7BE13 !important;
+    color: white;
+  }
+  .movies {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
+  }
+  .movies li {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #F3EEAF;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.6em;
+    border-radius: 4px;
+  }
+  .movies li.selected:hover {
+    background-color: #D7BE13 !important;
+    color: white;
+  }
+  .movies li:hover {
+    color: #5D5D5D;
+    background-color: #D7BE13;
+    left: .1em;
+  }
+  .movies .text {
+    position: relative;
+    top: -3px;
+  }
+  .movies .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: #5D5D5D;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+  }
