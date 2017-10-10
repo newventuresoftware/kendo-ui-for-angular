@@ -17,7 +17,8 @@
             <ng-template kendoGridToolbarTemplate>
                 <button type="button" kendoGridExcelCommand><span class="k-icon k-i-file-excel"></span>Export to Excel</button>
             </ng-template>
-            <kendo-grid-column field="OrderID" title="ID" filter="numeric"></kendo-grid-column>
+
+            <kendo-grid-column field="OrderID" title="ID" [filterable]="false" width="75px"></kendo-grid-column>
             <kendo-grid-column field="OrderDate" title="Order Date" format="{0:MM/dd/yyyy}" filter="date"></kendo-grid-column>
             <kendo-grid-column field="CustomerID" title="Customer"></kendo-grid-column>
             <kendo-grid-column field="ShipName" title="Ship Name"></kendo-grid-column>
