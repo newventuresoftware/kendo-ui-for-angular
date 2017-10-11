@@ -1,9 +1,5 @@
 <h2>{{title}}</h2>
-
-<ul class="movies">
-    <li *ngFor="let movie of movies" (click)="selectMovie(movie)" [class.selected]="movie === selectedMovie">
-        <span class="badge">{{movie.id}}</span>{{movie.title | uppercase}}
-    </li>
-</ul>
-
-<app-movie-details [movie]="selectedMovie"></app-movie-details>
+<hr />
+<a routerLink="dashboard" routerLinkActive="active">Dashboard</a>
+<a routerLink="movies" routerLinkActive="active">Movies</a>
+<router-outlet></router-outlet>

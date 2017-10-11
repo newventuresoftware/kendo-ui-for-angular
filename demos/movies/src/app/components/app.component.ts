@@ -9,14 +9,4 @@ import { Movie } from './../models/movie';
 })
 export class AppComponent {
     title = 'My Movies';
-    selectedMovie: Movie;
-    movies: Movie[];
-
-    constructor(private movieService: MovieService) {
-        movieService.getMovies().subscribe(data => this.movies = data);
-    }
-
-    selectMovie(movie: Movie) {
-        this.selectedMovie = movie;
-    }
 }

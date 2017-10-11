@@ -16,10 +16,15 @@ export class MovieService {
         new Movie(8, 'Batman Begins')
     ];
 
-    getMovies(): Observable<Movie[]> {
-        return Observable.create((observer: Observer<Movie[]>) => {
-            observer.next(this.movies);
-            observer.complete();
-        });
+    getMovies(): Movie[] {
+        return this.movies;
+        // return Observable.create((observer: Observer<Movie[]>) => {
+        //     observer.next(this.movies);
+        //     observer.complete();
+        // });
+    }
+
+    getMovieById(id: number): Movie {
+        return this.movies.find(m => m.id === id);
     }
 }
