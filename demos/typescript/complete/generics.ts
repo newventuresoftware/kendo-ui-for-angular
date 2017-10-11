@@ -60,6 +60,8 @@ function sequenceEquals<T>(first: IEquatable<T>[], second: T[]) {
     return true;
 }
 
+//TODO: Implement a generic queue
+
 const garageA = [new Car('BMW 430', 2017), new Car('Audi A8', 2016)];
 const garageB = [new Car('BMW 430', 2017), garageA[1]];
 

@@ -43,6 +43,10 @@ class Employee extends Person {
     }
 }
 
+class MyMath {
+    static sum(): number { return 4; }
+}
+
 const howard = new Employee("Howard", "Sales");
 console.log(howard.getElevatorPitch());
 console.log(howard.name);

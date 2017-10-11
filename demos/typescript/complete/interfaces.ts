@@ -12,6 +12,8 @@ interface Point {
 
 const p: Point = { x: 1, y: 2 };
 
+//TODO: Demonstrate structural typing by creating an equiv. class for Point, that doesn't implement the interface
+
 /** Class Types */
 interface Shape {
     calculateArea(): number;

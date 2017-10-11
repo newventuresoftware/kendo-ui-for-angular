@@ -60,14 +60,8 @@
 			                <img width="350" class="no-border" src="./img/KendoUI_Badge_Square_Certified_Big.png" />
 		                </div>
 		            </section>
-                    <section data-background-color="white">
-                        <img class="no-border" width="500" src="./img/nvs-logo.svg"/>
-                    </section>
-                    <section id="progress-partner">
-		                <div id="progress-logos">
-			                <img id="progress-partner-logo" width="500" class="no-border" src="./img/progress-partner-gray---300-dpi.png" />
-		                </div>
-		            </section>
+                    <section data-background="./img/nvs-intro.PNG">                        </section>
+                    <section id="nvs-partners" data-background="./img/nvs-partners.PNG"></section>
                     <section id="pug-emea" data-background-color="#15334B">
                         <a href="http://www.pugchallenge.eu/" target="_blank"><img src="./img/pug-emea.jpg" class="no-border" /></a>
                     </section>
@@ -86,7 +80,7 @@
                     <img alt="" src="./img/death-by-ppt.jpg" width="500" class="no-border" />
                 </section>
                 <section>
-                    <h4>We'll make it Interactive</h4>
+                    <h4>We'll make it interactive</h4>
                     <img alt="" src="./img/programmer-cat.jpg" width="500" />
                 </section>
                 <section id="tools">
@@ -185,7 +179,9 @@
                         </p>
                     </section>
                     <section data-background="./img/ts.png" class="color-white">
-                        <h3>EcmaScript Next</h3>
+                        <h4>EcmaScript 6</h4>
+                        <h4>EcmaScript 7</h4>
+                        <h4>EcmaScript Next</h4>
                     </section>
                 </section>
                 <section>
@@ -224,7 +220,7 @@
                         <img src="./img/configs-meme.jpg" />
                     </section>
                     <section>
-                        <p><span><strong>Angular solves this problem!</strong></span></p>
+                        <p><span><strong>Angular CLI solves this problem!</strong></span></p>
                         <img width="350" src="./img/frodo.jpeg" class="fragment" />
                     </section>
                     <section id="ng-cli" data-background-color="#315FBE">
@@ -241,8 +237,8 @@
                                         <li>Pipes</li>
                                     </ul>
                                 </li>
-                                <li>Support for progressive web apps</li>
                                 <li>Linting</li>
+                                <li>Building</li>
                                 <li>And many more...</li>
                             </ul>
                         </div>
@@ -263,9 +259,9 @@
                             <dt>Install Angular CLI</dt>
                             <dd><pre><code class="bash">npm install -g @angular/cli</code></pre></dd>
                             <dt>Initialize a project</dt>
-                            <dd><pre><code class="bash">ng new hello-angular</code></pre></dd>
+                            <dd><pre><code class="bash">ng new movies</code></pre></dd>
                             <dt>Navigate to the project root.</dt>
-                            <dd><pre><code class="bash">cd hello-angular</code></pre></dd>
+                            <dd><pre><code class="bash">cd movies</code></pre></dd>
                             <dt>Run the project</dt>
                             <dd><pre><code class="bash">ng serve</code></pre></dd>
                         </dl>
@@ -284,9 +280,9 @@ export class AppModule { }</code></pre>
                         <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -20%; left: -15%;" />
                         <h4 class="text-right">What is @NgModule?</h4>
                         <ul style="font-size: 0.9em;">
-                            <li>A <strong>decorator function</strong> that takes a single metadata object whose properties describe the module.</li>
-                            <li>Tells Angular how to <strong>compile and run</strong> the module code.</li>
-                            <li>Consolidates components, directives and services into <strong>cohesive blocks</strong> of functionality.</li>
+                            <li>A <strong><em>decorator function</em></strong> that takes a single metadata object whose properties describe the module.</li>
+                            <li>Tells Angular how to <strong><em>compile and run</em></strong> the module code.</li>
+                            <li>Consolidates components, directives and services into <strong><em>cohesive blocks</em></strong> of functionality.</li>
                             <li>It can import other modules for reusing their Components, Directives etc.</li>
                         </ul>
                     </section>
@@ -714,7 +710,7 @@ export class AppModule { }</code></pre>
                     <section id="debugging">
                         <h3>Debugging</h3>
                         <img alt="" src="./img/Debug.jpg" class="no-border" width="300" />
-                        <p>The TypeScript compiler generates source map files, which allow browsers to recover the original source code from the compiled javascript.</p>
+                        <p style="font-size: 0.8em">The TypeScript compiler generates source map files, which allow browsers to recover the original source code from the compiled javascript.</p>
                     </section>
                     <section id="code-quality" data-background-color="#000">
                         <h3>Ensuring Code Quality</h3>
