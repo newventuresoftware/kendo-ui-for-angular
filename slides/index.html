@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Ng Slides</title>
+		<title>Slides</title>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/simple.css">
@@ -484,21 +484,81 @@ export class AppModule { }</code></pre>
                             <pre><code>platformBrowserDynamic().bootstrapModule(AppModule);</code></pre>
                         </div>
                     </section>
-                    <!-- <section id="reactive-programming">
-                         <h4 class="text-right">Reactive Programming</h4>
-                         <ul>
-                         <li>Programming with asynchronous data streams</li>
-                         <li>You are able to create data streams of anything</li>
-                         <li>A stream can be used as an input to another one</li>
-                         <li>A stream is a sequence of ongoing events ordered in time.</li>
-                         <li>It emits <strong>three different things</strong><ul>
-                         <li>a value (of some type)</li>
-                         <li>an error</li>
-                         <li>a complete method</li>
-                         </ul>
-                         </li>
-                         </ul>
-                         </section> -->
+                    <section id="services-demo">
+                        <h3>Live Demo</h3>
+                        <p>Services and DI</p>
+                        <img alt="" src="./img/dog-coder.jpeg" width="500" />
+                    </section>
+                    <section id="ng-routing" data-background="./img/the-long-history-of-route-66.jpg">
+                        <h3 class="color-white"><span>Routing in Angular</span></h3>
+                        <div><img src="./img/ng-logo.png" width="150" class="no-border bg-transparent" /></div>
+                        <div style="height: 175px"></div>
+                    </section>
+                    <section id="routing-overview">
+                        <h4 class="text-right">What is Routing?</h4>
+                        <ul>
+                            <li>Routing the standard way to navigate in a web applications.</li>
+                            <li>Each unique route must always return the same page.</li>
+                        </ul>
+                    </section>
+                    <section id="routing-demo">
+                        <h3>Live Demo</h3>
+                        <p>Angular Routing.</p>
+                        <img alt="" src="./img/dog-coder.jpeg" width="500" />
+                    </section>
+                    <section id="reactive-programming" data-background-color="#315FBE">
+                        <h4>Reactive Programming</h4>
+                        <ul style="font-size: 0.8em">
+                            <li>Programming with asynchronous data streams.</li>
+                            <li>You are able to create data streams of anything.</li>
+                            <li>A stream is a sequence of ongoing events ordered in time.</li>
+                            <li>A stream can be used as an input to another one.</li>
+                            <li>It emits <strong>three different things</strong><ul>
+                                <li>a value (of some type)</li>
+                                <li>an error</li>
+                                <li>a complete method</li>
+                            </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section id="observables" data-background-color="#fff">
+                        <h4>RxJS and Observables</h4>
+                        <img class="no-border" src="./img/ng-rxjs.png" width="200" style="position: absolute; top: -40%; right: -15%;" />
+                        <p>Set of libraries for composing asynchronous and event-based programs using observable sequences</p>
+                        <pre><code class="js">const subscription = source
+    .filter(quote => quote.price > 30)
+    .map(quote => quote.price)
+    .forEach(price => console.log(price));</code></pre>
+                        <!-- You can think of an observable as an array whose items arrive asynchronously over time. Observables help you manage asynchronous data,
+                             such as data coming from a backend service. Observables are used within Angular itself, including Angular’s event system and its http client
+                        service. To use observables, Angular uses a third-party library called Reactive Extensions (RxJS). -->
+                    </section>
+                    <section data-background-color="#72088F">
+                        <div>
+                            <img alt="" src="./img/rx-filter.png" width="450" class="no-border" />
+                        </div>
+                        <hr/>
+                        <div>
+                            <img alt="" src="./img/rx-map.png" width="450" class="no-border" />
+                        </div>
+                    </section>
+                    <section id="cold-hot-observables">
+                        <h4 class="text-right">Cold vs Hot</h4>
+                        <ul style="font-size: 0.7em">
+                            <li><p><strong>Cold observables</strong> start running upon subscription</p>
+                                <ul>
+                                    <li>The observable sequence only starts pushing values to the observers when <strong>Subscribe is called</strong></li>
+                                </ul>
+                            </li>
+                            <li><p><strong>Hot observables</strong> are ones that are pushing even when you are not subscribed to the observable</p>
+                                <ul>
+                                    <li>Like mouse moves, or Timer ticks, etc.</li>
+                                </ul>
+                            </li>
+                            <li><p>It’s not always possible from the subscriber side to know whether you are dealing with a cold or hot Observable</p>
+                            </li>
+                        </ul>
+                    </section>
                     <!-- <section id="observable-vs-promise">
                          <table>
                          <thead>
@@ -522,32 +582,43 @@ export class AppModule { }</code></pre>
                          </tr>
                          </tbody>
                          </table>
-                         </section> -->
+                    </section> -->
                     <!-- <section id="ng-http">
                          <h3>Angular HttpClient</h3>
                          <p style="font-size: 0.8em">Angular provides a simplified API for HTTP functionality, building on top of the XMLHttpRequest interface exposed by browsers.</p>
                          <p style="font-size: 0.8em">Additional benefits of HttpClient include <strong>testability support</strong>, <strong>strong typing</strong> of request and response objects, request and <strong>response interceptor support</strong>, and better error handling via apis based on Observables.</p>
-                         </section> -->
-                    <section id="services-demo">
-                        <h3>Live Demo</h3>
-                        <p>Services and DI</p>
-                        <img alt="" src="./img/dog-coder.jpeg" width="500" />
-                    </section>
-                    <section id="ng-routing" data-background="./img/the-long-history-of-route-66.jpg">
-                        <h3 class="color-white"><span>Routing in Angular</span></h3>
-                        <div><img src="./img/ng-logo.png" width="150" class="no-border bg-transparent" /></div>
-                        <div style="height: 175px"></div>
-                    </section>
-                    <section id="routing-overview">
-                        <h4 class="text-right">What is Routing?</h4>
+                    </section> -->
+                    <section id="ng-http"  data-background-color="#315FBE">
+                        <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -30%; left: -10%;" />
+                        <h4>Angular HTTP</h4>
                         <ul>
-                            <li>Routing the standard way to navigate in a web applications.</li>
-                            <li>Each unique route must always return the same page.</li>
+                            <li>Angular's http service delegates the client/server communication tasks to a helper service called the XHRBackend</li>
+                            <li>Register for HTTP services<ul>
+                                <li>Import the <strong>HttpModule</strong></li>
+                            </ul>
+                            </li>
+                            <li>Can work with both <em>Observables</em> and <em>Promises</em>.</li>
                         </ul>
                     </section>
-                    <section id="routing-demo">
+                    <section id="ng-http-example">
+                        <h4 class="text-right">
+                            Angular HTTP Example
+                        </h4>
+                        <pre><code class="ts">// Fetch all existing comments
+getComments() : Observable&lt;Comment[]&gt; {
+    // ...using get request
+    return this.http.get('/api/comments')
+        // ...and calling .json() on the response to return data
+        .map((res:Response) => res.json())
+        //...errors if any
+        .catch((error:any) => Observable.throw(error.json().error));
+}</code></pre>
+                        <pre><code class="ts">service.getComments()
+    .subscribe(comments => this.comments = comments);</code></pre>
+                    </section>
+                    <section>
                         <h3>Live Demo</h3>
-                        <p>Angular Routing.</p>
+                        <p>Observables and HTTP.</p>
                         <img alt="" src="./img/dog-coder.jpeg" width="500" />
                     </section>
                     <section id="ng-lifecycle">
@@ -630,13 +701,17 @@ export class AppModule { }</code></pre>
                         <pre><code class="bash">npm install --save [kendo-component]</code></pre>
                         <p>Every component represents a separate Angular module.</p>
                     </section>
-                    <section>
-                        <h3>Components in Action</h3>
+                    <section data-background="./img/telerik-bg.jpg">
+                        <h3>Live Demo</h3>
+                        <p>Components in Action</p>
                         <img alt="" src="./img/kendoka-08-350.png" class="no-border" width="300" />
                     </section>
-                    <section>
-                        <h3>Common Features</h3>
-                        <p><em>Data Query, Localization...</em></p>
+                    <section id="data-query">
+                        <h4>Common Features: Data Query</h4>
+                        <p style="font-size: 0.8em">The Data Query provides functions that help you handle the following bulk data operations: <br/>
+                            <em>sorting, filtering, grouping, aggragates</em>
+                        </p>
+                        <a style="font-size: 0.8em" href="https://www.telerik.com/kendo-angular-ui/components/dataquery/api/" target="_blank">telerik.com/kendo-angular-ui/components/dataquery/api/</a>
                     </section>
                     <section data-background="./img/bg-pattern.png" class="color-white" id="theme-builder">
                         <img alt="" src="./img/progress_mainLogo.png" class="no-border bg-transparent" width="700" />
