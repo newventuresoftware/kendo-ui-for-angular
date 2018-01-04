@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Slides</title>
+		<title>KendoUI for Angular</title>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="./css/reveal.css">
 		<link rel="stylesheet" href="./css/theme/simple.css">
@@ -99,24 +99,20 @@
                 <!-- TypeScript -->
                 <section>
                     <section id="typescript" data-background="./img/type-script-bg.jpeg" data-background-transition="zoom"></section>
-                    <section data-background-color="#007ACC">
+                    <section id="ts-overview" data-background-color="#007ACC">
                         <h4 class="text-right">What is TypeScript?</h4>
                         <ul>
                             <li>Language created by <code>Microsoft</code>.</li>
                             <li>Has optional <code>static typing</code>.</li>
-                            <li>Inherits concepts from <code>C#</code>.</li>
-                            <li>Can use type definitions for <code>intellisense</code>.</li>
-                            <li>Can use <code>JavaScript</code> libraries.</li>
                             <li><strong>Compiles to JavaScript</strong>.</li>
+                            <li>Inherits concepts from <code>C#</code>.</li>
+                            <li>Provides language service API.</li>
                         </ul>
                     </section>
-                    <section>
+                    <section id="ts-quote">
                         <p><em>It's always better to catch errors at compile time rather that at runtime.</em></p>
                     </section>
-                    <section data-background="#000">
-                        <img alt="" src="./img/corleone-runtime.jpg" width="400" />
-                    </section>
-                    <section data-background-color="#007ACC">
+                    <section id="ts-benefits" data-background-color="#007ACC">
                         <h4 class="text-right">Benefits of TypeScript</h4>
                         <ul>
                             <li>Due to <code>static typing</code>, it's more <strong>predictable</strong>.</li>
@@ -124,22 +120,22 @@
                             <li>Due to <code>compilation step</code>, some errors are caught <strong>compile-time</strong>, not run-time.</li>
                         </ul>
                     </section>
-                    <section id="typescript-venn">
+                    <section id="ts-venn">
                         <img src="./img/typescript-venn.png" class="no-border" width="300" />
                     </section>
-                    <section>
+                    <section id="ts-install">
                         <h4 class="text-right">Installing TypeScript</h4>
                         <div style="height: 50px"></div>
                         <p>Using the Node Package Manager.</p>
                         <pre><code class="bash">npm install --global typescript</code></pre>
                         <div style="height: 50px"></div>
                     </section>
-                    <section>
+                    <section id="ts-compile">
                         <h4 class="text-right">Compiling TypeScript</h4>
-                        <p>TypeScript is written in .ts files, which can't be used directly in the browser.<br/>It need to be translated to vanilla .js first.</p>
+                        <p>TypeScript is written in <strong>.ts</strong> files, which can't be used directly in the browser.<br/>It need to be compiled to vanilla .js first.</p>
                         <pre><code class="bash">tsc main.ts</code></pre>
                     </section>
-                    <section>
+                    <section id="ts-config">
                         <h4 class="text-right">tsconfig.json</h4>
                         <p>Specifies the way TS is compiled.<br/>(autogeneratable with tsc --init)</p>
                         <pre><code class="json">{
@@ -155,35 +151,106 @@
                     <section id="ts-summary" data-background="./img/ts.png" class="color-white">
                         <h3>Language Features</h3>
                     </section>
-                    <section data-background="#000">
-                        <img alt="" src="./img/montanta-type-checker.jpg-large" width="500" class="no-border" />
-                    </section>
-                    <section data-background-color="#007ACC" class="color-white">
+                    <section data-background-color="#007ACC">
                         <h3>Static Type System</h3>
                         <p><em>&ldquo;Strongly typed languages reduce bugs by 15%.&rdquo;</em></p>
                     </section>
-                    <section data-background="./img/ts.png" class="color-white">
+                    <section id="basic-types">
+                        <h3>Basic Types</h3>
+                        <p>predefined in the language:</p>
+                        <p><code>number, string, boolean, Array, enum, undefined, null, tuples, any, void, never</code></p>
+                    </section>
+                    <section id="ts-say-hello" data-background="#000">
+                        <h3>Live Demo</h3>
+                        <a href="https://www.typescriptlang.org/play/" target="_blank">
+                            <img alt="" src="./img/montanta-type-checker.jpg" width="400" class="no-border" />
+                        </a>
+                    </section>
+                    <section id="complex-types">
+                        <h3>Complex Types</h3>
+                        <p>created by the developer</p>
+                    </section>
+                    <section data-background-color="#007ACC">
                         <h3>Classes</h3>
+                        <pre><code class="js">class Employee {
+    name: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+
+    greet(): string {
+        return `Hi, my name is #{this.name}`;
+    }
+}</code></pre>
                     </section>
-                    <section data-background="./img/ts.png" class="color-white">
+                    <section id="ts-interfaces" data-background-color="#007ACC">
                         <h3>Interfaces</h3>
+                        <div>
+                            <pre><code class="ts">interface MyInterface {
+    member: number;
+    optionalMember?: boolean;
+
+    myMethod(param: string[]): number;
+}
+
+const instance: MyInterface = ...</code></pre>
+                        </div>
                     </section>
-                    <section data-background="./img/ts.png" class="color-white">
+                    <section class="live-demo" data-background-color="black">
+                        <h3>Live Demo</h3>
+                        <img alt="" src="./img/code-or-didnt-happen.jpg" />
+                    </section>
+                    <section id="ts-generics" data-background="./img/ts.png" class="color-white">
                         <h3>Generics</h3>
                         <p>
                             <em>Class&lt;T&gt;</em>
                         </p>
+                        <p>Creating a component that can work over a variety of types rather than a single one.</p>
                     </section>
-                    <section data-background="./img/ts.png" class="color-white">
+                    <section class="live-demo" data-background-color="black">
+                        <h3>Live Demo</h3>
+                        <img alt="" src="./img/code-or-didnt-happen.jpg" />
+                    </section>
+                    <section id="ts-modules" data-background="./img/ts.png" class="color-white">
                         <h3>Modules</h3>
                         <p>
                             <em>import / export</em>
                         </p>
                     </section>
-                    <section data-background="./img/ts.png" class="color-white">
-                        <h4>EcmaScript 6</h4>
-                        <h4>EcmaScript 7</h4>
-                        <h4>EcmaScript Next</h4>
+                    <section class="live-demo" data-background-color="black">
+                        <h3>Live Demo</h3>
+                        <img alt="" src="./img/code-or-didnt-happen.jpg" />
+                    </section>
+                    <section id="ts-esnext" data-background="./img/ts.png" class="color-white">
+                        <h3>EcmaScript Next</h3>
+                    </section>
+                    <section class="live-demo" data-background-color="black">
+                        <h3>Live Demo</h3>
+                        <img alt="" src="./img/code-or-didnt-happen.jpg" />
+                    </section>
+                    <section id="ts-lang-services">
+                        <h4 class="text-right">More than a language</h4>
+                        <p>TypeScript also provides tooling and language services for autocompletion, code navigation and refactoring.</p>
+                    </section>
+                    <section id="ts-server" data-background-color="#007ACC">
+                        <h3>tssserver</h3>
+                        <p>Plugins for:</p>
+                        <ul>
+                            <li>Tide(Emacs)</li>
+                            <li>VS Code TypeScript Support</li>
+                            <li>TypeScript-Sublime-Plugin(Sublime Text)</li>
+                        </ul>
+                    </section>
+                    <section id="d-ts-files">
+                        <h3>Type Definition Files</h3>
+                        <p>{lib}.d.ts</p>
+                        <p>Distributed via NPM</p>
+                        <pre><code class="bash">npm install --save @types/jquery</code></pre>
+                    </section>
+                    <section id="ts-angular">
+                        <h3>TypeScript and Angular</h3>
+                        <img src="./img/logo-angular-typescript-schulung.png" class="no-border" />
                     </section>
                 </section>
                 <section>
