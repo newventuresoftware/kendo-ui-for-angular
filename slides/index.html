@@ -34,10 +34,82 @@
                     <h2 class="title">Kendo UI for Angular</h2>
                     <div><img alt="" src="./img/kendoka-08-350.png" width="300" class="no-border kendo-logo" /></div>
                 </section>
-                <section>
+                <section id="speaker-and-company-info">
+                    <section data-background="./img/telerik-bg.jpg">
+                        <h3>Welcome</h3>
+                        <h4>Progress Virtual Classroom</h4>
+                        <img width="700" src="./img/virtual-academy.jpg" class="no-border" />
+                    </section>
+                    <section id="training-schedule">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Date</strong></td>
+                                    <td><strong>Time</strong></td>
+                                    <td><strong>Course</strong></td>
+                                </tr>
+                                <tr style="color: #60BEA0; font-weight: bold">
+                                    <td>February 28, 2018</td>
+                                    <td>9am - 1pm EST<strong></strong></td>
+                                    <td><strong>Kendo UI &amp; Angular</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>March 7, 2018</td>
+                                    <td>9am - 1pm EST</td>
+                                    <td><strong>Telerik UI for ASP.NET MVC and ASP.NET Core</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>March 8, 2018</td>
+                                    <td>9am - 1pm EST</td>
+                                    <td><strong>Kendo UI &amp; React</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>March 14, 2018</td>
+                                    <td>9am - 1pm EST</td>
+                                    <td><strong>Kendo UI &amp; jQuery</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>March 22, 2018</td>
+                                    <td>9am - 1pm EST</td>
+                                    <td><strong>Kendo UI &amp; Vue</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>March 27, 2018</td>
+                                    <td>9am - 1pm EST</td>
+                                    <td><strong>Telerik UI for Xamarin</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>March 30, 2018</td>
+                                    <td>9am - 1pm EST</td>
+                                    <td><strong>Telerik UI for WPF</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>April 5, 2018</td>
+                                    <td>9am - 1pm EST</td>
+                                    <td><strong>Telerik Reporting &amp; Telerik Report Server</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>April 10, 2018</td>
+                                    <td>9am - 1pm EST</td>
+                                    <td><strong>Telerik UI for WinForms</strong><strong></strong></td>
+                                </tr>
+                                <tr>
+                                    <td>April 12, 2018</td>
+                                    <td>9am - 1pm EST</td>
+                                    <td><strong>Telerik UI for ASP.NET AJAX</strong><strong></strong></td>
+                                </tr>
+                                <tr>
+                                    <td>April 13, 2018</td>
+                                    <td>9am - 1pm EST</td>
+                                    <td><strong>Telerik UI for UWP</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
                     <section id="speaker-info" data-background="./img/telerik-bg.jpg">
                         <div class="speaker-img-container">
                             <img src="./img/speaker.jpg" width="200" />
+                            <h4>Denis Kyashif</h4>
                         </div>
 		                <table class="speaker-contact-info">
 			                <tbody>
@@ -62,11 +134,19 @@
 			                <img width="350" class="no-border" src="./img/KendoUI_Badge_Square_Certified_Big.png" />
 		                </div>
 		            </section>
-                    <section data-background="./img/nvs-intro.PNG">                        </section>
-                    <section id="nvs-partners" data-background="./img/nvs-partners.PNG"></section>
-                    <!-- <section id="pug-emea" data-background-color="#15334B">
-                         <a href="http://www.pugchallenge.eu/" target="_blank"><img src="./img/pug-emea.jpg" class="no-border" /></a>
-                         </section> -->
+                    <!-- New Venture Software
+                         Your premier consulting and professional services partner for Progress Telerik products and technologies. Trust a reliable partner who’s been instrumental in building the award-winning DevCraft suite. 
+                         
+                         Message pillars:
+
+                         1.	The exceptional quality of our consulting and professional services stems from a solid background and expertise in Telerik DevCraft:
+                         a.	Benefit from being consulted by ex-Progress Telerik software architects who have led a number of teams building the Telerik DevCraft suite.
+                         2.	Portfolio breadth: we support all progress Telerik products and technologies:
+                         a.	The New Venture Software team possesses rock-solid understanding, experience and expertise in all Progress Telerik products, be it for the web, desktop or mobile. 
+                         3.	Successful track record of delivering future-proof software consulting and development solutions.
+                         a.	New Venture Software has a proven record of success delivering software solutions that can transform businesses. -->
+                    <section data-background-image="./img/Training-intro-slide.jpg" data-background-size="contain" data-background-color="#fff"></section>
+                    <section id="nvs-partners" data-background="./img/Training-intro-slide+bullets.jpg"  data-background-size="contain" data-background-color="#fff"></section>
                 </section>
                 <section id="agenda" class="color-white" data-background-image="./img/school-board.jpg">
                     <h3>Agenda</h3>
@@ -911,7 +991,12 @@ getComments() : Observable&lt;Comment[]&gt; {
                 <div class="progress-logo-container">
                     <img alt="Progress Tools" src="./img/progress-tools-1.png" class="no-border" width="250" />
                 </div>
-                <div class="nvs-website-bar"><span class="nvs-website-text brackets">www.newventuresoftware.com</span></div>
+                <div class="nvs-website-bar">
+                    <span class="nvs-website-text brackets">www.newventuresoftware.com</span>
+                    <small style="float: right; margin-right: 20px;">
+                        &copy; 2018 Progress Software Corporation and/or its subsidiaries or affiliates. All rights reserved.
+                    </small>
+                </div>
 	        </section>
 		</div>
 

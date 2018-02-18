@@ -136,6 +136,14 @@ h1:after, h2:after, h3:after, h4:after, h5:after {
 
 .reveal-shared .progress-logo-container {
     position: absolute;
-    right: 15px;
-    top: 15px;
+    right: 5px;
+    top: 0;
+}
+
+#training-schedule table {
+    font-size: 20px;
+}
+
+#training-schedule table td {
+    padding: 10px 5px;
 }
