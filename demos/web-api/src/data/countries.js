@@ -1,0 +1,23 @@
+export default [
+    "Argentina",
+    "Austria",
+    "Belgium",
+    "Brazil",
+    "Canada",
+    "Denmark",
+    "Finland",
+    "France",
+    "Germany",
+    "Ireland",
+    "Italy",
+    "Mexico",
+    "Norway",
+    "Poland",
+    "Portugal",
+    "Spain",
+    "Sweden",
+    "Switzerland",
+    "UK",
+    "USA",
+    "Venezuela"
+];

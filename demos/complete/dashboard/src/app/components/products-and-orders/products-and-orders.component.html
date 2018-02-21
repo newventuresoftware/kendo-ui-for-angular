@@ -1,0 +1,43 @@
+<div class="container">
+    <h3>Products and Orders</h3>
+    <div style="position: relative">
+        <!-- <kendo-grid [data]="orders" [height]="600"
+            [sortable]="true" [sort]="state.sort" (sortChange)="onGridSortChange($event)"
+            [pageable]="true" [skip]="state.skip" [pageSize]="state.take" (pageChange)="onGridPageChange($event)"
+            [groupable]="true" [group]="state.group" (groupChange)="onGridGroupChange($event)"
+            [filterable]="true" [filter]="state.filter" (filterChange)="onGridFilterChange($event)"
+            [selectable]="true" (selectionChange)="onGridSelectionChange($event)" [kendoGridSelectBy]="'OrderID'"> -->
+        <kendo-grid [data]="orders" [height]="600"
+            [sortable]="true" [sort]="state.sort"
+            [pageable]="true" [skip]="state.skip" [pageSize]="state.take"
+            [groupable]="true" [group]="state.group"
+            [filterable]="true" [filter]="state.filter" (dataStateChange)="onGridDataStateChange($event)"
+            [selectable]="true" (selectionChange)="onGridSelectionChange($event)" [kendoGridSelectBy]="'OrderID'">
+
+            <ng-template kendoGridToolbarTemplate>
+                <button type="button" kendoGridExcelCommand><span class="k-icon k-i-file-excel"></span>Export to Excel</button>
+            </ng-template>
+
+            <kendo-grid-column field="OrderID" title="ID" [filterable]="false" width="75px"></kendo-grid-column>
+            <kendo-grid-column field="OrderDate" title="Order Date" format="{0:MM/dd/yyyy}" filter="date"></kendo-grid-column>
+            <kendo-grid-column field="CustomerID" title="Customer"></kendo-grid-column>
+            <kendo-grid-column field="ShipName" title="Ship Name"></kendo-grid-column>
+            <kendo-grid-column field="ShipCity" title="City"></kendo-grid-column>
+            <kendo-grid-column field="ShipCountry" title="Country"></kendo-grid-column>
+
+            <kendo-grid-excel fileName="Orders.xlsx"></kendo-grid-excel>
+        </kendo-grid>
+        <div *ngIf="isLoading" class="spinner-wrapper">
+            <span class="k-icon k-i-loading spinner"></span>
+        </div>
+    </div>
+    <kendo-dialog title="Order Details" *ngIf="orderDetailsDialogOpened" (close)="closeOrderDetailsDialog()">
+        <h4>Order #{{selectedOrderInfo.OrderID}}</h4>
+        <ul>
+            <li *ngFor="let product of selectedOrderInfo.OrderDetails">
+                <img [src]="'/assets/data/Products/' + product.ProductID + '.jpg'" width="75">
+                Quantity: {{product.Quantity}} | UnitPrice: {{product.UnitPrice}}
+            </li>
+        </ul>
+    </kendo-dialog>
+</div>

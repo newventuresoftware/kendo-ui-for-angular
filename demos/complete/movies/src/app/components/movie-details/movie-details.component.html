@@ -1,0 +1,6 @@
+<div *ngIf="movie">
+    <h3>Movie Details: {{movie.title}}</h3>
+    <span>ID: {{movie.id}}</span>
+    <input [(ngModel)]="movie.title" />
+</div>
+<button (click)="goBack()">Back</button>

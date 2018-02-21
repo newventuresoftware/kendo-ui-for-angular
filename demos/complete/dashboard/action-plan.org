@@ -1,0 +1,27 @@
+* REGIONAL SALES STATUS
+** Kendo Dropdownlist 
+Install, populate with static data, populate from service (countries)
+** Pie Chart
+Install, populate with static data, populate from service
+** Date Picker
+From, To, two way-binding, refresh chart on chage
+** Line Chart
+Populate from static data, from remote service
+
+* PRODUCTS & ORDERS
+** Grid
+- Install, 
+- create with static data, 
+- populate from service
+- create loading spinner
+- add paging
+** Data Query
+- add sorting
+- consolidate using process()
+- add filtering and grouping
+** Excel Export
+** Kendo Dialog
+- open the dialog when the row is selected
+
+* Theme Builder
+Create, download and include a custom theme
