@@ -5,7 +5,7 @@ known as ECMAScript 6, JavaScript programmers will be able to build their applic
 class-based approach. In TypeScript, we allow developers to use these techniques now, and compile them down to JavaScript
 that works across all major browsers and platforms, without having to wait for the next version of JavaScript. */
 
-/* Demo:
+/*
 - syntax, 
 - inheritence, 
 - access modifiers(private, protected, readonly), 

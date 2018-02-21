@@ -1,0 +1,27 @@
+@import "~@progress/kendo-theme-default/scss/all";
+
+#pie-chart-container {
+    padding: 15px 0;
+
+    .k-chart {
+        height: 225px;
+    }
+}
+
+.spinner-wrapper {
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+
+    .spinner {
+        font-size: 4.5rem;
+        color: #000;
+        position: absolute;
+        top: 35%;
+        left: 45%;
+    }
+}

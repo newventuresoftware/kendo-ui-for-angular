@@ -201,7 +201,7 @@
                             <li>Provides language service API.</li>
                         </ul>
                     </section>
-                    <section id="ts-quote">
+                    <section id="ts-quote" data-background="#000">
                         <p><em>It's always better to catch errors at compile time rather that at runtime.</em></p>
                     </section>
                     <section id="ts-benefits" data-background-color="#007ACC">
@@ -275,6 +275,23 @@
         return `Hi, my name is #{this.name}`;
     }
 }</code></pre>
+                        <aside class="notes">
+                            <p>
+                                Traditional JavaScript uses functions and prototype-based inheritance to build up reusable components, 
+                                but this may feel a bit awkward to programmers more comfortable with an object-oriented approach, where
+                                classes inherit functionality and objects are built from these classes. Starting with ECMAScript 2015, also
+                                known as ECMAScript 6, JavaScript programmers will be able to build their applications using this object-oriented 
+                                class-based approach. In TypeScript, we allow developers to use these techniques now, and compile them down to JavaScript
+                                that works across all major browsers and platforms, without having to wait for the next version of JavaScript.
+                            </p>
+                            <ul>
+                                <li>Syntax</li>
+                                <li>Inheritance</li>
+                                <li>Access Modifiers</li>
+                                <li>Properties</li>
+                                <li>Static Members</li>
+                            </ul>
+                        </aside>
                     </section>
                     <section id="ts-interfaces" data-background-color="#007ACC">
                         <h3>Interfaces</h3>
@@ -288,6 +305,21 @@
 
 const instance: MyInterface = ...</code></pre>
                         </div>
+                        <aside class="notes">
+                            <p>
+                                One of TypeScript’s core principles is that type-checking focuses on the shape that values have. 
+                                This is sometimes called “duck typing” or “structural subtyping”. In TypeScript, interfaces fill 
+                                the role of naming these types, and are a powerful way of defining contracts within your code as 
+                                well as contracts with code outside of your project.
+                            </p>
+                            <p><strong>Function Types</strong><br/>Interfaces are capable of describing the wide range of shapes that JavaScript objects can take. 
+                                In addition to describing an object with properties, interfaces are also capable of describing function types.
+
+                                To describe a function type with an interface, we give the interface a call signature. 
+                                This is like a function declaration with only the parameter list and return type given. Each parameter in the parameter list requires both name and type.</p>
+                            <p><strong>Indexable Types</strong><br/>Indexable types have an index signature that describes the types we can use to index into the object, 
+                                along with the corresponding return types when indexing.</p>
+                        </aside>
                     </section>
                     <section class="live-demo" data-background-color="black">
                         <h3>Live Demo</h3>
@@ -299,6 +331,14 @@ const instance: MyInterface = ...</code></pre>
                             <em>Class&lt;T&gt;</em>
                         </p>
                         <p>Creating a component that can work over a variety of types rather than a single one.</p>
+                        <aside class="notes">
+                            <p>A major part of software engineering is building components that not only have well-defined and 
+                                consistent APIs, but are also reusable.
+
+                                In languages like C# and Java, one of the main tools in the toolbox for creating reusable 
+                                components is generics, that is, being able to create a component that can work over a variety 
+                                of types rather than a single one. This allows users to consume these components and use their own types.</p>
+                        </aside>
                     </section>
                     <section class="live-demo" data-background-color="black">
                         <h3>Live Demo</h3>
@@ -309,6 +349,13 @@ const instance: MyInterface = ...</code></pre>
                         <p>
                             <em>import / export</em>
                         </p>
+                        <aside class="notes">
+                            Starting with ECMAScript 2015, JavaScript has a concept of modules. TypeScript shares this concept.
+
+                            Modules are executed within their own scope, not in the global scope; this means that variables, functions, classes, etc. 
+                            declared in a module are not visible outside the module unless they are explicitly exported using one of the export forms. 
+                            Conversely, to consume a variable, function, class, interface, etc. exported from a different module, it has to be imported using one of the import forms.
+                        </aside>
                     </section>
                     <section class="live-demo" data-background-color="black">
                         <h3>Live Demo</h3>
