@@ -17,12 +17,18 @@ Open slides/index.html in your browser
 ## Running the Demos
 
 ### TypeScript
-Run the TypeScript Examples
+Navigate to the project and install the dependencies.
 ```
 cd demos/complete/typescript
 npm install
-tsc // to compile the .ts files
-node output/<filename>.js // to run the compiled file
+```
+Compile the .ts files
+```
+tsc
+```
+Run the compiled file 
+```
+node output/<filename>.js
 ```
 ### Movies
 Run the Angular project
