@@ -5,3 +5,4 @@ intial/typescript/output/
 complete/typescript/output/
 .vscode
 .vs
+package-lock.json
