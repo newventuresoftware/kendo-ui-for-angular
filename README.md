@@ -3,6 +3,7 @@ This repository contains slides, example projects and boilerplate code for inter
 
 ## Dependencies
 * [NodeJS](https://nodejs.org/en/download/)
+* [TypeScript](https://www.npmjs.com/package/typescript)
 * [Angular CLI](https://github.com/angular/angular-cli#angular-cli)
 
 ## Clone
