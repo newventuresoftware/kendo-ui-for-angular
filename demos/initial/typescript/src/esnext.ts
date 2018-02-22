@@ -2,8 +2,12 @@
 const city = 'Paris';
 console.log(`Welcome to ${city}! Enjoy your stay.`)
 
-// Object Destructiong
-const obj = { a: 1, b: true, c: 'c' };
+// Object Destructuring
+const obj = { 
+    a: 1, 
+    b: true, 
+    c: 'c' 
+};
 const { a, b } = obj;
 console.log(a, b); // 1, true
 

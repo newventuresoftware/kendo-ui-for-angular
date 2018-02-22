@@ -1,14 +1,26 @@
-class Matrix {
-    constructor(private grid: number[][]) { }
+class Stack<T> {
+    data: T[];
 
-    get Rows(): number { return this.grid.length; }
-    get Cols(): number { return this.grid[0].length; }
-
-    valueAt(row: number, col: number): number {
-        return this.grid[row][col];
+    constructor() {
+        this.data = [];
     }
-}
 
-class Car {
-    constructor(public model: string, public productionYear: number) { }
+    push(item: T) {
+        this.data.push(item);
+    }
+
+    pop(): T {
+        return this.data.pop();
+    }
+
+    peek(): T {
+        if(this.data.length)
+            return this.data[this.data.length - 1];
+
+        return null;
+    }
+
+    size() {
+        return this.data.length;
+    }
 }

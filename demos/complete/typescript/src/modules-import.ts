@@ -1,7 +1,7 @@
-import { IValidator, NumberValidator, sum, key } from './modules-export';
+import { IValidator, IsPositiveNumber, sum, key } from './modules-export';
 
-var validator: IValidator = new NumberValidator();
+var isPositive: IValidator = new IsPositiveNumber();
 
-console.log(validator.validate(3)); // true
+console.log(isPositive.validate(3)); // true
 console.log(sum(1, 2)); // 3
 console.log(key); // 1a2b3c

@@ -317,6 +317,11 @@
                             </ul>
                         </aside>
                     </section>
+                    <section class="live-demo" data-background-color="black">
+                        <h3>Live Demo</h3>
+                        <p>Classes in TypeScript</p>
+                        <img alt="" src="./img/code-or-didnt-happen.jpg" />
+                    </section>
                     <section id="ts-interfaces" data-background-color="#007ACC">
                         <h3>Interfaces</h3>
                         <div>
@@ -336,6 +341,12 @@ const instance: MyInterface = ...</code></pre>
                                 the role of naming these types, and are a powerful way of defining contracts within your code as 
                                 well as contracts with code outside of your project.
                             </p>
+                        </aside>
+                    </section>
+                    <section class="live-demo" data-background-color="black">
+                        <h3>Live Demo</h3>
+                        <img alt="" src="./img/code-or-didnt-happen.jpg" />
+                        <aside class="notes">
                             <p><strong>Function Types</strong><br/>Interfaces are capable of describing the wide range of shapes that JavaScript objects can take. 
                                 In addition to describing an object with properties, interfaces are also capable of describing function types.
 
@@ -344,10 +355,6 @@ const instance: MyInterface = ...</code></pre>
                             <p><strong>Indexable Types</strong><br/>Indexable types have an index signature that describes the types we can use to index into the object, 
                                 along with the corresponding return types when indexing.</p>
                         </aside>
-                    </section>
-                    <section class="live-demo" data-background-color="black">
-                        <h3>Live Demo</h3>
-                        <img alt="" src="./img/code-or-didnt-happen.jpg" />
                     </section>
                     <section id="ts-generics" data-background="./img/ts.png" class="color-white">
                         <h3>Generics</h3>
@@ -387,6 +394,7 @@ const instance: MyInterface = ...</code></pre>
                     </section>
                     <section id="ts-esnext" data-background="./img/ts.png" class="color-white">
                         <h3>EcmaScript Next</h3>
+                        <a href="https://github.com/DrkSephy/es6-cheatsheet" target="_blank">Cheatsheet</a>
                     </section>
                     <section class="live-demo" data-background-color="black">
                         <h3>Live Demo</h3>
@@ -406,14 +414,23 @@ const instance: MyInterface = ...</code></pre>
                         </ul>
                     </section>
                     <section id="d-ts-files">
-                        <h3>Type Definition Files</h3>
+                        <h3>Type Declaration Files</h3>
                         <p>{lib}.d.ts</p>
                         <p>Distributed via NPM</p>
                         <pre><code class="bash">npm install --save @types/jquery</code></pre>
+                        <aside class="notes">You can tell TypeScript that you are trying to describe code that exists elsewhere (e.g. written in JavaScript/CoffeeScript/The runtime environment like the browser or Node.js)</aside>
                     </section>
                     <section id="ts-angular">
                         <h3>TypeScript and Angular</h3>
                         <img src="./img/logo-angular-typescript-schulung.png" class="no-border" />
+                        <aside class="notes">
+                            Angular is a modern framework built entirely in TypeScript, and as a result, using TypeScript with Angular provides a seamless experience.
+                            The Angular documentation not only supports TypeScript as a first-class citizen, but uses it as its primary language. With this in mind, Angular’s site will always be the most up-to-date reference for using Angular with TypeScript.
+                        </aside>
+                    </section>
+                    <section data-background-color="#007ACC">
+                        <h3>Learn TypeScript</h3>
+                        <a href="https://www.typescriptlang.org/docs/home.html" target="_blank">Official Documentation</a>
                     </section>
                 </section>
                 <section>
@@ -1096,7 +1113,7 @@ getComments() : Observable&lt;Comment[]&gt; {
 				 { src: 'plugin/notes/notes.js', async: true },
 				 { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 			 ],
-             slideNumber: 'c/t'
+            //  slideNumber: 'c/t'
 		 });
 		</script>
 	</body>
