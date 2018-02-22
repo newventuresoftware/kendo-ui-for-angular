@@ -7,12 +7,12 @@ This repository contains slides, example projects and boilerplate code for inter
 
 ## Clone
 ```
-git clone --recursive https://github.com/newventuresoftware/angular-training.git
+git clone https://github.com/newventuresoftware/kendo-ui-for-angular.git
 cd angular-training
 ```
 
 ## View the Slides
-Open slides/index.html in your browser
+Open slides/index.html in your browser or follow this [Link](https://rawgit.com/newventuresoftware/kendo-ui-for-angular/master/slides/index.html)
 
 ## Running the Demos
 
