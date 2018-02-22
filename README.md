@@ -1,4 +1,4 @@
-# Angular Training Materials
+# Kendo UI for Angular Training Materials
 This repository contains slides, example projects and boilerplate code for interactive demo projects with Angular and Kendo UI.
 
 ## Dependencies
