@@ -8,8 +8,16 @@ export class CountryService {
     
     constructor(private http: HttpClient, @Inject('baseUrl') private baseUrl) { }
 
-    // GET /api/countries
+    getCountries(): Observable<string[]> {
+        return this.http.get<string[]>(`${this.baseUrl}/countries`);
+    }
 
-    // GET /api/countries/:name/sales?from=<DATE>&to=<DATE>
+    getCountrySalesInfo(country: string,
+                        from: Date = new Date(1900, 1, 1),
+                        to: Date = new Date()): Observable<any[]> {
+
+        return this.http.get<any[]>(
+            `${this.baseUrl}/countries/${country}/sales?from=${from}&to=${to}`);
+    }
     
 }
