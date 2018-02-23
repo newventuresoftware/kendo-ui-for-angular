@@ -1,6 +1,66 @@
 @import "~@progress/kendo-theme-default/scss/all";
 //@import "themes/nvs/all";
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.main-wrapper {
+    display: flex;
+    height: 100%;
+
+    .nav-section {
+        width: 250px;
+        min-width: 250px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #5AA1DA;
+        padding: 15px;
+
+        h1 {
+            background-color: #60BEA0;
+            color: #fff;
+            padding: 60px 15px;
+            margin: -15px -15px 0 -15px;
+            text-align: center;
+        }
+
+        ul {
+            flex: 1;
+
+            li {
+                list-style-type: none;
+                font-size: 20px;
+                padding: 20px 0;
+
+                a, a:visited {
+                    text-decoration: none;
+                    color: #fff;
+                }
+
+                a:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        .rights {
+            font-size: 15px;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+    }
+
+    .main-section {
+        flex-grow: 1;
+        padding: 1% 10%;
+    }
+}
+
 #pie-chart-container {
     padding: 15px 0;
 
