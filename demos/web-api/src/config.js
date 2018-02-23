@@ -10,13 +10,13 @@ const requireProcessEnv = name => {
 };
 
 /* istanbul ignore next */
-if (process.env.NODE_ENV !== "production") {
-    const dotenv = require("dotenv-safe");
-    dotenv.load({
-        path: path.join(__dirname, "../.env"),
-        sample: path.join(__dirname, "../.env.example")
-    });
-}
+// if (process.env.NODE_ENV !== "production") {
+//     const dotenv = require("dotenv-safe");
+//     dotenv.load({
+//         path: path.join(__dirname, "../.env"),
+//         sample: path.join(__dirname, "../.env.example")
+//     });
+// }
 
 const config = {
     all: {
@@ -25,7 +25,7 @@ const config = {
         port: process.env.PORT || 9000,
         ip: process.env.IP || "0.0.0.0",
         apiRoot: process.env.API_ROOT || "/api",
-        masterKey: requireProcessEnv("MASTER_KEY")
+        // masterKey: requireProcessEnv("MASTER_KEY")
     },
     development: {},
     production: {

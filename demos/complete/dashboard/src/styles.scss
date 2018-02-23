@@ -27,6 +27,7 @@ html, body {
             padding: 60px 15px;
             margin: -15px -15px 0 -15px;
             text-align: center;
+            font-size: 30px;
         }
 
         ul {
@@ -44,6 +45,11 @@ html, body {
 
                 a:hover {
                     opacity: 0.8;
+                    color: blue;
+                }
+
+                a.active-link {
+                    font-weight: bold;
                 }
             }
         }
