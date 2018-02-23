@@ -180,7 +180,7 @@
                                     Successful track record of delivering future-proof software consulting and development solutions.
                                 </li>
                                 <li>
-                                    Me and my teammates feel honoured and excited to have the opportunity to share our experience and passion about the Telerik technologies.
+                                    My teammates and I feel honoured and excited to have the opportunity to share our experience and passion about the Telerik technologies.
                                 </li>
                             </ol>
                         </aside>
@@ -203,6 +203,9 @@
                 <section data-background-color="#000">
                     <p><em><strong>Say NO to the slow and painful</em></strong></p>
                     <img alt="" src="./img/death-by-ppt.jpg" width="500" class="no-border" />
+                    <aside class="notes">
+                        I'd like to raise a voice against the...
+                    </aside>
                 </section>
                 <section>
                     <h4>We'll make it interactive</h4>
@@ -353,6 +356,7 @@ const instance: MyInterface = ...</code></pre>
                     </section>
                     <section class="live-demo" data-background-color="black">
                         <h3>Live Demo</h3>
+                        <p>Interfaces</p>
                         <img alt="" src="./img/code-or-didnt-happen.jpg" />
                         <aside class="notes">
                             <p><strong>Function Types</strong><br/>Interfaces are capable of describing the wide range of shapes that JavaScript objects can take. 
@@ -381,6 +385,7 @@ const instance: MyInterface = ...</code></pre>
                     </section>
                     <section class="live-demo" data-background-color="black">
                         <h3>Live Demo</h3>
+                        <p>Generics</p>
                         <img alt="" src="./img/code-or-didnt-happen.jpg" />
                     </section>
                     <section id="ts-modules" data-background="./img/ts.png" class="color-white">
@@ -398,11 +403,23 @@ const instance: MyInterface = ...</code></pre>
                     </section>
                     <section class="live-demo" data-background-color="black">
                         <h3>Live Demo</h3>
+                        <p>Modules</p>
                         <img alt="" src="./img/code-or-didnt-happen.jpg" />
                     </section>
                     <section id="ts-esnext" data-background="./img/ts.png" class="color-white">
                         <h3>EcmaScript Next</h3>
                         <a href="https://github.com/DrkSephy/es6-cheatsheet" target="_blank">Cheatsheet</a>
+                        <aside class="notes">
+                            <p>
+                                JavaScript is the language. ECMAScript is the specification it’s based on.                                
+                                When people call JavaScript a “dialect of the ECMAScript language,” they mean it in the same sense as when talking about English, French, or Chinese dialects.
+                                A dialect derives most of its lexicon and syntax from its parent language, but deviates enough to deserve distinction.
+                                JavaScript mostly implements the ECMAScript specification as described in ECMA-262, but a handful of differences do exist.
+                            </p>
+                            <p>
+                                TypeScript provides pulls in features from future versions of JavaScript so that we can use them today and still support older browsers.
+                            </p>
+                        </aside>
                     </section>
                     <section class="live-demo" data-background-color="black">
                         <h3>Live Demo</h3>
@@ -468,6 +485,13 @@ const instance: MyInterface = ...</code></pre>
                         <div>
                             <img alt="" src="./img/ng-architecture.png" class="no-border" />
                         </div>
+                        <aside class="notes">
+                            You write Angular applications by composing HTML templates with Angularized markup, writing component classes to manage those templates, adding application logic in services, and boxing components and services in modules.
+
+                            Then you launch the app by bootstrapping the root module. Angular takes over, presenting your application content in a browser and responding to user interactions according to the instructions you've provided.
+
+                            Of course, there is more to it than this. You'll learn the details in the slides that follow. For now, focus on the big picture.
+                        </aside>
                     </section>
                     <section>
                         <p><em>With all the front-end build tools, setting up a project can be tedious.</em></p>
@@ -531,7 +555,15 @@ const instance: MyInterface = ...</code></pre>
   declarations: [ AppComponent ],
   bootstrap:    [ AppComponent ]
 })
-export class AppModule { }</code></pre>
+export class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);</code></pre>
+                        <aside class="notes">
+                            Angular apps are modular and Angular has its own modularity system called NgModules.
+                            Every Angular app has at least one NgModule class, the root module, conventionally named AppModule.
+
+                            While the root module may be the only module in a small application, most apps have many more feature modules, each a cohesive block of code dedicated to an application domain, a workflow, or a closely related set of capabilities.
+                        </aside>
                     </section>
                     <section id="ng-modules-bullets" data-background-color="#315FBE">
                         <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -20%; left: -15%;" />
@@ -557,6 +589,12 @@ export class AppModule { }</code></pre>
                             <li>Angular <strong>creates, updates and destroys</strong> components as the user moves through the app.</li>
                             <li>Angular provides <strong>view encapsulation</strong> by default which enables the <strong>Shadow DOM</strong></li>
                         </ul>
+                        <aside class="notes">
+                            <p>
+                                A component controls a patch of screen called a view.
+                                We define a component's application logic—what it does to support the view—inside a class. The class interacts with the view through an API of properties and methods.
+                            </p>
+                        </aside>
                     </section>
                     <section id="shadow-dom">
                         <h4 class="text-right">Shadow DOM</h4>
@@ -613,6 +651,16 @@ export class AppModule { }</code></pre>
                     <section id="ng-data-binding-overview">
                         <h4 class="text-right">Data Binding Types</h4>
                         <img class="no-border" alt="" src="./img/ng-databinding.png" />
+                        <aside class="notes">
+                            <p>Without a framework, you would be responsible for pushing data values into the HTML controls and turning user responses into actions and value updates. Writing such push/pull logic by hand is tedious, error-prone, and a nightmare to read as any experienced jQuery programmer can attest.
+                            </p>
+                            <p>
+                                Angular supports data binding, a mechanism for coordinating parts of a template with parts of a component. Add binding markup to the template HTML to tell Angular how to connect both sides.
+                            </p>
+                            <p>
+                                As the diagram shows, there are four forms of data binding syntax. Each form has a direction — to the DOM, from the DOM, or in both directions.
+                            </p>
+                        </aside>
                     </section>
                     <section id="ng-components-demo">
                         <h3>Live Demo</h3>
@@ -623,6 +671,32 @@ export class AppModule { }</code></pre>
                         <h3>Pipes & Directives</h3>
                         <img src="./img/ng-logo.png" width="150" class="no-border bg-transparent" />
                         <p><em>@Pipe() <br/>@Directive()</em></p>
+                    </section>
+                    <section id="directives-overview" data-background-color="#315FBE">
+                        <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -50%; left: -15%;" />
+                        <h4 class="text-right">What are Directives?</h4>
+                        <p>Directives aim to extends the static nature of HTML. They allow creating custom elements, attributes and even control flow inside the HTML.</p>
+                        <aside class="notes">
+                            Angular templates are dynamic. When Angular renders them, it transforms the DOM according to the instructions given by directives.
+
+                            A directive is a class with a @Directive decorator. A component is a directive-with-a-template; a @Component decorator is actually a @Directive decorator extended with template-oriented features.
+                        </aside>
+                    </section>
+                    <section id="directive-types" data-background-color="#315FBE">
+                        <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -50%; left: -15%;" />
+                        <h4 class="text-right">Directives Types</h4>
+                        <ul style="font-size: 0.8em">
+                            <li><strong>Components</strong> - directives with a template.</li>
+                            <li><strong>Structural</strong> - change the DOM layout by adding and removing DOM elements<em>(*ngIf, *ngFor)</em>.</li>
+                            <li><strong>Attribute</strong> - change the appearance or behavior of an element, component, or another directive<em>(NgStyle, NgClass)</em>.</li>
+                        </ul>
+                        <aside class="notes">
+                            Two other kinds of directives exist: structural and attribute directives.
+
+                            They tend to appear within an element tag as attributes do, sometimes by name but more often as the target of an assignment or a binding.
+
+                            Structural directives alter layout by adding, removing, and replacing elements in DOM.
+                        </aside>
                     </section>
                     <section id="pipes-overview" data-background-color="#353334">
                         <h4 class="text-right">What are Pipes?</h4>
@@ -642,32 +716,21 @@ export class AppModule { }</code></pre>
                                 </td>
                             </tr>
                         </table>
-                    </section>
-                    <section id="directives-overview" data-background-color="#315FBE">
-                        <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -50%; left: -15%;" />
-                        <h4 class="text-right">What are Directives?</h4>
-                        <p>Directives aim to extends the static nature of HTML. They allow creating custom elements, attributes and even control flow inside the HTML.</p>
-                    </section>
-                    <section id="directive-types" data-background-color="#315FBE">
-                        <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -50%; left: -15%;" />
-                        <h4 class="text-right">Directives Types</h4>
-                        <ul style="font-size: 0.8em">
-                            <li><strong>Components</strong> - directives with a template.</li>
-                            <li><strong>Structural</strong> - change the DOM layout by adding and removing DOM elements<em>(*ngIf, *ngFor)</em>.</li>
-                            <li><strong>Attribute</strong> - change the appearance or behavior of an element, component, or another directive<em>(NgStyle, NgClass)</em>.</li>
-                        </ul>
+                        <aside class="notes">
+                            <p>A way to transform values in Angular templates.</p>
+                        </aside>
                     </section>
                     <section id="ng-directives-pipes-demo">
                         <h3>Live Demo</h3>
                         <p>Working with Directives and Pipes</p>
                         <img alt="" src="./img/dog-coder.jpeg" width="500" />
                     </section>
-                    <section id="ng-di-services" data-background-color="#353334">
+                    <section id="ng-di-services" data-background="#353334">
                         <h3>Dependency Injection and Services</h3>
                         <img src="./img/ng-logo.png" width="170" class="no-border bg-transparent" />
                         <p>@Injectable()</p>
                     </section>
-                    <section id="di-about" data-background-color="#353334">
+                    <section id="di-about" data-background="#353334">
                         <h4>What is Dependency Injection(DI)?</h4>
                         <p class="fragment" style="font-size: 0.9em">A <strong>design principle</strong> in which a class should receive its dependencies from external sources rather than creating them itself.</p>
                     </section>
@@ -718,6 +781,17 @@ const car = new Car(engine);</code></pre>
                             <li>A service is nothing more than a class in Angular. It remains nothing more than a class until registered with an Angular injector.</li>
                             <li>You don't have to create an Angular injector. Angular creates an application-wide injector for you during the bootstrap process.</li>
                         </ul>
+                        <aside class="notes">
+                            <p>There is nothing specifically Angular about services. Angular has no definition of a service. There is no service base class, and no place to register a service.</p>
+                            <p>Almost anything can be a service. A service is typically a class with a narrow, well-defined purpose. It should do something specific and do it well.</p>
+                            <ul>For Example
+                                <li>Logging Service</li>
+                                <li>Data Service</li>
+                                <li>Authentication Service</li>
+                                <li>Configuration</li>
+                                <li>Tax Calculator</li>
+                            </ul>
+                        </aside>
                     </section>
                     <section id="ng-services-img">
                         <h4 class="text-right">DI & Services</h4>
@@ -744,6 +818,16 @@ export class AppModule { }</code></pre>
                         <h3>Live Demo</h3>
                         <p>Services and DI</p>
                         <img alt="" src="./img/dog-coder.jpeg" width="500" />
+                        <aside class="notes">
+                            <p>Dependency injection is a way to supply a new instance of a class with the fully-formed dependencies it requires. Most dependencies are services. Angular uses dependency injection to provide new components with the services they need.</p>
+                            <p>Angular can tell which services a component needs by looking at the types of its constructor parameters.</p>
+                            <p>
+                                When Angular creates a component, it first asks an injector for the services that the component requires.
+                                An injector maintains a container of service instances that it has previously created. If a requested service instance is not in the container,
+                                the injector makes one and adds it to the container before returning the service to Angular. When all requested services have been resolved and
+                                returned, Angular can call the component's constructor with those services as arguments. This is dependency injection.
+                            </p>
+                        </aside>
                     </section>
                     <section id="ng-routing" data-background="./img/the-long-history-of-route-66.jpg">
                         <h3 class="color-white"><span>Routing in Angular</span></h3>
@@ -756,6 +840,15 @@ export class AppModule { }</code></pre>
                             <li>Routing the standard way to navigate in a web applications.</li>
                             <li>Each unique route must always return the same page.</li>
                         </ul>
+                        <aside class="notes">
+                            <p>The Angular Router enables navigation from one view to the next as users perform application tasks. The browser is a familiar model of application navigation:</p>
+                            <ul>
+                                <li>Enter a URL in the address bar and the browser navigates to a corresponding page.</li>
+                                <li>Click links on the page and the browser navigates to a new page.</li>
+                                <li>Click the browser's back and forward buttons and the browser navigates backward and forward through the history of pages you've seen.</li>
+                            </ul>
+                            <p>The Angular Router ("the router") borrows from this model. It can interpret a browser URL as an instruction to navigate to a client-generated view. It can pass optional parameters along to the supporting view component that help it decide what specific content to present. You can bind the router to links on a page and it will navigate to the appropriate application view when the user clicks a link. You can navigate imperatively when the user clicks a button, selects from a drop box, or in response to some other stimulus from any source. And the router logs activity in the browser's history journal so the back and forward buttons work as well.</p>
+                        </aside>
                     </section>
                     <section id="routing-demo">
                         <h3>Live Demo</h3>
@@ -785,9 +878,11 @@ export class AppModule { }</code></pre>
     .filter(quote => quote.price > 30)
     .map(quote => quote.price)
     .forEach(price => console.log(price));</code></pre>
-                        <!-- You can think of an observable as an array whose items arrive asynchronously over time. Observables help you manage asynchronous data,
-                             such as data coming from a backend service. Observables are used within Angular itself, including Angular’s event system and its http client
-                        service. To use observables, Angular uses a third-party library called Reactive Extensions (RxJS). -->
+                        <aside class="notes">
+                            You can think of an observable as an array whose items arrive asynchronously over time. Observables help you manage asynchronous data,
+                            such as data coming from a backend service. Observables are used within Angular itself, including Angular’s event system and its http client
+                            service. To use observables, Angular uses a third-party library called Reactive Extensions (RxJS).
+                        </aside>
                     </section>
                     <section data-background-color="#72088F">
                         <div>
@@ -841,26 +936,30 @@ export class AppModule { }</code></pre>
                     </section>
                     <section id="ng-http"  data-background-color="#315FBE">
                         <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -30%; left: -10%;" />
-                        <h4>Angular HTTP</h4>
+                        <h4>Angular HttpClient</h4>
                         <ul>
                             <li>Angular's http service delegates the client/server communication tasks to a helper service called the XHRBackend</li>
                             <li>Register for HTTP services<ul>
-                                <li>Import the <strong>HttpModule</strong></li>
+                                <li>Import the <strong>HttpClientModule</strong></li>
                             </ul>
                             </li>
                             <li>Can work with both <em>Observables</em> and <em>Promises</em>.</li>
                         </ul>
+                        <aside class="notes">
+                            <p>
+                                Most front-end applications communicate with backend services over the HTTP protocol. Modern browsers support two different APIs for making HTTP requests: the XMLHttpRequest interface and the fetch() API.
+                                The HttpClient in @angular/common/http offers a simplified client HTTP API for Angular applications that rests on the XMLHttpRequest interface exposed by browsers. Additional benefits of HttpClient include testability features, typed request and response objects, request and response interception, Observable apis, and streamlined error handling.
+                            </p>
+                        </aside>
                     </section>
                     <section id="ng-http-example">
                         <h4 class="text-right">
-                            Angular HTTP Example
+                            Angular HttpClient Example
                         </h4>
                         <pre><code class="ts">// Fetch all existing comments
 getComments() : Observable&lt;Comment[]&gt; {
     // ...using get request
-    return this.http.get('/api/comments')
-        // ...and calling .json() on the response to return data
-        .map((res:Response) => res.json())
+    return this.http.get&lt;Comment[]&gt;('/api/comments')
         //...errors if any
         .catch((error:any) => Observable.throw(error.json().error));
 }</code></pre>
@@ -929,6 +1028,12 @@ getComments() : Observable&lt;Comment[]&gt; {
                             </small>
                         </p>
                     </section>
+                    <section data-background-color="#000">
+                        <p>
+                            <a href="https://angular.io/guide/cheatsheet" style="color: lightblue;" target="_blank">Angular Cheatsheet</a>
+                        </p>
+                        <img src="./img/cheat-on-exam.jpg" />
+                    </section>
                 </section>
                 <!-- Kendo -->
                 <section>
@@ -944,8 +1049,14 @@ getComments() : Observable&lt;Comment[]&gt; {
                             <li>Native Angular Component Suite.</li>
                             <li>Each component group represents a separate Angular module.</li>
                             <li>Distributed via NPM (nodejs package manager).</li>
-                            <li>Offers Unlimited Support.</li>
+                            <li>Unlimited Product Support.</li>
                         </ul>
+                        <aside class="notes">
+                            <p>A complete JS UI component library that allows you to quickly build eye-catching, high quality, high-performance responsive native web apps using Angular.</p>
+                            <p>Reduces time-to-market and design risk.</p>
+                            <p>This is a true Angular UI component suite, built from the ground up. No wrappers, no jQuery dependencies.</p>
+                            <p>Native, written in Angular, focused on performance.</p>
+                        </aside>
                     </section>
                     <section>
                         <h4 class="text-right">Installation</h4>
@@ -1052,6 +1163,17 @@ getComments() : Observable&lt;Comment[]&gt; {
                     <section id="ng-nativescript" data-background-color="#315FBE">
                         <h3>Angular + NativeScript</h3>
                         <img alt="" src="./img/ng-nativescript.png" class="bg-transparent no-border" />
+                        <aside class="notes">
+                            <p>
+                                NativeScript is a free and open source framework for building native iOS and Android apps using JavaScript and CSS. NativeScript renders UIs with the native platform’s rendering engine—no WebViews—resulting in native-like performance and UX.
+                            </p>
+                            <p>
+                                The latest version of Angular makes it possible to use the framework outside of a web browser, and developers at Progress—the company that created and maintains NativeScript—worked closely with developers at Google for over a year to make Angular in NativeScript a reality.
+                            </p>
+                            <p>
+                                The result is a software architecture that allows you to build mobile apps using the same framework—and in some cases the same code—that you use to build Angular web apps, with the performance you’d expect from native code.
+                            </p>
+                        </aside>
                     </section>
                 </section>
                 <section id="learning-resources" data-background="./img/school-board.jpg">
