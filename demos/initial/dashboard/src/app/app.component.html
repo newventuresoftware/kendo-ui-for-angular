@@ -1,17 +1,19 @@
-<div id="nav-section" class="column">
-    <h1 id="dash-logo" class="center-block">{{title}}</h1>
-    <ul class="nav">
-        <li>
-            <a routerLink="/regional-sales-status"><span class="icon icon-chart-column"></span>Regional Sales Status</a>
-        </li>
-        <li>
-            <a routerLink="/products-and-orders"><span class="icon icon-star-empty"></span>Products &amp; Orders</a>
-        </li>
-    </ul>
-    <div id="rights">
-        <p>Copyright &copy; New Venture Software</p>
-    </div>
-</div>
-<div id="main-section">
-    <router-outlet></router-outlet>
+<div class="main-wrapper">
+    <aside class="nav-section">
+        <h1>{{title}}</h1>
+        <ul>
+            <li>
+                <a routerLink="/regional-sales-status" routerLinkActive="active-link">Regional Sales Status</a>
+            </li>
+            <li>
+                <a routerLink="/products-and-orders" routerLinkActive="active-link">Products &amp; Orders</a>
+            </li>
+        </ul>
+        <div class="rights">
+            &copy; New Venture Software
+        </div>
+    </aside>
+    <section class="main-section">
+        <router-outlet></router-outlet>
+    </section>
 </div>
