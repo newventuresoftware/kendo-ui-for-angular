@@ -16,7 +16,7 @@ export class MovieService {
         new Movie(8, 'Batman Begins')
     ];
 
-    constructor(private http: Http) { }
+    constructor() { }
 
     getMovies(): Movie[] {
         return this.movies;
