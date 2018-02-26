@@ -7,8 +7,8 @@ export const index = ({ querymen: { query, select, cursor } }, res, next) => {
 
 export const show = (req, res, next) => {
     const country = req.params.name;
-    const from = req.query ? new Date(req.query.from) : new Date(1900, 0, 1);
-    const to = req.to ? new Date(req.query.to) : new Date();
+    const from = req.query && !isNaN(Date.parse(req.query.from)) ? new Date(req.query.from) : new Date(1900, 0, 1);
+    const to = req.query && !isNaN(Date.parse(req.query.to)) ? new Date(req.query.to) : new Date();
 
     let countrySales = 0;
     let allSales = 0;

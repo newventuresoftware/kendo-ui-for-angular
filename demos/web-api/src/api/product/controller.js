@@ -26,10 +26,8 @@ export const index = (req, res, next) => {
 
 export const topSelling = (req, res, next) => {
     const country = req.params.country;
-    const from = req.query.from
-        ? new Date(req.query.from)
-        : new Date(1900, 0, 1);
-    const to = req.query.to ? new Date(req.query.to) : new Date();
+    const from = req.query && !isNaN(Date.parse(req.query.from)) ? new Date(req.query.from) : new Date(1900, 0, 1);
+    const to = req.query && !isNaN(Date.parse(req.query.to)) ? new Date(req.query.to) : new Date();
 
     const series = req.query.series === "true" ? true : false;
 
