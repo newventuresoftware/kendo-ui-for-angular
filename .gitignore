@@ -2,5 +2,5 @@ notes.org
 transcript.org
 /demos/.vscode/launch.json
 node_modules
-demos/initial/typescript/output
 demos/complete/typescript/output
+demos/initial/
