@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./regional-sales-status.component.scss']
 })
 export class RegionalSalesStatusComponent implements OnInit {
-    selectedCountryRevenue: number;
+
     selectedCountry = 'USA';
     countries: string[] = [];
 
@@ -47,7 +47,6 @@ export class RegionalSalesStatusComponent implements OnInit {
         this.countryService.getCountrySalesInfo(this.selectedCountry, fromDate, toDate)
             .subscribe(data => {
                 this.countryMarketShare = data;
-                this.selectedCountryRevenue = this.countryMarketShare.find(x => x.country === country).sales;
             });
     }
 
