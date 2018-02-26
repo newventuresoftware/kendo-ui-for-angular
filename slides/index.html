@@ -474,7 +474,10 @@ const instance: MyInterface = ...</code></pre>
                             <img alt="" src="./img/ng-logo-text.png" class="no-border bg-transparent" width="500" />
                         </div>
                         <p>A developer platform for building mobile and desktop web apps using TypeScript/JavaScript and other languages.</p>
-                        <p>Consists of several libraries, some of them core and some optional.</p>
+                        <aside class="notes">
+                            <p>Angular is a platform that makes it easy to build applications with the web. Angular combines declarative templates, dependency injection, end to end tooling, and integrated best practices to solve development challenges. Angular empowers developers to build applications that live on the web, mobile, or the desktop</p>
+                            <p>Consists of several libraries, some of them core and some optional.</p>
+                        </aside>
                     </section>
                     <section id="ng-framework" data-background-color="#000" data-background-transition="zoom">
                         <h3>Framework</h3>
@@ -499,6 +502,9 @@ const instance: MyInterface = ...</code></pre>
                     </section>
                     <section data-background-color="#000">
                         <img src="./img/configs-meme.jpg" />
+                        <aside class="notes">
+                            <p>Good tools make application development quicker and easier to maintain than if you did everything by hand.</p>
+                        </aside>
                     </section>
                     <section>
                         <p><span><strong>Angular CLI solves this problem!</strong></span></p>
@@ -524,8 +530,11 @@ const instance: MyInterface = ...</code></pre>
                             </ul>
                         </div>
                         <div class="col col-right">
-                        <img alt="" src="./img/ng-cli-logo.png" width="300" class="no-border bg-transparent" />
+                            <img alt="" src="./img/ng-cli-logo.png" width="300" class="no-border bg-transparent" />
                         </div>
+                        <aside class="notes">
+                            The Angular CLI is a command line interface tool that can create a project, add files, and perform a variety of ongoing development tasks such as testing, bundling, and deployment.
+                        </aside>
                     </section>
                     <section id="ng-cli-demo">
                         <h3>Live Demo</h3>
@@ -540,11 +549,11 @@ const instance: MyInterface = ...</code></pre>
                             <dt>Install Angular CLI</dt>
                             <dd><pre><code class="bash">npm install -g @angular/cli</code></pre></dd>
                             <dt>Initialize a project</dt>
-                            <dd><pre><code class="bash">ng new movies</code></pre></dd>
+                            <dd><pre><code class="bash">ng new my-app</code></pre></dd>
                             <dt>Navigate to the project root.</dt>
-                            <dd><pre><code class="bash">cd movies</code></pre></dd>
+                            <dd><pre><code class="bash">cd my-app</code></pre></dd>
                             <dt>Run the project</dt>
-                            <dd><pre><code class="bash">ng serve</code></pre></dd>
+                            <dd><pre><code class="bash">ng serve --open</code></pre></dd>
                         </dl>
                     </section>
                     <section id="ng-modules" data-background="./img/telerik-bg.jpg">
@@ -563,6 +572,9 @@ platformBrowserDynamic().bootstrapModule(AppModule);</code></pre>
                             Every Angular app has at least one NgModule class, the root module, conventionally named AppModule.
 
                             While the root module may be the only module in a small application, most apps have many more feature modules, each a cohesive block of code dedicated to an application domain, a workflow, or a closely related set of capabilities.
+                            Angular ships as a collection of JavaScript modules. You can think of them as library modules.
+
+                            Each Angular library name begins with the @angular prefix.
                         </aside>
                     </section>
                     <section id="ng-modules-bullets" data-background-color="#315FBE">
@@ -596,48 +608,48 @@ platformBrowserDynamic().bootstrapModule(AppModule);</code></pre>
                             </p>
                         </aside>
                     </section>
-                    <section id="shadow-dom">
-                        <h4 class="text-right">Shadow DOM</h4>
-                        <ul style="font-size: 0.8em;">
-                            <li><code>Shadow DOM</code> is just normal DOM with two differences:
-                                <ol>
-                                    <li>how it's created/used and </li>
-                                    <li>how it behaves in relation to the rest of the page</li>
-                                </ol>
-                            </li>
-                            <li><p><code>Shadow DOM</code> is designed as a tool for building component-based apps</p>
-                                <ul>
-                                    <li>Angular uses components<ul>
-                                        <li>It addresses the <code>DOM</code> tree encapsulation problem</li>
-                                        <li>Allows us to <strong>hide</strong> <code>DOM</code> logic behind other elements</li>
-                                    </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </section>
-                    <section id="shadow-dom-2">
-                        <h4 class="text-right">Shadow DOM</h4>
-                        <ul style="font-size: 0.9em;">
-                            <li><code>Isolated DOM</code> -  A component's DOM is self-contained <ul>
-                                <li><code>document.querySelector()</code> won't return nodes in the component's shadow DOM</li>
-                            </ul>
-                            </li>
-                            <li><code>Scoped CSS</code> -  CSS defined inside shadow DOM is scoped to it</li>
-                        </ul>
-                    </section>
-                    <section id="view-encapsulation" data-background-color="#315FBE">
-                        <h4 class="text-right">View Encapsulation</h4>
-                        <ul>
-                            <li>Angular comes with view encapsulation by default which enables Shadow DOM</li>
-                            <li>There are three view encapsulation types available<ul>
-                                <li><code>None</code> - no Shadow DOM and no encapsulation</li>
-                                <li><code>Emulated</code> <strong>(default)</strong> - no Shadow DOM but there is encapsulation of the views</li>
-                                <li><code>Native</code> - native Shadow DOM</li>
-                            </ul>
-                            </li>
-                        </ul>
-                    </section>
+                    <!-- <section id="shadow-dom">
+                         <h4 class="text-right">Shadow DOM</h4>
+                         <ul style="font-size: 0.8em;">
+                         <li><code>Shadow DOM</code> is just normal DOM with two differences:
+                         <ol>
+                         <li>how it's created/used and </li>
+                         <li>how it behaves in relation to the rest of the page</li>
+                         </ol>
+                         </li>
+                         <li><p><code>Shadow DOM</code> is designed as a tool for building component-based apps</p>
+                         <ul>
+                         <li>Angular uses components<ul>
+                         <li>It addresses the <code>DOM</code> tree encapsulation problem</li>
+                         <li>Allows us to <strong>hide</strong> <code>DOM</code> logic behind other elements</li>
+                         </ul>
+                         </li>
+                         </ul>
+                         </li>
+                         </ul>
+                         </section>
+                         <section id="shadow-dom-2">
+                         <h4 class="text-right">Shadow DOM</h4>
+                         <ul style="font-size: 0.9em;">
+                         <li><code>Isolated DOM</code> -  A component's DOM is self-contained <ul>
+                         <li><code>document.querySelector()</code> won't return nodes in the component's shadow DOM</li>
+                         </ul>
+                         </li>
+                         <li><code>Scoped CSS</code> -  CSS defined inside shadow DOM is scoped to it</li>
+                         </ul>
+                         </section>
+                         <section id="view-encapsulation" data-background-color="#315FBE">
+                         <h4 class="text-right">View Encapsulation</h4>
+                         <ul>
+                         <li>Angular comes with view encapsulation by default which enables Shadow DOM</li>
+                         <li>There are three view encapsulation types available<ul>
+                         <li><code>None</code> - no Shadow DOM and no encapsulation</li>
+                         <li><code>Emulated</code> <strong>(default)</strong> - no Shadow DOM but there is encapsulation of the views</li>
+                         <li><code>Native</code> - native Shadow DOM</li>
+                         </ul>
+                         </li>
+                         </ul>
+                         </section> -->
                     <section id="ng-component-tree">
                         <h3>Component Tree</h3>
                         <img src="./img/ng-component-tree.PNG" class="no-border" />
@@ -666,11 +678,14 @@ platformBrowserDynamic().bootstrapModule(AppModule);</code></pre>
                         <h3>Live Demo</h3>
                         <p>Creating Angular Components</p>
                         <img alt="" src="./img/dog-coder.jpeg" width="500" />
+                        <aside class="notes">
+                            Chapter 3 - The Hero Editor
+                        </aside>
                     </section>
                     <section id="ng-directives" data-background-color="#315FBE">
-                        <h3>Pipes & Directives</h3>
+                        <h3>Directives & Pipes</h3>
                         <img src="./img/ng-logo.png" width="150" class="no-border bg-transparent" />
-                        <p><em>@Pipe() <br/>@Directive()</em></p>
+                        <p><em>@Directive() <br/>@Pipe()</em></p>
                     </section>
                     <section id="directives-overview" data-background-color="#315FBE">
                         <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -50%; left: -15%;" />
@@ -724,6 +739,10 @@ platformBrowserDynamic().bootstrapModule(AppModule);</code></pre>
                         <h3>Live Demo</h3>
                         <p>Working with Directives and Pipes</p>
                         <img alt="" src="./img/dog-coder.jpeg" width="500" />
+                        <aside class="notes">
+                            Chapter 4 - Displaying a List <br/>
+                            Chapter 5 - Master/Detail Component
+                        </aside>
                     </section>
                     <section id="ng-di-services" data-background="#353334">
                         <h3>Dependency Injection and Services</h3>
@@ -796,6 +815,16 @@ const car = new Car(engine);</code></pre>
                     <section id="ng-services-img">
                         <h4 class="text-right">DI & Services</h4>
                         <img src="./img/ng-injector.png" width="600" class="no-border" />
+                        <aside class="notes">
+                            <p>Dependency injection is a way to supply a new instance of a class with the fully-formed dependencies it requires. Most dependencies are services. Angular uses dependency injection to provide new components with the services they need.</p>
+                            <p>Angular can tell which services a component needs by looking at the types of its constructor parameters.</p>
+                            <p>
+                                When Angular creates a component, it first asks an injector for the services that the component requires.
+                                An injector maintains a container of service instances that it has previously created. If a requested service instance is not in the container,
+                                the injector makes one and adds it to the container before returning the service to Angular. When all requested services have been resolved and
+                                returned, Angular can call the component's constructor with those services as arguments. This is dependency injection.
+                            </p>
+                        </aside>
                     </section>
                     <section id="ng-providers">
                         <h3>Providers</h3>
@@ -819,14 +848,7 @@ export class AppModule { }</code></pre>
                         <p>Services and DI</p>
                         <img alt="" src="./img/dog-coder.jpeg" width="500" />
                         <aside class="notes">
-                            <p>Dependency injection is a way to supply a new instance of a class with the fully-formed dependencies it requires. Most dependencies are services. Angular uses dependency injection to provide new components with the services they need.</p>
-                            <p>Angular can tell which services a component needs by looking at the types of its constructor parameters.</p>
-                            <p>
-                                When Angular creates a component, it first asks an injector for the services that the component requires.
-                                An injector maintains a container of service instances that it has previously created. If a requested service instance is not in the container,
-                                the injector makes one and adds it to the container before returning the service to Angular. When all requested services have been resolved and
-                                returned, Angular can call the component's constructor with those services as arguments. This is dependency injection.
-                            </p>
+                            Chapter 6 - Services
                         </aside>
                     </section>
                     <section id="ng-routing" data-background="./img/the-long-history-of-route-66.jpg">
@@ -854,86 +876,89 @@ export class AppModule { }</code></pre>
                         <h3>Live Demo</h3>
                         <p>Angular Routing.</p>
                         <img alt="" src="./img/dog-coder.jpeg" width="500" />
-                    </section>
-                    <section id="reactive-programming" data-background-color="#315FBE">
-                        <h4>Reactive Programming</h4>
-                        <ul style="font-size: 0.8em">
-                            <li>Programming with asynchronous data streams.</li>
-                            <li>You are able to create data streams of anything.</li>
-                            <li>A stream is a sequence of ongoing events ordered in time.</li>
-                            <li>A stream can be used as an input to another one.</li>
-                            <li>It emits <strong>three different things</strong><ul>
-                                <li>a value (of some type)</li>
-                                <li>an error</li>
-                                <li>a complete method</li>
-                            </ul>
-                            </li>
-                        </ul>
-                    </section>
-                    <section id="observables" data-background-color="#fff">
-                        <h4>RxJS and Observables</h4>
-                        <img class="no-border" src="./img/ng-rxjs.png" width="200" style="position: absolute; top: -40%; right: -15%;" />
-                        <p>Set of libraries for composing asynchronous and event-based programs using observable sequences</p>
-                        <pre><code class="js">const subscription = source
-    .filter(quote => quote.price > 30)
-    .map(quote => quote.price)
-    .forEach(price => console.log(price));</code></pre>
                         <aside class="notes">
-                            You can think of an observable as an array whose items arrive asynchronously over time. Observables help you manage asynchronous data,
-                            such as data coming from a backend service. Observables are used within Angular itself, including Angular’s event system and its http client
-                            service. To use observables, Angular uses a third-party library called Reactive Extensions (RxJS).
+                            Chapter 7 - Routing
                         </aside>
                     </section>
-                    <section data-background-color="#72088F">
-                        <div>
-                            <img alt="" src="./img/rx-filter.png" width="450" class="no-border" />
-                        </div>
-                        <hr/>
-                        <div>
-                            <img alt="" src="./img/rx-map.png" width="450" class="no-border" />
-                        </div>
-                    </section>
-                    <section id="cold-hot-observables">
-                        <h4 class="text-right">Cold vs Hot</h4>
-                        <ul style="font-size: 0.7em">
-                            <li><p><strong>Cold observables</strong> start running upon subscription</p>
-                                <ul>
-                                    <li>The observable sequence only starts pushing values to the observers when <strong>Subscribe is called</strong></li>
-                                </ul>
-                            </li>
-                            <li><p><strong>Hot observables</strong> are ones that are pushing even when you are not subscribed to the observable</p>
-                                <ul>
-                                    <li>Like mouse moves, or Timer ticks, etc.</li>
-                                </ul>
-                            </li>
-                            <li><p>It’s not always possible from the subscriber side to know whether you are dealing with a cold or hot Observable</p>
-                            </li>
-                        </ul>
-                    </section>
-                    <section id="observable-vs-promise">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th style="text-align:center">Observables</th>
-                                    <th style="text-align:center">Promise</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td style="text-align:center">Observables handle multiple values over time</td>
-                                    <td style="text-align:center">Promises are only called once and will return a single value</td>
-                                </tr>
-                                <tr>
-                                    <td style="text-align:center">Observables are cancellable</td>
-                                    <td style="text-align:center">Promises are not cancellable</td>
-                                </tr>
-                                <tr>
-                                    <td style="text-align:center">Observables are lazy</td>
-                                    <td style="text-align:center">Promises NOT</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </section>
+                    <!-- <section id="reactive-programming" data-background-color="#315FBE">
+                         <h4>Reactive Programming</h4>
+                         <ul style="font-size: 0.8em">
+                         <li>Programming with asynchronous data streams.</li>
+                         <li>You are able to create data streams of anything.</li>
+                         <li>A stream is a sequence of ongoing events ordered in time.</li>
+                         <li>A stream can be used as an input to another one.</li>
+                         <li>It emits <strong>three different things</strong><ul>
+                         <li>a value (of some type)</li>
+                         <li>an error</li>
+                         <li>a complete method</li>
+                         </ul>
+                         </li>
+                         </ul>
+                         </section>
+                         <section id="observables" data-background-color="#fff">
+                         <h4>RxJS and Observables</h4>
+                         <img class="no-border" src="./img/ng-rxjs.png" width="200" style="position: absolute; top: -40%; right: -15%;" />
+                         <p>Set of libraries for composing asynchronous and event-based programs using observable sequences</p>
+                         <pre><code class="js">const subscription = source
+                         .filter(quote => quote.price > 30)
+                         .map(quote => quote.price)
+                         .forEach(price => console.log(price));</code></pre>
+                         <aside class="notes">
+                         You can think of an observable as an array whose items arrive asynchronously over time. Observables help you manage asynchronous data,
+                         such as data coming from a backend service. Observables are used within Angular itself, including Angular’s event system and its http client
+                         service. To use observables, Angular uses a third-party library called Reactive Extensions (RxJS).
+                         </aside>
+                         </section>
+                         <section data-background-color="#72088F">
+                         <div>
+                         <img alt="" src="./img/rx-filter.png" width="450" class="no-border" />
+                         </div>
+                         <hr/>
+                         <div>
+                         <img alt="" src="./img/rx-map.png" width="450" class="no-border" />
+                         </div>
+                         </section>
+                         <section id="cold-hot-observables">
+                         <h4 class="text-right">Cold vs Hot</h4>
+                         <ul style="font-size: 0.7em">
+                         <li><p><strong>Cold observables</strong> start running upon subscription</p>
+                         <ul>
+                         <li>The observable sequence only starts pushing values to the observers when <strong>Subscribe is called</strong></li>
+                         </ul>
+                         </li>
+                         <li><p><strong>Hot observables</strong> are ones that are pushing even when you are not subscribed to the observable</p>
+                         <ul>
+                         <li>Like mouse moves, or Timer ticks, etc.</li>
+                         </ul>
+                         </li>
+                         <li><p>It’s not always possible from the subscriber side to know whether you are dealing with a cold or hot Observable</p>
+                         </li>
+                         </ul>
+                         </section>
+                         <section id="observable-vs-promise">
+                         <table>
+                         <thead>
+                         <tr>
+                         <th style="text-align:center">Observables</th>
+                         <th style="text-align:center">Promise</th>
+                         </tr>
+                         </thead>
+                         <tbody>
+                         <tr>
+                         <td style="text-align:center">Observables handle multiple values over time</td>
+                         <td style="text-align:center">Promises are only called once and will return a single value</td>
+                         </tr>
+                         <tr>
+                         <td style="text-align:center">Observables are cancellable</td>
+                         <td style="text-align:center">Promises are not cancellable</td>
+                         </tr>
+                         <tr>
+                         <td style="text-align:center">Observables are lazy</td>
+                         <td style="text-align:center">Promises NOT</td>
+                         </tr>
+                         </tbody>
+                         </table>
+                         </section> -->
                     <section id="ng-http"  data-background-color="#315FBE">
                         <img src="./img/ng-logo.png" width="120" class="no-border bg-transparent" style="position: absolute; top: -30%; left: -10%;" />
                         <h4>Angular HttpClient</h4>
@@ -956,21 +981,26 @@ export class AppModule { }</code></pre>
                         <h4 class="text-right">
                             Angular HttpClient Example
                         </h4>
-                        <pre><code class="ts">// Fetch all existing comments
-getComments() : Observable&lt;Comment[]&gt; {
-    // ...using get request
-    return this.http.get&lt;Comment[]&gt;('/api/comments')
-        //...errors if any
-        .catch((error:any) => Observable.throw(error.json().error));
+                        <pre><code class="ts">// Inject the HttpClient Service
+import { HttpClient } from '@angular/common/http';
+
+@Injectable()
+export class CommentsService {
+    constructor(private http: HttpClient) { }
+
+    getComments() : Observable&lt;Comment[]&gt; {
+        // ...using get request
+        return this.http.get&lt;Comment[]&gt;('/api/comments');
+    }
 }</code></pre>
                         <pre><code class="ts">service.getComments()
     .subscribe(comments => this.comments = comments);</code></pre>
                     </section>
-                    <section>
-                        <h3>Live Demo</h3>
-                        <p>Observables and HTTP.</p>
-                        <img alt="" src="./img/dog-coder.jpeg" width="500" />
-                    </section>
+                    <!-- <section>
+                         <h3>Live Demo</h3>
+                         <p>Observables and HTTP.</p>
+                         <img alt="" src="./img/dog-coder.jpeg" width="500" />
+                         </section> -->
                     <section id="ng-lifecycle">
                         <h3>Angular Lifecycle</h3>
                         <p><em>ngOnInit()</em></p>
