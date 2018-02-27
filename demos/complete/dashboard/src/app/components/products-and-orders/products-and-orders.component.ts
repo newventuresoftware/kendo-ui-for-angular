@@ -20,7 +20,7 @@ export class ProductsAndOrdersComponent implements OnInit {
     state: State = {
         sort: [],
         skip: 0,
-        take: 20,
+        take: 10,
         group: [],
     };
 
