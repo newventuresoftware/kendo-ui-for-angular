@@ -4,3 +4,4 @@ demos/initial
 /demos/.vscode/launch.json
 node_modules
 /demos/complete/typescript/output
+slides/package-lock.json
