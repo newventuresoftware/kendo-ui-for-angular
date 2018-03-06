@@ -52,3 +52,9 @@ cd demos/complete/dashboard
 npm install
 ng serve
 ```
+
+## Terms & Conditions of Use
+
+This project uses Telerik Kendo UI, which is commercial software. To use it, you need to agree to the [Telerik End User License Agreement for Kendo UI Complete](https://www.telerik.com/purchase/license-agreement/kendo-ui). If you do not own a commercial license, the files associated with the software shall be governed by the trial license terms.
+
+All available Kendo UI commercial licenses may be obtained [here](http://www.telerik.com/purchase/kendo-ui).
