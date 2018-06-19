@@ -1,8 +1,10 @@
+
+import {finalize} from 'rxjs/operators';
 import { OrderService  } from '../../services/order.service';
 import { Component, OnInit } from '@angular/core';
 import { SelectionEvent, GridDataResult, PageChangeEvent, DataStateChangeEvent } from '@progress/kendo-angular-grid';
 import { SortDescriptor, orderBy, State, GroupDescriptor, process } from '@progress/kendo-data-query';
-import 'rxjs/add/operator/finally';
+
 
 @Component({
     selector: 'app-products-and-orders',
@@ -32,8 +34,8 @@ export class ProductsAndOrdersComponent implements OnInit {
 
     loadGridData() {
         this.isLoading = true;
-        this.orderService.getOrders()
-            .finally(() => this.isLoading = false)
+        this.orderService.getOrders().pipe(
+            finalize(() => this.isLoading = false))
             .subscribe(data => {
                 this.orders = process(data, this.state);
             });

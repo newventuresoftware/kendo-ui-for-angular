@@ -1,6 +1,7 @@
 <div class="main-wrapper">
     <aside class="nav-section">
         <h1>{{title}}</h1>
+        <h3 style="color: red" *ngIf="!isWebApiUp">The Web API is not running.</h3>
         <ul>
             <li>
                 <a routerLink="/regional-sales-status" routerLinkActive="active-link">Regional Sales Status</a>
