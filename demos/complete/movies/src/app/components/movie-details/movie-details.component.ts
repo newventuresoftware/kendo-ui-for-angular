@@ -18,7 +18,7 @@ export class MovieDetailsComponent {
 
         this.route.paramMap
             .subscribe((params: ParamMap) => {
-                this.movie = this.movieService.getMovieById(parseInt(params.get('id')));
+                this.movie = this.movieService.getMovieById(parseInt(params.get('id'), 10));
             });
     }
 
