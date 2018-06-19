@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import 'rxjs/add/operator/finally';
+
 
 @Component({
     selector: 'app-products-and-orders',

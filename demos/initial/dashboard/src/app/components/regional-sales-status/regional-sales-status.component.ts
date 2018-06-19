@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./regional-sales-status.component.scss']
 })
 export class RegionalSalesStatusComponent implements OnInit {
-    
+
     constructor() { }
 
     ngOnInit() {
