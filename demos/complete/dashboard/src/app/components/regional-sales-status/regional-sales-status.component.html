@@ -4,10 +4,16 @@
     </h3>
     <div>
         <kendo-dropdownlist [data]="countries" [value]="selectedCountry" (selectionChange)="handleSelectedCountryChange($event)"></kendo-dropdownlist>
-        <label for="fromDate">From: </label>
-        <kendo-datepicker [(value)]="fromDate" (valueChange)="handleDateRangeChange($event)"></kendo-datepicker>
-        <label for="toDate">To: </label>
-        <kendo-datepicker [(value)]="toDate" (valueChange)="handleDateRangeChange($event)"></kendo-datepicker>
+        <kendo-daterange>
+            <label>
+                Start:
+                <kendo-dateinput kendoDateRangeStartInput [(value)]="fromDate" (valueChange)="handleDateRangeChange($event)"></kendo-dateinput>
+            </label>
+            <label>
+                End:
+                <kendo-dateinput kendoDateRangeEndInput [(value)]="toDate" (valueChange)="handleDateRangeChange($event)"></kendo-dateinput>
+            </label>
+        </kendo-daterange>
     </div>
     <div>
         <kendo-chart [categoryAxis]="{ categories: categories }" [title]="{ text: 'Top Selling Products' }">
