@@ -2,10 +2,9 @@ import { Observable } from 'rxjs/Rx';
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 
-
 @Injectable()
 export class CountryService {
-    
+
     constructor(private http: HttpClient, @Inject('baseUrl') private baseUrl) { }
 
     getCountries(): Observable<string[]> {
@@ -19,5 +18,4 @@ export class CountryService {
         return this.http.get<any[]>(
             `${this.baseUrl}/countries/${country}/sales?from=${from}&to=${to}`);
     }
-    
 }

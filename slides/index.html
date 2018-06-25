@@ -283,12 +283,12 @@
                         <p>predefined in the language:</p>
                         <p><code>number, string, boolean, Array, enum, undefined, null, tuples, any, void, never</code></p>
                     </section>
-                    <section id="ts-say-hello" data-background="#000">
-                        <h3>Live Demo</h3>
-                        <a href="https://www.typescriptlang.org/play/" target="_blank">
-                            <img alt="" src="./img/montanta-type-checker.jpg" width="400" class="no-border" />
-                        </a>
-                    </section>
+                    <!-- <section id="ts-say-hello" data-background="#000">
+                         <h3>Live Demo</h3>
+                         <a href="https://www.typescriptlang.org/play/" target="_blank">
+                         <img alt="" src="./img/montanta-type-checker.jpg" width="400" class="no-border" />
+                         </a>
+                         </section> -->
                     <section id="complex-types">
                         <h3>Complex Types</h3>
                         <p>created by the developer</p>
@@ -324,11 +324,11 @@
                             </ul>
                         </aside>
                     </section>
-                    <section class="live-demo" data-background-color="black">
-                        <h3>Live Demo</h3>
-                        <p>Classes in TypeScript</p>
-                        <img alt="" src="./img/code-or-didnt-happen.jpg" />
-                    </section>
+                    <!-- <section class="live-demo" data-background-color="black">
+                         <h3>Live Demo</h3>
+                         <p>Classes in TypeScript</p>
+                         <img alt="" src="./img/code-or-didnt-happen.jpg" />
+                         </section> -->
                     <section id="ts-interfaces" data-background-color="#007ACC">
                         <h3>Interfaces</h3>
                         <div>
@@ -350,20 +350,20 @@ const instance: MyInterface = ...</code></pre>
                             </p>
                         </aside>
                     </section>
-                    <section class="live-demo" data-background-color="black">
-                        <h3>Live Demo</h3>
-                        <p>Interfaces</p>
-                        <img alt="" src="./img/code-or-didnt-happen.jpg" />
-                        <aside class="notes">
-                            <p><strong>Function Types</strong><br/>Interfaces are capable of describing the wide range of shapes that JavaScript objects can take. 
-                                In addition to describing an object with properties, interfaces are also capable of describing function types.
+                    <!-- <section class="live-demo" data-background-color="black">
+                         <h3>Live Demo</h3>
+                         <p>Interfaces</p>
+                         <img alt="" src="./img/code-or-didnt-happen.jpg" />
+                         <aside class="notes">
+                         <p><strong>Function Types</strong><br/>Interfaces are capable of describing the wide range of shapes that JavaScript objects can take. 
+                         In addition to describing an object with properties, interfaces are also capable of describing function types.
 
-                                To describe a function type with an interface, we give the interface a call signature. 
-                                This is like a function declaration with only the parameter list and return type given. Each parameter in the parameter list requires both name and type.</p>
-                            <p><strong>Indexable Types</strong><br/>Indexable types have an index signature that describes the types we can use to index into the object, 
-                                along with the corresponding return types when indexing.</p>
-                        </aside>
-                    </section>
+                         To describe a function type with an interface, we give the interface a call signature. 
+                         This is like a function declaration with only the parameter list and return type given. Each parameter in the parameter list requires both name and type.</p>
+                         <p><strong>Indexable Types</strong><br/>Indexable types have an index signature that describes the types we can use to index into the object, 
+                         along with the corresponding return types when indexing.</p>
+                         </aside>
+                         </section> -->
                     <section id="ts-generics" data-background="./img/ts.png" class="color-white">
                         <h3>Generics</h3>
                         <p>
@@ -379,16 +379,34 @@ const instance: MyInterface = ...</code></pre>
                                 of types rather than a single one. This allows users to consume these components and use their own types.</p>
                         </aside>
                     </section>
-                    <section class="live-demo" data-background-color="black">
-                        <h3>Live Demo</h3>
-                        <p>Generics</p>
-                        <img alt="" src="./img/code-or-didnt-happen.jpg" />
+                    <section data-background="./img/ts.png">
+                        <pre><code class="ts">
+class Stack&lt;T&gt; {
+    data: T[] = [];
+
+    push(item: T) {
+        this.data.push(item);
+    }
+
+    pop(): T {
+        return this.data.pop();
+    }
+    /* ... */
+}
+                        </code></pre>
                     </section>
+                    <!-- <section class="live-demo" data-background-color="black">
+                         <h3>Live Demo</h3>
+                         <p>Generics</p>
+                         <img alt="" src="./img/code-or-didnt-happen.jpg" />
+                         </section> -->
                     <section id="ts-modules" data-background="./img/ts.png" class="color-white">
                         <h3>Modules</h3>
-                        <p>
-                            <em>import / export</em>
-                        </p>
+                        <div>
+                            <pre><code class="ts">export const numberRegexp = /^[0-9]+$/;
+export class NumberValidator { /* ... */ }</code></pre>
+                            <pre><code class="ts">import { numberRegexp, NumberValidator } from "./NumberValidator";</code></pre>
+                        </div>
                         <aside class="notes">
                             Starting with ECMAScript 2015, JavaScript has a concept of modules. TypeScript shares this concept.
 
@@ -397,11 +415,11 @@ const instance: MyInterface = ...</code></pre>
                             Conversely, to consume a variable, function, class, interface, etc. exported from a different module, it has to be imported using one of the import forms.
                         </aside>
                     </section>
-                    <section class="live-demo" data-background-color="black">
-                        <h3>Live Demo</h3>
-                        <p>Modules</p>
-                        <img alt="" src="./img/code-or-didnt-happen.jpg" />
-                    </section>
+                    <!-- <section class="live-demo" data-background-color="black">
+                         <h3>Live Demo</h3>
+                         <p>Modules</p>
+                         <img alt="" src="./img/code-or-didnt-happen.jpg" />
+                         </section> -->
                     <section id="ts-esnext" data-background="./img/ts.png" class="color-white">
                         <h3>EcmaScript Next</h3>
                         <a href="https://github.com/DrkSephy/es6-cheatsheet" target="_blank">Cheatsheet</a>
@@ -417,10 +435,10 @@ const instance: MyInterface = ...</code></pre>
                             </p>
                         </aside>
                     </section>
-                    <section class="live-demo" data-background-color="black">
-                        <h3>Live Demo</h3>
-                        <img alt="" src="./img/code-or-didnt-happen.jpg" />
-                    </section>
+                    <!-- <section class="live-demo" data-background-color="black">
+                         <h3>Live Demo</h3>
+                         <img alt="" src="./img/code-or-didnt-happen.jpg" />
+                         </section> -->
                     <section id="ts-lang-services">
                         <h4 class="text-right">More than a language</h4>
                         <p>TypeScript also provides tooling and language services for autocompletion, code navigation and refactoring.</p>
