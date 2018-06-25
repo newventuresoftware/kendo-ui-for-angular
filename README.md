@@ -1,7 +1,7 @@
 # Kendo UI for Angular Training Materials
 This repository contains slides, example projects and boilerplate code for interactive demo projects with Angular and Kendo UI.
 
-## Dependencies
+## Prerequisites
 * [NodeJS](https://nodejs.org/en/download/)
 * [TypeScript](https://www.npmjs.com/package/typescript)
 * [Angular CLI](https://github.com/angular/angular-cli#angular-cli)
