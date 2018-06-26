@@ -6,8 +6,7 @@ import { Location } from '@angular/common';
 
 @Component({
     selector: 'app-movie-details',
-    templateUrl: './movie-details.component.html',
-    styleUrls: ['./movie-details.component.css']
+    templateUrl: './movie-details.component.html'
 })
 export class MovieDetailsComponent {
     @Input() movie: Movie;
